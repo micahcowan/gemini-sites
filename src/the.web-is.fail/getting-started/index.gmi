@@ -1,0 +1,44 @@
+# Start Exploring the SmolNet
+
+Want to start exploring the SmolNet, but haven't a clue where to start? This page is intended to help set you on the road!
+
+We'll tell you what equipment you need, and point you at some useful search engines and other starting points.
+
+!- TODO: Terminology (separate link) (gemspace, capsule, gemcap, gopherhole, glog, phlog, etc - be sure to differentiate between geminispace, and geminispace.org or whatever)
+
+# Equipment
+
+## Portals
+
+If you're just testing the waters, then it's probably easiest to use your preferred web browser, together with a web portal that can translate between the Web and the SmolNet protocols (Gopher, Gemini, etc).
+
+=> http://portal.mozz.us/ (Gemini, Spartan, Gopher...)
+=> https://gopherproxy.meulie.net/ (Gopher only)
+!- TODO: more portal links. Does geminiprotocol.net have some?
+
+## Clients (Browsers... but not of the Web)
+
+If you're done just walking around and perusing the SmolNet, and want to _soar_, here are some clients (browsers) that you can use for a more-immersive experience (and to give your portal's server a break!).
+
+Advantages that a dedicated client provides over a portal, can (but don't
+necessarily) include:
+* Significantly faster load times
+* Managing your login credentials (TLS-cert identities) in geminispace
+* Subscribing to a capsule's updates
+* The relief of knowing that so long as you stay in the client, that nasty Web can't harm you
+
+My client-of-choice is Lagrange, which
+* is available on multiple platforms,
+* supports a large number of SmolNet protocols (including Gopher, Gemini, Titan, Spartan), but not Web protocols,
+* can manage (and generate!) TLS-certificate identities for logging into capsules,
+* can manage subscription feeds to any updates to favorite capsules,
+* will generate a table of contents, for navigation convenience,
+* generates a unique theme/appearance for each capsule,
+* clearly distinguishes between SmolNet and Web hyperlinks, and
+* uses (some) familiar keybindings from common web browsers
+
+=> gemini://skyjake.fi/lagrange/ Lagrange (multiplatform)
+=> https://github.com/MasterQ32/kristall Kristall (multiplatform; does Gemini, but not Gopher)
+=> https://github.com/snoe/deedum Deedum (for Android; does Gemini, but not Gopher)
+=> https://github.com/rkd77/elinks Elinks (In-terminal browser. Does Gemini,, does Gopher, does the Web too.)
+!include license.gmi
