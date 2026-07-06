@@ -1,8 +1,8 @@
---
+# Copyright Notice
 
 Copyright (C) 2026 Kado <kado@shizuka.space>
-
-This capsule [the.web-is.fail] is licensed under the CC BY-NC-SA 4.0. You can do anything you like with it (share, modify, etc), provided you do not use it for commercial purposes, and provided you credit the author (Kado <kado@shizuka.space>), and clearly describe and demarkate any modifications you've made to it.
+This capsule (the.web-is.fail) is licensed under the CC BY-NC-SA 4.0.
 
 => mailto:kado@shizuka.space
+=> https://creativecommons.org/licenses/by-nc-sa/4.0/ CC BY-NC-SA 4.0 License Deed (Plain-English) Summary
 => ../licenses/cc-by-nc-sa-4.0.txt CC BY-NC-SA 4.0 License - Legal Text

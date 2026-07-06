@@ -1,0 +1,30 @@
+# Why You Should Use A Client When Exploring the SmolNet
+
+One of the biggest reasons you should use a client to explore geminispace, is that gemcaps tend to use client TLS certificates, rather than username-and-password, to identify and authenticate its users. You will therefore need a client that can generate and manage such certificates, in order to log into any such sites.
+
+Example sites that use TLS certs for logging in, include:
+=> gemini://bbs.geminispace.com/
+=> gemini://sggs.thegonz.net/
+
+What else does using a SmolNet client buy you? Depending on the client's capabilities:
+* Significantly faster load times than a portal
+* As mentioned above, you can generate manage TLS-cert identities for logging in
+* Won't burden the portal server
+* You can still surf the SmolNet even if the portal site goes down
+* The relief of knowing that so long as you stay in the client, that nasty Web can't harm you (but only if using a client with no web protocol support)
+
+I recommend Lagrange, which
+* is available on multiple platforms,
+* supports a large number of SmolNet protocols (including Gopher, Gemini, Titan, Spartan), but not Web protocols,
+* can generate/manage TLS-certificate identities/logins,
+* can manage subscription feeds to any updates to your favorite capsules,
+* will generate a table of contents, for navigation convenience,
+* generates a unique theme/appearance for each capsule,
+* supports the Titan protocol for posting, uploading, and editing content (depends on the capsule's support for these features)
+* clearly distinguishes between SmolNet and Web hyperlinks, and
+* uses (some) familiar keybindings from common web browsers
+
+Here are a handful of links to clients you might try:
+!include clients.gmi
+
+!include license.gmi

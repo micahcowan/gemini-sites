@@ -2,9 +2,11 @@
 
 Want to start exploring the SmolNet, but haven't a clue where to start? This page is intended to help set you on the road!
 
-We'll tell you what equipment you need, and point you at some useful search engines and other starting points.
+This page covers what equipment you need, and points you at some useful search engines and other starting points.
 
 !- TODO: Terminology (separate link) (gemspace, capsule, gemcap, gopherhole, glog, phlog, etc - be sure to differentiate between geminispace, and geminispace.org or whatever)
+
+!-=> [web-failure link] What is SmolNet, and why should I care?
 
 # Equipment
 
@@ -18,27 +20,18 @@ If you're just testing the waters, then it's probably easiest to use your prefer
 
 ## Clients (Browsers... but not of the Web)
 
-If you're done just walking around and perusing the SmolNet, and want to _soar_, here are some clients (browsers) that you can use for a more-immersive experience (and to give your portal's server a break!).
+If you're done just kicking the tires of SmolNet, and want to explore it in greater depth, then you want a client (like a browser) for that. Most gemcaps that support logins, use client TLS certificates as both identification and authentication, rather than username-and-password, so a client that can generate and manage different client certificates is particularly helpful for taking a more active and participatory role in the community (as opposed to just observing).
 
-Advantages that a dedicated client provides over a portal, can (but don't
-necessarily) include:
-* Significantly faster load times
-* Managing your login credentials (TLS-cert identities) in geminispace
-* Subscribing to a capsule's updates
-* The relief of knowing that so long as you stay in the client, that nasty Web can't harm you
+I recommend Lagrange, which currently appears to be the most full-featured and comfortable-to-use client, is available on multiple platforms, and has support for a number of SmollNet protocols, and convenience features.
 
-My client-of-choice is Lagrange, which
-* is available on multiple platforms,
-* supports a large number of SmolNet protocols (including Gopher, Gemini, Titan, Spartan), but not Web protocols,
-* can manage (and generate!) TLS-certificate identities for logging into capsules,
-* can manage subscription feeds to any updates to favorite capsules,
-* will generate a table of contents, for navigation convenience,
-* generates a unique theme/appearance for each capsule,
-* clearly distinguishes between SmolNet and Web hyperlinks, and
-* uses (some) familiar keybindings from common web browsers
+=> ../why-client/ Why would you use a client?
 
-=> gemini://skyjake.fi/lagrange/ Lagrange (multiplatform)
-=> https://github.com/MasterQ32/kristall Kristall (multiplatform; does Gemini, but not Gopher)
-=> https://github.com/snoe/deedum Deedum (for Android; does Gemini, but not Gopher)
-=> https://github.com/rkd77/elinks Elinks (In-terminal browser. Does Gemini,, does Gopher, does the Web too.)
+Here are a handful of links to clients you might try:
+!include clients.gmi
+
+# Search Indices
+
+=> gemini://tlgs.one "Totally Legit" Gemini Search (for Geminispace)
+=> gopher://gopher.floodgap.com/1/v2/ Floodgap/Veronica 2 (for Gopherspace)
+
 !include license.gmi
