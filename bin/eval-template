@@ -1,0 +1,67 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+
+class Templator:
+    def __init__(self, fin, fout, includedir=None):
+        self.fin = fin
+        self.fout = fout
+        self.includedir = includedir
+
+        self.includer = Includer(includedir)
+
+    def process(self):
+        for line in self.fin:
+            line = line.strip()
+            if len(line) > 0 and line[0] == '!':
+                self.process_directive(line[1:])
+            else:
+                self.process_nondirective(line)
+
+    def process_nondirective(self, line):
+        print(line, file=self.fout)
+
+    def process_directive(self, line):
+        c = line[0]
+        if c == "-":
+            # COMMENT: skip this line
+            pass
+        elif line.startswith("include "):
+            self.process_include(line)
+        else:
+            raise(Exception(f"Unknown directive {line}"))
+
+    def process_include(self, line):
+        if line.startswith("include "):
+            line = line[len("include "):].strip()
+        content = self.includer.include(line)
+        if len(content) > 0 and content[-1] != '\n':
+            content += "\n"
+        print(content, file=self.fout, end="")
+
+# internal class Includer, for handling template inclusions
+class Includer:
+    def __init__(self, dir):
+        self.dir = dir
+
+        if dir is not None:
+            self.dict = { x: None for x in os.listdir(dir) if x.endswith(".gmi") }
+        else:
+            self.dict = {}
+
+    def include(self, name):
+        if name not in self.dict:
+            raise(Exception(f"Could not find \"{name}\" for inclusion!"))
+        elif self.dict[name] is not None:
+            return self.dict[name]
+        else:
+            f = open(os.path.join(self.dir, name))
+            self.dict[name] = f.read()
+            f.close()
+            return self.dict[name]
+
+if __name__ == "__main__":
+    ttor = Templator(sys.stdin, sys.stdout, includedir="src/the.web-is.fail/BITS")
+    ttor.process()
+    sys.exit(0)
