@@ -5,13 +5,15 @@ Perhaps not completely. But the current, often user-antagonistic incarnation of 
 !-=> /the-net-that-was/ The Internet That Was
 !-The internet we were once building, before it derailed
 
-=> /charges-against-the-web/ Crimes of the Modern Web
-What's wrong with today's World-Wide Web
+!-=> /not-our-friend/ Why The Web Is No Longer Our Friend
+!-Why "surfing the Web" no longer feels warm and inviting
 
-=> /another-path/ Another Path
-Introducing the SmolNet, A Refuge
+=> /introducing-smolnet/ Introducing the SmolNet
+A refuge from overstimulation, hyperactivity, doom-scrolling, and battles for your attention
 
 => /getting-started/ Getting Started
 How and Where to Get Started on the SmolNet
+
+!-History of Gopher and Gemini?
 
 !include license.gmi

@@ -1,0 +1,23 @@
+# Introducing the SmolNet (The Small Internet)
+
+# Anti-User Practices Solved by the SmolNet
+
+## Technologically Impossible (or Nearly)
+
+The protocols used in SmolNet are designed _not_ to support the following site behaviors. It may be that loopholes will be found (or wedged in) to make them possible, but by design they are not supported:
+
+* Cookies. There is no means for a server to send you any kind of metadata other than the actual page content itself, nor for your client (browser) to hold onto anything from the server to be sent back to it (apart from URLs).
+* Additional content-fetching. When retrieving a requested page, there is no way for your browser to be asked to also fetch other content for the page, such as CSS, scripts, or even images (which have historically been used to track you across sites). (You are welcome to click a link to separately fetch anything you are interested in!) (This guarantee is specific to *some* protocols, such as Gemini and Spartan, and does not fully apply to Gopher, though it's mostly true there, as well).
+* Cross-site tracking. Aside from images, it is not generally possible to inject any other kinds of trackers that could jeapordize your privacy, either.
+* The never-ending Doom Scroll. One URL = one page-fetch; no further content can be fetched without the user clicking a link.
+* Prevent page-source viewing. There is no means by which a page can interfere with a user being able to view its raw source content (nor, really, any reason a site might wish to do so, as any intelligence will live on the server, not the client).
+* Script-based content modification. Since there is no support for scripting languages, there is no means for a page to modify its own content after it has been received, nor to alter what is rendered.
+* Style-based content-hiding. There is only just enough "formatting" language in gemtext to support headings, bullet points, links, blockquotes, preformatted text, and normal text... and that's it. There is no way to specify that something should be hidden.
+
+## Not Impossible, But Rare-to-Non-Existent
+
+There is nothing in the way of technology preventing the following kinds of behaviors, but since SmolNet citizens generally find themselves here specifically to avoid these kinds of things, no one is building them, and there is at least some degree of hope that the community might resist attempts to introduce them, or even to link to sites with such behaviors:
+
+* Intrusive advertising. It would be possible to inject text-only advertising into page content. If such ads masquerade as legitimate content, then that might be particularly aggravating. I have not personally encountered any directed advertisement. It may be that some limited amount of (clearly-marked) text advertising might arise and be accepted by the community (bills must still be paid, etc), but I believe we would at least reject "masquerading" ads
+
+!include license.gmi
