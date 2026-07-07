@@ -17,13 +17,17 @@ foo:
 	mkdir -p $(dir $@)
 	cp $< $@
 
-stamps/sites: stamps stamps/the.web-is.fail
+stamps/sites: stamps stamps/the.web-is.fail stamps/shizuka.space
 	touch $@
 
 stamps:
 	mkdir -p stamps
 
 stamps/the.web-is.fail: $(FAIL-OBJS)
+	touch $@
+
+stamps/shizuka.space:
+	echo "Hello, quiet world!" >| /var/gemini/shizuka.space/index.gmi
 	touch $@
 
 .PHONY: clean
