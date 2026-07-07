@@ -1,0 +1,54 @@
+# The Web That Was
+by Sparr Risher
+
+The year is 2008. You don't know it yet, but the internet will never again be as accessible, searchable, interoperable, or durable as it is right now. Profit motive, the tragedy of the commons, and malicious self interest are beginning to conspire to erode all of the best parts of the online world, and it will only get worse from here. Here are some of the highlights of your regular online experience that the people being born today won't even realize were taken from them:
+
+You open up your RSS reader and see a chronological list of updates from every website, blog, etc that you are subscribed to. You can sort and filter to the topic categories you've created. You can jump back to the last time you read, to make sure you didn't miss anything on the feeds that are important to you. When you visit a new site or page, if it has a regular flow of new content then it almost certainly publishes a RSS feed that you can subscribe to.
+
+You buy a copy of a multiplayer online video game. It either includes a dedicated server application or has a server built into the client. You can play against your friends without accessing the publisher's servers or paying any recurring fees. You can play without an internet connection if you're on the same home network. You can still play online even when the developer and publisher go out of business in the future.
+
+You open your favorite instant messaging client, one of half a dozen independent options (Adium, Pidgin, Trillian, Miranda, Kopete, etc), any of which can connect to almost every major messaging network (AIM, MSN, Yahoo, ICQ, Google Talk, Facebook Chat, etc). In that single window you see all of your contacts from every network, with the same contact on multiple networks merged for you to choose between. Your friend Sam is online/reachable on four networks; do you want to use the one that supports images or typing updates or voice chat or encryption? Your friend Pat is offline across the board, but left a status message saying where they were going.
+
+You see something cool and want to share it with a friend. You copy the URL and message it to them. They can almost certainly view the thing without creating an account or logging in somewhere. You scroll back a year or a decade in your chat with them and the links back then probably still work.
+
+You make a post on a social media/network platform with a link to some other platform, and the content from that other platform is automatically previewed or embedded in your post. Your friends can watch your Youtube video directly on your post in their Facebook feed. You don't need to screenshot a tweet to get its contents to appear on another site.
+
+You search for something on Google. The first page has a single relevant text-only ad, and ten results that are virtually guaranteed to be the best available resources for your chosen topic.
+
+You search for restaurants near your home that offer delivery, and that's exactly what you find, with their menus and prices listed directly on their website.
+
+You launch a program that you installed five years ago, and it still has all the same functionality it had before. All the servers it interacts with still support the same protocols. All the file formats it can read and write are still compatible with other newer programs.
+
+You take some time to chat with people who share your niche interest. There's a single IRC channel and one web forum where almost all of them congregate. The content of at least one, possibly both, are indexed by major search engines, and you don't have to create an account to read past discussions.
+
+You launch Google Chrome, excited for another open source entry into the browser war and the diminishing dominance of Internet Explorer. You have no idea how short lived the impending era of vaguely balanced browser market share will be before the pendulum swings right back to a single browser controlling the market.
+
+You're a somewhat technical computer user, but you have a niche question that only a few other people would know the answer to. Luckily for you, Stack Overflow launched recently, and is already rapidly becoming the single best resource the world has ever seen for this scenario. You post your question and get helpful answers from well qualified people in short order.
+
+You use a minor internet and email provider, perhaps a local ISP or through your work, or even hosted on your own. Your emails reliably reach users on all other major and minor email providers, without automatically being classified as spam.
+
+You use Google Reader, Yahoo Pipes, iGoogle, Meebo, Delicious, or other such web-only apps, with no idea that they will simply disappear some time soon.
+
+Over the next ten to twenty years, these experiences will become fading memories. Mentioning them will make you sound more and more alien to younger people. Some of them will leave the Overton window entirely and even arguing for them on their merits will start to sound unreasonable. We won't just forget these experiences existed; we'll stop imagining that such things are even possible. Maybe if we're very lucky some of them will eventually be reinvented from first principles. Thankfully, it's still 2008, and you don't need to worry about any of that. Party on.
+
+PS: Each individual aspect of online technology described here actually peaked at slightly different times, ranging from the late 1990s to the early 2010s. I chose 2008 in this article as roughly the peak within that range, to accommodate a few specific landmark dates, and as a symbolic nod to the people born then becoming adults now. While you could make some of the same arguments about 2002 or 2012, the overall pattern wouldn't be nearly as strong.
+
+Enshittification is the dominant theme of the 2020s. We, the people, can choose to change this dependency on oligarch-controlled mega-corporations. I’m appalled at the public indifference.
+
+Someday, youth will rise up and say enough is enough. Will those of us alive today witness a revolution, or merely a lengthy dark-age?
+
+The reason this changed is related to the key thing that's wrong with it.
+
+"It's 2008. You are in the majority of humanity who don't use the internet. You've never heard of any of the things mentioned. You access the Internet from a computer, and there's a good chance that's rented for you by the hour at an Internet Cafe."
+
+That is to say, because of the enormous value of these winner-take-all ecosystems, people were rushing to grow, not monetize.
+
+Some of it was paid by advertising, but an enormous fraction of the things on the list were paid for by a wealth transfer from investors to consumers.
+
+In many ways, that was a much better situation. I don't disagree with the premise. I'm just saying that it's understandable when you realize that sooner or later things have to work as a business. And people have decided that they don't want to pay. They want not just consumer surplus but the whole ball of wax, and they want people who want to pick their pocket to pay for the privilege of doing so by supporting all of these other things.
+
+In any case, in 2008 suddenly people had other things on their mind. And then the money that was paying for all of it went away.
+
+=> https://www.facebook.com/sparr0/posts/pfbid0X7Bbt9jpnWKbWiaGXAifLphna3wR2RcNUzaePQUL1LC6F7y3B5UrBXEZ4NQEWXpgl  Original source (Facebook login required))
+
+The content of this page is copyrighted by Sparr Risher, and is NOT covered by the site-wide Creative Commons license.
