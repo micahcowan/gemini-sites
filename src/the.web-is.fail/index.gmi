@@ -1,0 +1,17 @@
+# The Web Has Failed
+
+Perhaps not completely. But the current, often user-antagonistic incarnation of our would-be Internet "utopia" known as the World Wide Web, certainly leaves a fair bit to be desired, particularly where privacy or serenity is concerned.
+
+=> /the-once-web/ The Web That Was
+The web we were once building, before it derailed
+
+=> /charges-against-the-web/ Crimes of the Modern Web
+What's wrong with today's World-Wide Web
+
+=> /another-path/ Another Path
+Introducing the SmolNet, A Refuge
+
+=> /getting-started/ Getting Started
+How and Where to Get Started on the SmolNet
+
+!include license.gmi
