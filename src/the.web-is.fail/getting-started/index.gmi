@@ -27,12 +27,40 @@ Dedicated clients. For when you're ready to get serious, or if you want to log i
 Here are a handful of links to clients you might try:
 !include clients.gmi
 
-# Search Indices
+# Starting Points (Link Garden)
+
+Now that you know how to get around, here are some ideas on where you might start!
+
+## Search Engines
 
 Searching for content about something? Try one of these!
 (Unlike Google, these won't understand questions - be sure your search includes the actual words that should be in the found pages (and no other words))
 
 => gemini://tlgs.one "Totally Legit" Gemini Search (for Geminispace)
 => gopher://gopher.floodgap.com/1/v2/ Floodgap/Veronica 2 (for Gopherspace)
+
+## Cities and Tildespaces
+
+Servers with personal sites for a multitude of different users. Like GeoCities of old!
+
+=> gemini://sdf.org/ The Super Dimension Fortress (SDF) - Gemini
+=> cophre://sdf.org/1/ The Super Dimension Fortress (SDF) - Gopher
+=> gemini://tilde.team/ Tilde Team - Gemini
+=> gopher://tilde.team/1/ Tilde Team - Gopher
+=> gemini://tilde.team/~khuxkm/leo/ khuxkm's LEO
+
+## Bulletin Boards (BBS)
+
+Servers where you can post and read content on a variety of topics.
+
+=> gemini://bbs.geminispace.org/ GeminiSpace BBS
+=> gemini://station.martinrue.com/ Station
+
+## Games, and Gaming Spaces
+
+=> gemini://astrobotany.mozz.us/ Astrobotany (Care for your digital flowers, and participate in a community)
+=> gemini://gemini.thegonz.net/ "Things" at TheGonz.net (scroll to the "Games" section)
+=> gopher://mozz.us:7006/1/ Text Adventures at Mozz.us (Gopher)
+=> gemini://sggs.thegonz.net/ Simple Gemini Game Server (Shogi, Go, Connect4, ...)
 
 !include license.gmi
