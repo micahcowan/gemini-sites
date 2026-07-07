@@ -20,9 +20,7 @@ If you're just testing the waters, then it's probably easiest to use your prefer
 
 ## Clients (Browsers... but not of the Web)
 
-If you're done just kicking the tires of SmolNet, and want to explore it in greater depth, then you want a client (like a browser) for that. Most gemcaps that support logins, use client TLS certificates as both identification and authentication, rather than username-and-password, so a client that can generate and manage different client certificates is particularly helpful for taking a more active and participatory role in the community (as opposed to just observing).
-
-I recommend Lagrange, which currently appears to be the most full-featured and comfortable-to-use client, is available on multiple platforms, and has support for a number of SmollNet protocols, and convenience features.
+Dedicated clients. For when you're ready to get serious, or if you want to log into gemcaps.
 
 => ../why-client/ Why would you use a client?
 
@@ -30,6 +28,9 @@ Here are a handful of links to clients you might try:
 !include clients.gmi
 
 # Search Indices
+
+Searching for content about something? Try one of these!
+(Unlike Google, these won't understand questions - be sure your search includes the actual words that should be in the found pages (and no other words))
 
 => gemini://tlgs.one "Totally Legit" Gemini Search (for Geminispace)
 => gopher://gopher.floodgap.com/1/v2/ Floodgap/Veronica 2 (for Gopherspace)

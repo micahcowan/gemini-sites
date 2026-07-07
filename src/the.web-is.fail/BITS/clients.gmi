@@ -1,4 +1,4 @@
-=> gemini://skyjake.fi/lagrange/ Lagrange (multiplatform, including iOS and Android)
+=> gemini://skyjake.fi/lagrange/ ⭐ Lagrange ⭐ (recommended!) (multiplatform, including iOS and Android)
 => https://github.com/MasterQ32/kristall Kristall (multiplatform; does Gemini, but not Gopher)
 => https://github.com/snoe/deedum Deedum (for Android; does Gemini, but not Gopher)
 => https://github.com/rkd77/elinks Elinks (In-terminal browser. Does Gemini,, does Gopher, does the Web too.)

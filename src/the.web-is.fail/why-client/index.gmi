@@ -1,6 +1,6 @@
 # Why You Should Use A Client When Exploring the SmolNet
 
-One of the biggest reasons you should use a client to explore geminispace, is that gemcaps tend to use client TLS certificates, rather than username-and-password, to identify and authenticate its users. You will therefore need a client that can generate and manage such certificates, in order to log into any such sites.
+If you're done just kicking the tires of SmolNet, and want to explore it in greater depth, then you want a client (like a browser) for that. Most gemcaps that support logins, use client TLS certificates as both identification and authentication, rather than username-and-password, so a client that can generate and manage different client certificates is particularly helpful for taking a more active and participatory role in the community (as opposed to just observing).
 
 Example sites that use TLS certs for logging in, include:
 => gemini://bbs.geminispace.com/
