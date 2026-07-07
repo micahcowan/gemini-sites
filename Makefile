@@ -3,17 +3,14 @@ FAIL-OBJS := $(patsubst src/%,build/%,$(FAIL-SRC))
 
 all: stamps/sites
 
-$(FAIL-OBJS): build/%.gmi: src/%.gmi src/the.web-is.fail/BITS/*.gmi
-$(FAIL-OBJS): build/%: src/%
-$(FAIL-OBJS):
+$(filter %.gmi,$(FAIL-OBJS)): build/%.gmi: src/%.gmi src/the.web-is.fail/BITS/*.gmi
 	mkdir -p $(dir $@)
-	name="$@"; \
-	if test "$${name%.gmi}" != "$${name}"; then \
-	    bin/eval-template -I src/the.web-is.fail/BITS < $< > $@.tmp; \
-	    mv $@.tmp $@; \
-	else \
-	    cp $< $@; \
-	fi
+	bin/eval-template -I src/the.web-is.fail/BITS < $< > $@.tmp
+	mv $@.tmp $@
+
+$(filter-out %.gmi,$(FAIL-OBJS)): build/%: src/%
+	mkdir -p $(dir $@)
+	cp $< $@
 
 foo:
 	mkdir -p $(dir $@)
