@@ -1,14 +1,15 @@
+BUILD = /var/gemini/
 FAIL-SRC := $(shell find src/the.web-is.fail ! -type d | grep -v BITS)
-FAIL-OBJS := $(patsubst src/%,build/%,$(FAIL-SRC))
+FAIL-OBJS := $(patsubst src/%,$(BUILD)/%,$(FAIL-SRC))
 
 all: stamps/sites
 
-$(filter %.gmi,$(FAIL-OBJS)): build/%.gmi: src/%.gmi src/the.web-is.fail/BITS/*.gmi
+$(filter %.gmi,$(FAIL-OBJS)): $(BUILD)/%.gmi: src/%.gmi src/the.web-is.fail/BITS/*.gmi
 	mkdir -p $(dir $@)
 	bin/eval-template -I src/the.web-is.fail/BITS < $< > $@.tmp
 	mv $@.tmp $@
 
-$(filter-out %.gmi,$(FAIL-OBJS)): build/%: src/%
+$(filter-out %.gmi,$(FAIL-OBJS)): $(BUILD)/%: src/%
 	mkdir -p $(dir $@)
 	cp $< $@
 
@@ -28,4 +29,4 @@ stamps/the.web-is.fail: $(FAIL-OBJS)
 .PHONY: clean
 
 clean:
-	rm -fr build
+	rm -fr $(BUILD)/*/*
