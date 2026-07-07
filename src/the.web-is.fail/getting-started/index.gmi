@@ -44,7 +44,7 @@ Searching for content about something? Try one of these!
 Servers with personal sites for a multitude of different users. Like GeoCities of old!
 
 => gemini://sdf.org/ The Super Dimension Fortress (SDF) - Gemini
-=> cophre://sdf.org/1/ The Super Dimension Fortress (SDF) - Gopher
+=> gopher://sdf.org/1/ The Super Dimension Fortress (SDF) - Gopher
 => gemini://tilde.team/ Tilde Team - Gemini
 => gopher://tilde.team/1/ Tilde Team - Gopher
 => gemini://tilde.team/~khuxkm/leo/ khuxkm's LEO
