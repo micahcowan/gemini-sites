@@ -8,11 +8,22 @@ class Templator:
         self.fin = fin
         self.fout = fout
         self.includedir = includedir
-
         self.includer = Includer(includedir)
+
+        self.suppress_next_empty = False
+        # True if next line should be omitted if blank
+
+        self.suppressing_empty = False
+        # True if CURRENT line should be omitted if blnak
+
+        self.last_was_empty = True
+        # True if previous non-directive line was blank
 
     def process(self):
         for line in self.fin:
+            self.suppressing_empty = self.suppress_next_empty
+            self.suppress_next_empty = False
+
             line = line.strip()
             if len(line) > 0 and line[0] == '!':
                 self.process_directive(line[1:])
@@ -20,13 +31,21 @@ class Templator:
                 self.process_nondirective(line)
 
     def process_nondirective(self, line):
-        print(line, file=self.fout)
+        self.last_was_empty = (line == "")
+        if line != "" or not self.suppressing_empty:
+            print(line, file=self.fout)
+        else:
+            pass # squash empty lines surrounding a comment
 
     def process_directive(self, line):
         c = line[0]
         if c == "-":
-            # COMMENT: skip this line
-            pass
+            # COMMENT: skip this line!
+
+            # If a comment is preceded AND followed by an empty line,
+            # squash them into just a single empty line.
+            if self.last_was_empty:
+                self.suppress_next_empty = True
         elif line.startswith("include "):
             self.process_include(line)
         else:
