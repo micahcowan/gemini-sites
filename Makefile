@@ -27,7 +27,8 @@ stamps/the.web-is.fail: $(FAIL-OBJS)
 	touch $@
 
 stamps/shizuka.space:
-	echo "Hello, quiet world!" >| /var/gemini/shizuka.space/index.gmi
+	mkdir -p $(BUILD)/shizuka.space
+	echo "Hello, quiet world!" >| $(BUILD)/shizuka.space/index.gmi
 	touch $@
 
 .PHONY: clean
