@@ -8,6 +8,22 @@ When technology provides corporations and their platforms with the power to oppr
 
 The small internet, or "SmolNet", is not (only) small in that it has relatively few users—it's small in that it deliberately uses "small", uncomplicated protocols and technologies, with deliberately limited opportunity for extension or evolution. These protocols help to ensure that SmolNet will always remain small, and that you can therefore depend on it continuing to provide its unique protections on your privacy, your freedom, your distraction-free focus on actual content—and perhaps, your mental health, as a result.
 
+# No Need to Abandon the Web!
+
+But look. For all its flaws, the Web is vital, exciting, and incredibly, incredibly useful. There is a lot on the Web that I'm very, very excited and grateful about. There is a lot of joy that it brings to my life. No one is asking you to abandon the Web, least of all me.
+
+Here are a handful of things that I am personally very enthusiastic about, and that are only possible because we kept pushing the Web to its limits.
+=> https://jsnes.org/ I can play games on retro game consoles such as the NES
+=> https://8bitworkshop.com/ I can write, compile, assemble, and debug my *own* NES (or other vintage console) game from scratch
+=> https://www.beepbox.co/ I can compose, share, and export music
+=> https://internet-janitor.itch.io/wigglypaint I can slap together wiggly animated doodles while taking a big hit of HyperCard nostalgia
+
+I'm not going to stop using these amazing tools and resources, just because some *other* websites (or even maybe one or two of these) are giving me the icks!
+
+But just because I'm not abandoning the web, doesn't mean I don't want to appreciate and participate in a community that's going in a different direction. The web has become so absolutely clogged with annoyances and hindrances, that it can feel a bit like I'm crawling on broken glass on my path from one Neat Thing to the next.
+
+...Wouldn't it be nice to spend at least some of my time in a hall where glass hasn't even been invented/discovered? I can always go back to the glass-ridden-but-flashier halls I'll always be dependent on... but it's very nice to spend time in a place where I can "crawl" to my heart's content, with the supreme confidence of knowing I'll never encounter the tinyest shard there.
+
 # Anti-User Practices that SmolNet Solves
 
 ## Technologically Impossible (or Nearly)
@@ -44,7 +60,7 @@ It _is_ possible (for some clients that support it) to stream content without a 
 
 ### No preventing "Save As..." or "View Source"
 
-On the web, some sites will use scripts in an attempt to prevent right-clicking, and thereby prevent you from inspecting the page's raw source, or from downloading any embedded images to your local disk (where you might—gasp!—continue to view it without having to go through their platform!)
+On the Web, some sites will use scripts in an attempt to prevent right-clicking, and thereby prevent you from inspecting the page's raw source, or from downloading any embedded images to your local disk (where you might—gasp!—continue to view it without having to go through their platform!)
 
 On the SmolNet, there's no scripting, and there are no embedded images anyway, so there's no way to prevent downloads or views (and... not much content to prevent download of anyway).
 
@@ -58,7 +74,7 @@ In theory, a server could just serve an excerpt of the content, and then make yo
 
 Not all clients, but at least several, will clearly mark any non-SmolNet web links, by coloring them differently, or by using different symbols for various link types, so that you know if you are leaving the guarantees of the SmolNet for the uncertainties and complexity of the Web. (And, of course, there's no means for a SmolNet page to interfere with that.)
 
-## Not Impossible, But Absent
+## Not Impossible, But Absent Nonetheless
 
 There is nothing in the way of technology preventing the following kinds of behaviors, except the goodwill and principles of the community itself. But, they are nonetheless absent (as of the time of this writing, to the knowledge of the author). So long as this remains true, they constitute additional blessings that can't be depended upon, on the World-Wide Web.
 
