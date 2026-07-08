@@ -1,23 +1,79 @@
-# Introducing the SmolNet (The Small Internet)
+# Introducing the SmolNet (The Small Internet), and Why You Should Use It
 
-# Anti-User Practices Solved by the SmolNet
+The SmolNet is a small section of internet technology and servers, built on an alternate set of protocols instead of the World-Wide Web's HTTP(S) and HTML. Rather than being advanced, complex protocols that make virtually anything possible, these protocols are explicitly designed to *limit* what is possible.
+
+At first blush, that might sound like a very backwards attitude toward technology. But in this era where we are increasingly forced to confront that, ironically, the nearly-unlimited capabilities of the Web are increasingly being used to *limit* the capabilities, privacy, and freedom of *users*, suddenly limitations on the technology may not sound like such a bad idea.
+
+When technology provides corporations and their platforms with the power to oppress and restrict users, it follows that building limitation into technology serves to *remove* limitations from the users!
+
+The small internet, or "SmolNet", is not (only) small in that it has relatively few users—it's small in that it deliberately uses "small", uncomplicated protocols and technologies, with deliberately limited opportunity for extension or evolution. These protocols help to ensure that SmolNet will always remain small, and that you can therefore depend on it continuing to provide its unique protections on your privacy, your freedom, your distraction-free focus on actual content—and perhaps, your mental health, as a result.
+
+# Anti-User Practices that SmolNet Solves
 
 ## Technologically Impossible (or Nearly)
 
 The protocols used in SmolNet are designed _not_ to support the following site behaviors. It may be that loopholes will be found (or wedged in) to make them possible, but by design they are not supported:
 
-* Cookies. There is no means for a server to send you any kind of metadata other than the actual page content itself, nor for your client (browser) to hold onto anything from the server to be sent back to it (apart from URLs).
-* Additional content-fetching. When retrieving a requested page, there is no way for your browser to be asked to also fetch other content for the page, such as CSS, scripts, or even images (which have historically been used to track you across sites). (You are welcome to click a link to separately fetch anything you are interested in!) (This guarantee is specific to *some* protocols, such as Gemini and Spartan, and does not fully apply to Gopher, though it's mostly true there, as well).
-* Cross-site tracking. Aside from images, it is not generally possible to inject any other kinds of trackers that could jeapordize your privacy, either.
-* The never-ending Doom Scroll. One URL = one page-fetch; no further content can be fetched without the user clicking a link.
-* Prevent page-source viewing. There is no means by which a page can interfere with a user being able to view its raw source content (nor, really, any reason a site might wish to do so, as any intelligence will live on the server, not the client).
-* Script-based content modification. Since there is no support for scripting languages, there is no means for a page to modify its own content after it has been received, nor to alter what is rendered.
-* Style-based content-hiding. There is only just enough "formatting" language in gemtext to support headings, bullet points, links, blockquotes, preformatted text, and normal text... and that's it. There is no way to specify that something should be hidden.
+(NOTE: the impossibility of some of these behaviors, depends on what protocol you are using. The Gemini protocol is explicitly aimed at preventing most of them, whereas Gopher was only intentional about avoiding some of them)
 
-## Not Impossible, But Rare-to-Non-Existent
+### No cookies
 
-There is nothing in the way of technology preventing the following kinds of behaviors, but since SmolNet citizens generally find themselves here specifically to avoid these kinds of things, no one is building them, and there is at least some degree of hope that the community might resist attempts to introduce them, or even to link to sites with such behaviors:
+There is no way for a server to send you any kind of metadata other than the actual page content itself, and its content-type; nor for your client (browser) to hold onto anything from the server to be sent back to it (apart from URLs).
 
-* Intrusive advertising. It would be possible to inject text-only advertising into page content. If such ads masquerade as legitimate content, then that might be particularly aggravating. I have not personally encountered any directed advertisement. It may be that some limited amount of (clearly-marked) text advertising might arise and be accepted by the community (bills must still be paid, etc), but I believe we would at least reject "masquerading" ads
+### No automatic content-fetching
+
+When retrieving a requested page, there is no way for your client (~browser) to be asked to also fetch other content for the page, such as CSS, scripts, or even images (which, sadly, have historically been used to track you across sites).
+
+This guarantee is specific to *some* protocols, such as Gemini and Spartan, and does not fully apply to Gopher (which can fetch GIF images, and via some extensions to the protocol, other image types as well). But in practice, Gopherholes don't do a lot of this.
+
+Even though images aren't loaded automatically, you are still welcome to click a link to separately view any linked content you are interested in!
+
+### No cross-site tracking
+
+As a consequence of the above, it is not generally possible for anyone outside of a site to track your path through it.
+
+A server can track your navigation through its own site(s) by your IP address. If you use a proxy, anonymized NAT (network-address translation), or an anonymizing network such as the TOR (The Onion Ring) network, the server cannot track you, because the client cannot send any identifying metadata.
+
+The obvious exception is that if you are using TLS certificate identities, the server can obviously track any content you fetch under that identity. Being tracked is, of course, the actual *point* of using an identity: so that the server can verify that you are the same person every time you use it. Regardless, no server can track what you do on some *other* server—at least, not without that server's explicit cooperation.
+
+### No doom-scrolling
+
+One URL visit = one page-fetch; no further content can be fetched without the user clicking a link.
+
+It _is_ possible (for some clients that support it) to stream content without a defined end, which is somewhat similar to "scrolled content", except that a typical website that provides the "doom-scrolling" experience will wish to detect when you are at or near the end of the content it has provided until now, so that it knows 
+
+### No preventing "Save As..." or "View Source"
+
+On the web, some sites will use scripts in an attempt to prevent right-clicking, and thereby prevent you from inspecting the page's raw source, or from downloading any embedded images to your local disk (where you might—gasp!—continue to view it without having to go through their platform!)
+
+On the SmolNet, there's no scripting, and there are no embedded images anyway, so there's no way to prevent downloads or views (and... not much content to prevent download of anyway).
+
+### No content hiding
+
+No scripting, so no article pages that teasingly let you see the content briefly, and then hide it by locking the scrollbar and popping up a subscription box you can't dismiss (without subscribing).
+
+In theory, a server could just serve an excerpt of the content, and then make you pay to see the rest... not much you can do about that technologically, though. At least they can't play "now you see it, now you don't!"
+
+### Know when you're leaving safety!
+
+Not all clients, but at least several, will clearly mark any non-SmolNet web links, by coloring them differently, or by using different symbols for various link types, so that you know if you are leaving the guarantees of the SmolNet for the uncertainties and complexity of the Web. (And, of course, there's no means for a SmolNet page to interfere with that.)
+
+## Not Impossible, But Absent
+
+There is nothing in the way of technology preventing the following kinds of behaviors, except the goodwill and principles of the community itself. But, they are nonetheless absent (as of the time of this writing, to the knowledge of the author). So long as this remains true, they constitute additional blessings that can't be depended upon, on the World-Wide Web.
+
+### Intrusive advertising (or, advertising)
+
+It would be possible to inject text-only advertising into page content. It would be particularly gross If such ads were to masquerade as legitimate content. It might be hard to avoid at least simple, clearly-marked text ads of any kind at all in the future, if the SmolNet achieves even a hundredth of the attention that the Web has. But it doesn't, and commercial ads are either non-existent, or nearly so.
+
+### Platform entrapment
+
+Out on the Web, it has become commonplace to build large, centralized platforms with attractive features and liberating, users-first policies, unencumbered by excessive advertising... only to later snap the trap-jaws shut when it's too late, and everybody's already there, and completely dependent on its conveniences. Then, they lock down the platform and tighten restrictions, become a firehose of advertisements, institute anti-user polices designed to keep you only on that platform, and minimize the opportunities to visit others, or sometimes even prohibit linking to them.
+
+Even the content that you're there for, will become less accessible, as they place obstacles between you, the user, and the content you're actually there for in the first place. After all, the more time you spend trying to get to the content, the more opportunities they will have to advertise at you, or otherwise leverage your attention.
+
+Nothing about the SmolNet prevents this from happening, apart from the collective intolerance of the community. But it hasn't happened yet.
+
+SmolNet can't prevent it happening. But a dogged unwillingness to participate in large, centralized platforms, and a strong preference for decentralized technologies, could!
 
 !include license.gmi
