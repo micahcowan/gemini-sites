@@ -1,4 +1,4 @@
-BUILD = /var/gemini/
+BUILD = build
 FAIL-SRC := $(shell find src/the.web-is.fail ! -type d | grep -v BITS)
 FAIL-OBJS := $(patsubst src/%,$(BUILD)/%,$(FAIL-SRC))
 
@@ -35,3 +35,5 @@ stamps/shizuka.space:
 
 clean:
 	rm -fr $(BUILD)/*/*
+# ^ Leave $(BUILD/$(SITENAME) around, in case build/ is symlinked to
+# /var/gemini, etc
