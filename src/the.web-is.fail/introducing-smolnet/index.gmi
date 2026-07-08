@@ -24,6 +24,11 @@ But just because I'm not abandoning the web, doesn't mean I don't want to apprec
 
 ...Wouldn't it be nice to spend at least some of my time in a hall where glass hasn't even been invented/discovered? I can always go back to the glass-ridden-but-flashier halls I'll always be dependent on... but it's very nice to spend time in a place where I can "crawl" to my heart's content, with the supreme confidence of knowing I'll never encounter the tinyest shard there.
 
+Read on to find out more about how the SmolNet saves you from the annoyances of the Web.
+
+Or, if you're already chomping at the bit to get started,
+=> /getting-started/ feel free to get started!
+
 # Anti-User Practices that SmolNet Solves
 
 ## Technologically Impossible (or Nearly)
@@ -40,7 +45,7 @@ There is no way for a server to send you any kind of metadata other than the act
 
 When retrieving a requested page, there is no way for your client (~browser) to be asked to also fetch other content for the page, such as CSS, scripts, or even images (which, sadly, have historically been used to track you across sites).
 
-This guarantee is specific to *some* protocols, such as Gemini and Spartan, and does not fully apply to Gopher (which can fetch GIF images, and via some extensions to the protocol, other image types as well). But in practice, Gopherholes don't do a lot of this.
+This guarantee is specific to *some* protocols, such as Gemini and Spartan, and does not fully apply to Gopher (which can fetch GIF images, and via some extensions to the protocol, other image types as well). But in practice, Gopherholes don't do a lot of this either.
 
 Even though images aren't loaded automatically, you are still welcome to click a link to separately view any linked content you are interested in!
 
@@ -62,7 +67,7 @@ It _is_ possible (for some clients that support it) to stream content without a 
 
 On the Web, some sites will use scripts in an attempt to prevent right-clicking, and thereby prevent you from inspecting the page's raw source, or from downloading any embedded images to your local disk (where you might—gasp!—continue to view it without having to go through their platform!)
 
-On the SmolNet, there's no scripting, and there are no embedded images anyway, so there's no way to prevent downloads or views (and... not much content to prevent download of anyway).
+On the SmolNet, there's no scripting, and there are no (automatically) embedded images anyway, so there's no way to prevent downloads or views (and... not much content to prevent download of anyway).
 
 ### No content hiding
 
