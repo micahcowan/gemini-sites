@@ -1,0 +1,3 @@
+Hello, quiet world!
+
+=> glog/
