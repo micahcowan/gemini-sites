@@ -46,17 +46,19 @@ stamps/shizuka.space-glog: $(SHIZ-GLOGDEX)
 	touch $@
 
 $(SHIZ-GLOGDEX): $(SHIZ-GLOGOBJ) Makefile bin/eval-template
+	printf '=> / /  Back to capsule home\n\n'>| $@.tmp
 	for article in $(SHIZ-GLOGOBJ); do \
 	    date=$${article%/index.gmi}; \
 	    date=$${date##*/}; \
 	    heading=$$(sed -ne '/^#/ { s/^#* //p; q; }' < $$article); \
 	    printf '=> %s/ %s - %s\n' "$$date" "$$date" "$$heading"; \
-	done >| $@.tmp
+	done >> $@.tmp
 	mv $@.tmp $@
 
-$(SHIZ-GLOGOBJ): $(BUILD)/shizuka.space/glog/%/index.gmi: src/shizuka.space/glog/%.gmi
+$(SHIZ-GLOGOBJ): $(BUILD)/shizuka.space/glog/%/index.gmi: src/shizuka.space/glog/%.gmi Makefile bin/eval-template
 	mkdir -p $(dir $@)
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
+	printf '\n=> / /  Back to capsule home\n=> .. ..  Back to /glog/\n' >> $@.tmp
 	mv $@.tmp $@
 
 .PHONY: clean
