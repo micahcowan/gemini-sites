@@ -23,8 +23,10 @@ And just maybe, like me, you're becoming more than a little bit tired of
 * The “doom scroll” and other techniques designed to stimulate addictive behaviors that keep you engaged on their platforms
 * Feed and search algorithms that are less efficient at actually getting you the content you want, so that you spend more time scrolling around amongst the ads
 * Pages that start blaring sound at you with no forewarning, the moment you interact with them
-* Absolutely everything begging, pleading, cheating, and manipulating you into spending your attention anywhere but where you wanted too
+* Absolutely everything begging, pleading, cheating, and manipulating you into spending your attention anywhere but where you wanted to
 * Non-existent privacy, where marketers and data miners know more about you than even you do
+
+Maybe you, too, are beginning to feel that your forays into the Web are draining your mental energy and your focus, drained by dribs and drabs at each encounter of the various obstacles and impediments that have become the standard price you pay, for the privilege to take part in the bounties of the Internet.
 
 !-=> /the-net-that-was/ The Internet That Was
 !-The internet we were once building, before it derailed

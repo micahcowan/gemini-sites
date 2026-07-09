@@ -74,7 +74,7 @@ A Super-Aggregator that automatically threads posts that refer to other posts
 
 Excellent starting-point guides that, of course, I only discovered after completing most of the content for this capsule.
 
-=> gemini://skyjake.fi/lagrange/getting_started.gmi skyjake's Getting Started
+=> gemini://skyjake.fi/lagrange/getting_started.gmi skyjake's Getting Started (on Gemini(/Lagrange))
 => gemini://geminiquickst.art/ GeminiQuickst.art
 
 !include license.gmi
