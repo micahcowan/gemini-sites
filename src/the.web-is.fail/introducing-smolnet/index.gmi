@@ -57,6 +57,12 @@ A server can track your navigation through its own site(s) by your IP address. I
 
 The obvious exception is that if you are using TLS certificate identities, the server can obviously track any content you fetch under that identity. Being tracked is, of course, the actual *point* of using an identity: so that the server can verify that you are the same person every time you use it. Regardless, no server can track what you do on some *other* server—at least, not without that server's explicit cooperation.
 
+### No "fingerprinting"
+
+Targeted advertising on the Web has never been more sophisticated, aggregating tiny, seemingly-insignificant points of data to form an identiy profile. Using things like what browser and OS you're using, small differences in how your browser behaves, little differences in how *you* behave, the set of fonts you have installed, etc, modern sites can still track you even if you've blocked cookies!
+
+None of this information is available to servers via Gopher, Gemini, or other SmolNet protocols—no fingerprinting on the Smolnet!
+
 ### No doom-scrolling
 
 One URL visit = one page-fetch; no further content can be fetched without the user clicking a link.
