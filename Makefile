@@ -34,6 +34,6 @@ stamps/shizuka.space:
 .PHONY: clean
 
 clean:
-	rm -fr $(BUILD)/*/*
+	rm -fr $(BUILD)/*/* stamps
 # ^ Leave $(BUILD/$(SITENAME) around, in case build/ is symlinked to
 # /var/gemini, etc
