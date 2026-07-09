@@ -1,11 +1,11 @@
-# Won't that be grand?
+# Won’t that be grand?
 
 Watching Tron (happy 44th birthday!).
 
 The following exchange, about 15m in, felt relevant to today.
 
-Walter: "Gotta expect some static. After all, computers are just machines. They can't think."
-Alan: "Some programs'll be thinking soon."
-Walter: (Chuckles) "Won't that be grand? Computers and the programs will start thinking and the people will stop."
+Walter: “Gotta expect some static. After all, computers are just machines. They can't think.”
+Alan: “Some programs'll be thinking soon.”
+Walter: (Chuckles) “Won't that be grand? Computers and the programs will start thinking and the people will stop.”
 
 tags: llm tron
