@@ -1,4 +1,15 @@
-# The Web Has Failed
+``` ascii-art logo (font)
+						    the.web-is.fail
+ _   _                        _            _           __      _ _ 
+| |_| |_  ___     __ __ _____| |__   ___  (_)___      / _|__ _(_) |
+|  _| ' \/ -_)  _ \ V  V / -_) '_ \ |___| | (_-<  _  |  _/ _` | | |
+ \__|_||_\___| (_) \_/\_/\___|_.__/       |_/__/ (_) |_| \__,_|_|_|
+
+		``the dash is in the middle''
+```
+
+
+# The Web Has Failed Us
 
 Perhaps not completely. But the current, often user-antagonistic incarnation of our would-be Internet utopia known as the World Wide Web, certainly leaves a fair bit to be desired, particularly where privacy or serenity is concerned.
 
@@ -10,6 +21,13 @@ Perhaps not completely. But the current, often user-antagonistic incarnation of 
 
 => /introducing-smolnet/ Introducing the SmolNet
 A refuge from overstimulation, hyperactivity, doom-scrolling, and battles for your attention
+
+!-=> /the-basics/ The Basics
+!-What You Should Know Before You Start
+!-^^ include terminology there!
+!-also edit the link to /getting-started/ within /introducing-smolnet/, to recommend this link before that.
+!-add links to the next area in order. From intro to basics, and from basics to getting-started
+!-add links to the front (here) from all pages
 
 => /getting-started/ Getting Started
 How and Where to Get Started on the SmolNet
