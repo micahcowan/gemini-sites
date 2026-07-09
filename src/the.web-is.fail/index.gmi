@@ -11,7 +11,20 @@
 
 # The Web Has Failed Us
 
-Perhaps not completely. But the current, often user-antagonistic incarnation of our would-be Internet utopia known as the World Wide Web, certainly leaves a fair bit to be desired, particularly where privacy or serenity is concerned.
+Don't get me wrong—Web technologies such as JavaScript, WebAssembly, HTML5 Canvas, and Web Audio, have placed tremendous power in the hands of website authors, and with them, some truly amazing, awe-inspiring applications have been built and deployed on the Web.
+
+...But that's exactly the problem. Because, while Web technology has enabled the creation of some very awesome things, that same technology allows site creators to also do some decidedly un-awesome things, too.
+
+And just maybe, like me, you're becoming more than a little bit tired of
+* The barrage of “Accept/Manage Your Cookies” boxes
+* Beginning to read an article, only to suddenly have a paywall blocking your view
+* Ads plastered absolutely everywhere you look
+* Sites that actively inhibit you from sharing links to their competitors' sites
+* The “doom scroll” and other techniques designed to stimulate addictive behaviors that keep you engaged on their platforms
+* Feed and search algorithms that are less efficient at actually getting you the content you want, so that you spend more time scrolling around amongst the ads
+* Pages that start blaring sound at you with no forewarning, the moment you interact with them
+* Absolutely everything begging, pleading, cheating, and manipulating you into spending your attention anywhere but where you wanted too
+* Non-existent privacy, where marketers and data miners know more about you than even you do
 
 !-=> /the-net-that-was/ The Internet That Was
 !-The internet we were once building, before it derailed
@@ -20,7 +33,7 @@ Perhaps not completely. But the current, often user-antagonistic incarnation of 
 !-Why "surfing the Web" no longer feels warm and inviting
 
 => /introducing-smolnet/ Introducing the SmolNet
-A refuge from overstimulation, hyperactivity, doom-scrolling, and battles for your attention
+A refuge from overstimulation, hyperactivity, doom-scrolling, and battles for your attention—a quiet place to read, and to engage with a community
 
 !-=> /the-basics/ The Basics
 !-What You Should Know Before You Start
