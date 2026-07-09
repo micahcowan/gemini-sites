@@ -24,7 +24,8 @@ class Templator:
             self.suppressing_empty = self.suppress_next_empty
             self.suppress_next_empty = False
 
-            line = line.strip()
+            while len(line) > 0 and (line[-1] == '\r' or line[-1] == '\n'):
+                line = line[:-1] # strip line terminator
             if len(line) > 0 and line[0] == '!':
                 self.process_directive(line[1:])
             else:
