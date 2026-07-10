@@ -1,7 +1,7 @@
 BUILD = build
 FAIL-SRC := $(shell find src/the.web-is.fail ! -type d | grep -v BITS)
 FAIL-OBJS := $(patsubst src/%,$(BUILD)/%,$(FAIL-SRC))
-SHIZ-STATIC-SRC := $(shell find src/shizuka.space ! -type d | grep -v BITS | grep -v glog/)
+SHIZ-STATIC-SRC := $(filter-out src/shizuka.space/index.gmi,$(shell find src/shizuka.space ! -type d | grep -v BITS | grep -v glog/))
 SHIZ-STATIC-OBJS := $(patsubst src/%,$(BUILD)/%,$(SHIZ-STATIC-SRC))
 SHIZ-GLOGSRC := $(shell find src/shizuka.space/glog ! -type d | grep -v BITS)
 SHIZ-GLOGOBJ := $(foreach obj,$(SHIZ-GLOGSRC),$(shell obj=$(obj); obj=build/$${obj#src/}; date=$${obj##*/}; date=$${date%.gmi}; date=$$(echo "$$date" | tr - /); echo "$(BUILD)/shizuka.space/glog/$${date}/index.gmi"))
@@ -39,7 +39,7 @@ stamps/the.web-is.fail: $(FAIL-OBJS)
 stamps/shizuka.space: stamps/shizuka.space-static stamps/shizuka.space-glog
 	touch $@
 
-stamps/shizuka.space-static: $(SHIZ-STATIC-OBJS)
+stamps/shizuka.space-static: $(BUILD)/shizuka.space/index.gmi $(SHIZ-STATIC-OBJS)
 	touch $@
 
 $(SHIZ-STATIC-OBJS): $(BUILD)/%.gmi: src/%.gmi src/shizuka.space/BITS/*.gmi Makefile bin/eval-template
@@ -47,18 +47,20 @@ $(SHIZ-STATIC-OBJS): $(BUILD)/%.gmi: src/%.gmi src/shizuka.space/BITS/*.gmi Make
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
 	mv $@.tmp $@
 
-stamps/shizuka.space-glog: $(SHIZ-GLOG-LATEST) $(SHIZ-GLOGOBJ)
+stamps/shizuka.space-glog: $(SHIZ-GLOGOBJ)
 
-$(SHIZ-GLOG-LATEST): $(SHIZ-GLOGOBJ) Makefile bin/eval-template
+#$(SHIZ-GLOG-LATEST): $(SHIZ-GLOGOBJ) Makefile bin/eval-template
+$(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Makefile bin/eval-template
 	mkdir -p $(dir $@)
-	printf '=> / /  Back to capsule home\n\n'>| $@.tmp
+	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
+	printf '\n###Latest glogs:\n\n' >> $@.tmp
 	for article in $(SHIZ-GLOGOBJ); do \
 	    target=$${article%index.gmi}; \
 	    target=$${target#$(BUILD)/shizuka.space/glog/}; \
 	    date=$${target%/}; \
 	    date=$$(echo "$$date" | tr / -); \
 	    heading=$$(sed -ne '/^#/ { s/^#* //p; q; }' < $$article); \
-	    printf '=> %s/ %s - %s\n' "../$$target" "$$date" "$$heading"; \
+	    printf '=> %s/ %s - %s\n' "/glog/$$target" "$$date" "$$heading"; \
 	done >> $@.tmp
 	mv $@.tmp $@
 
@@ -67,7 +69,7 @@ $(foreach target,$(SHIZ-GLOGOBJ),$(call make-shiz-glog-rule,$(target)))
 $(SHIZ-GLOGOBJ):
 	mkdir -p $(dir $@)
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
-	printf '\n=> /glog/latest/  Back to /glog/latest/\n=> / /  Back to capsule home\n' >> $@.tmp
+	printf '\n=> / /  Back to capsule home\n' >> $@.tmp
 	mv $@.tmp $@
 
 .PHONY: clean
