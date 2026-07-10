@@ -5,7 +5,7 @@ SHIZ-STATIC-SRC := $(shell find src/shizuka.space ! -type d | grep -v BITS | gre
 SHIZ-STATIC-OBJS := $(patsubst src/%,$(BUILD)/%,$(SHIZ-STATIC-SRC))
 SHIZ-GLOGSRC := $(shell find src/shizuka.space/glog ! -type d | grep -v BITS)
 SHIZ-GLOGOBJ := $(foreach obj,$(SHIZ-GLOGSRC),$(shell obj=$(obj); obj=build/$${obj#src/}; date=$${obj##*/}; date=$${date%.gmi}; date=$$(echo "$$date" | tr - /); echo "$(BUILD)/shizuka.space/glog/$${date}/index.gmi"))
-SHIZ-GLOGDEX := $(BUILD)/shizuka.space/glog/index.gmi
+SHIZ-GLOG-LATEST := $(BUILD)/shizuka.space/glog/latest/index.gmi
 
 define make-shiz-glog-rule
 $(1): $(call make-shiz-glog-src,$(1)) Makefile bin/eval-template
@@ -47,9 +47,10 @@ $(SHIZ-STATIC-OBJS): $(BUILD)/%.gmi: src/%.gmi src/shizuka.space/BITS/*.gmi Make
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
 	mv $@.tmp $@
 
-stamps/shizuka.space-glog: $(SHIZ-GLOGDEX)
+stamps/shizuka.space-glog: $(SHIZ-GLOG-LATEST) $(SHIZ-GLOGOBJ)
 
-$(SHIZ-GLOGDEX): $(SHIZ-GLOGOBJ) Makefile bin/eval-template
+$(SHIZ-GLOG-LATEST): $(SHIZ-GLOGOBJ) Makefile bin/eval-template
+	mkdir -p $(dir $@)
 	printf '=> / /  Back to capsule home\n\n'>| $@.tmp
 	for article in $(SHIZ-GLOGOBJ); do \
 	    target=$${article%index.gmi}; \
@@ -57,7 +58,7 @@ $(SHIZ-GLOGDEX): $(SHIZ-GLOGOBJ) Makefile bin/eval-template
 	    date=$${target%/}; \
 	    date=$$(echo "$$date" | tr / -); \
 	    heading=$$(sed -ne '/^#/ { s/^#* //p; q; }' < $$article); \
-	    printf '=> %s/ %s - %s\n' "$$target" "$$date" "$$heading"; \
+	    printf '=> %s/ %s - %s\n' "../$$target" "$$date" "$$heading"; \
 	done >> $@.tmp
 	mv $@.tmp $@
 
@@ -66,7 +67,7 @@ $(foreach target,$(SHIZ-GLOGOBJ),$(call make-shiz-glog-rule,$(target)))
 $(SHIZ-GLOGOBJ):
 	mkdir -p $(dir $@)
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
-	printf '\n=> / /  Back to capsule home\n=> /glog/  Back to /glog/\n' >> $@.tmp
+	printf '\n=> /glog/latest/  Back to /glog/latest/\n=> / /  Back to capsule home\n' >> $@.tmp
 	mv $@.tmp $@
 
 .PHONY: clean
