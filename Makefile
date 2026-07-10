@@ -2,10 +2,15 @@ BUILD = build
 FAIL-SRC := $(shell find src/the.web-is.fail ! -type d | grep -v BITS)
 FAIL-OBJS := $(patsubst src/%,$(BUILD)/%,$(FAIL-SRC))
 SHIZ-STATIC-SRC := $(shell find src/shizuka.space ! -type d | grep -v BITS | grep -v glog/)
-SHIZ-GLOGSRC := $(shell find src/shizuka.space/glog ! -type d | grep -v BITS)
 SHIZ-STATIC-OBJS := $(patsubst src/%,$(BUILD)/%,$(SHIZ-STATIC-SRC))
-SHIZ-GLOGOBJ := $(foreach file,$(SHIZ-GLOGSRC),$(shell file=$(file); file=build/$${file#src/}; file=$${file%.gmi}/index.gmi; echo $$file))
+SHIZ-GLOGSRC := $(shell find src/shizuka.space/glog ! -type d | grep -v BITS)
+SHIZ-GLOGOBJ := $(foreach obj,$(SHIZ-GLOGSRC),$(shell obj=$(obj); obj=build/$${obj#src/}; date=$${obj##*/}; date=$${date%.gmi}; date=$$(echo "$$date" | tr - /); echo "$(BUILD)/shizuka.space/glog/$${date}/index.gmi"))
 SHIZ-GLOGDEX := $(BUILD)/shizuka.space/glog/index.gmi
+
+define make-shiz-glog-rule
+$(1): $(call make-shiz-glog-src,$(1)) Makefile bin/eval-template
+endef
+make-shiz-glog-src = $(shell date=$1; date=$${date#$(BUILD)/shizuka.space/glog/}; date=$${date%/index.gmi}; date=$$(echo "$$date" | tr / -); echo "src/shizuka.space/glog/$${date}.gmi")
 
 all: stamps/sites
 
@@ -43,22 +48,25 @@ $(SHIZ-STATIC-OBJS): $(BUILD)/%.gmi: src/%.gmi src/shizuka.space/BITS/*.gmi Make
 	mv $@.tmp $@
 
 stamps/shizuka.space-glog: $(SHIZ-GLOGDEX)
-	touch $@
 
 $(SHIZ-GLOGDEX): $(SHIZ-GLOGOBJ) Makefile bin/eval-template
 	printf '=> / /  Back to capsule home\n\n'>| $@.tmp
 	for article in $(SHIZ-GLOGOBJ); do \
-	    date=$${article%/index.gmi}; \
-	    date=$${date##*/}; \
+	    target=$${article%index.gmi}; \
+	    target=$${target#$(BUILD)/shizuka.space/glog/}; \
+	    date=$${target%/}; \
+	    date=$$(echo "$$date" | tr / -); \
 	    heading=$$(sed -ne '/^#/ { s/^#* //p; q; }' < $$article); \
-	    printf '=> %s/ %s - %s\n' "$$date" "$$date" "$$heading"; \
+	    printf '=> %s/ %s - %s\n' "$$target" "$$date" "$$heading"; \
 	done >> $@.tmp
 	mv $@.tmp $@
 
-$(SHIZ-GLOGOBJ): $(BUILD)/shizuka.space/glog/%/index.gmi: src/shizuka.space/glog/%.gmi Makefile bin/eval-template
+$(foreach target,$(SHIZ-GLOGOBJ),$(call make-shiz-glog-rule,$(target)))
+
+$(SHIZ-GLOGOBJ):
 	mkdir -p $(dir $@)
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
-	printf '\n=> / /  Back to capsule home\n=> .. ..  Back to /glog/\n' >> $@.tmp
+	printf '\n=> / /  Back to capsule home\n=> /glog/  Back to /glog/\n' >> $@.tmp
 	mv $@.tmp $@
 
 .PHONY: clean
