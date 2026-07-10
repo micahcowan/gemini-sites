@@ -62,6 +62,7 @@ $(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Ma
 	    heading=$$(sed -ne '/^#/ { s/^#* //p; q; }' < $$article); \
 	    printf '=> %s/ %s - %s\n' "/glog/$$target" "$$date" "$$heading"; \
 	done >> $@.tmp
+	printf '\n--\n=> mailto:kado@shizuka.space\n' >> $@.tmp
 	mv $@.tmp $@
 
 $(foreach target,$(SHIZ-GLOGOBJ),$(call make-shiz-glog-rule,$(target)))
@@ -70,6 +71,7 @@ $(SHIZ-GLOGOBJ):
 	mkdir -p $(dir $@)
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
 	printf '\n=> / /  Back to capsule home\n' >> $@.tmp
+	printf '\n--\n=> mailto:kado@shizuka.space\n' >> $@.tmp
 	mv $@.tmp $@
 
 .PHONY: clean
