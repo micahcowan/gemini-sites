@@ -28,14 +28,32 @@ And just maybe, like me, you're becoming more than a little bit tired of
 
 Maybe you, too, are beginning to feel that your forays into the Web are draining your mental energy and your focus, drained by dribs and drabs at each encounter of the various obstacles and impediments that have become the standard price you pay, for the privilege to take part in the bounties of the Internet.
 
+Of course, a site author can simply choose to forego these things. Not use cookies, adhere to a strictly text-oriented, undistracted, unobtrusive style. The problem is, as a user, there's no way to know whether a site will be one that extracts that mental tax, or one that doesn't.
+
+And, even once you've identified that a website has been constructed in a friendly manner, you have no way of knowing that any links found on that website, will also be to friendly sites.
+
+And even if a website author has staunchly refused to provide any links to un-friendly sites, there's nothing stoppoing any of those sites from _becoming_ unfriendly at a later date.
+
+# Enter the SmolNet
+
+The small internet, affectionately dubbed SmolNet, is a series of sites, built not on the Web technologies of HTTP(S) and HTML, but on protocols and text formats that are deliberately simple and “unpowerful”. They don't do any of those bothersome things mentioned above, because they are literally incapable of supporting them. In fact, the primary SmolNet protocols only really support two kinds of content, at their core: text, and links!
+
+Not only that, but these protocols provide no way for either the server or the client to send each other anything but “I want resource X,” and “Okay, here is resource X.” There is no metadata sent, except what the type of the content is, no HTTP Headers or any kind of equivalent, and the protocols are designed for it to be impractical-to-impossible for anyone to try to add such things to the protocol later on.
+
+As a consequence, not only can you be absolutely certain that the site you are visiting will not unexpectedly annoy or distract you in the ways we just covered, but you can also be sure that any sites linked to will _also_ be simple in nature, provided they are links that also use SmolNet protocols. And, fortunately, many of the clients (~browsers) that speak them, will mark SmolNet links very differently from non-SmolNet ones, so that it's always very obvious if you're about to leave the safety and simplicity guarantees—because your “browser” has marked out the safe and the unsafe paths.
+
+The SmolNet is primarily for people who want to be reading. That is what you'll be doing with the bulk of the content available on the SmolNet—and while you are reading, you will be doing little else, because little else is possible on most pages.
+
+There are games, there is art, there is music, there are “applications”. But the art never loads unless you asked for it, the music never plays unless you clicked for it, and all the apps and games are governed by a simple rule: nothing can ever change in the page you're viewing—once you've loaded the page, the content is stable, until you click a link to reload the page, or to visit another. There is no “dynamic content” on the SmolNet, and that is what prevents much of the annoyances of the modern Web.
+
 !-=> /the-net-that-was/ The Internet That Was
 !-The internet we were once building, before it derailed
 
 !-=> /not-our-friend/ Why The Web Is No Longer Our Friend
 !-Why "surfing the Web" no longer feels warm and inviting
 
-=> /introducing-smolnet/ Introducing the SmolNet
-A refuge from overstimulation, hyperactivity, doom-scrolling, and battles for your attention—a quiet place to read, and to engage with a community
+!-=> /introducing-smolnet/ Introducing the SmolNet
+!-A refuge from overstimulation, hyperactivity, doom-scrolling, and battles for your attention—a quiet place to read, and to engage with a community
 
 !-=> /the-basics/ The Basics
 !-What You Should Know Before You Start
@@ -44,8 +62,9 @@ A refuge from overstimulation, hyperactivity, doom-scrolling, and battles for yo
 !-add links to the next area in order. From intro to basics, and from basics to getting-started
 !-add links to the front (here) from all pages
 
-=> /getting-started/ Getting Started
-How and Where to Get Started on the SmolNet
+# Let's Get Started!
+
+=> /getting-started/ How to Get Started on SmolNet
 
 !-History of Gopher and Gemini?
 
