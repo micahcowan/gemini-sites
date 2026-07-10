@@ -54,3 +54,5 @@ In general, Gopher sites (often known as "gopherholes"), do not have logins, or 
 For Gemini sites (often known as "capsules", or "gemcaps"), logins do exist on some sites, but logging in with a username and password, though commonplace on the Web, is unusual in geminispace. Instead, since Gemini requires TLS-encrypted connections at all times, it is typical for users to identify themselves by using a specific TLS client certificate, often known as “identities”. Many Gemini clients offer the ability to create and manage these.
 
 Just as, if you use an in-browser password manager and try to login using a friend's or a public Web browser, you won't be able to (unless you remember the password—but memorizable passwords are usually insecure!), in the same way, if you try to log into a gemcap on a different browser (perhaps just even on a different device that you own), you'll find that you cannot, unless you first transfer your identity's certificate and private key (never, ever share that to others or to any site!) to the client on the other device.
+
+!include license.gmi
