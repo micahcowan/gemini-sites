@@ -49,15 +49,6 @@ There are games, there is art, there is music, there are “applications”. But
 => /anti-user/ Anti-User Practices, Solved by the SmolNet
 For more details on anti-user behaviors that the SmolNet saves you from, and how it does so
 
-!-=> /the-net-that-was/ The Internet That Was
-!-The internet we were once building, before it derailed
-
-!-=> /not-our-friend/ Why The Web Is No Longer Our Friend
-!-Why "surfing the Web" no longer feels warm and inviting
-
-!-=> /introducing-smolnet/ Introducing the SmolNet
-!-A refuge from overstimulation, hyperactivity, doom-scrolling, and battles for your attention—a quiet place to read, and to engage with a community
-
 # Before You Start
 
 Before you get started, you should probably know a couple of things first, so they don't surprise or confuse you.
@@ -117,16 +108,7 @@ Just as, if you use an in-browser password manager and try to login using a frie
 
 # Let's Get Started!
 
-!-=> /the-basics/ The Basics
-!-What you should probably know before you start
-!-^^ include terminology there!
-!-also edit the link to /getting-started/ within /introducing-smolnet/, to recommend this link before that.
-!-add links to the next area in order. From intro to basics, and from basics to getting-started
-!-add links to the front (here) from all pages
-
 => /getting-started/ Getting Started
 How to get started on SmolNet
-
-!-History of Gopher and Gemini?
 
 !include license.gmi
