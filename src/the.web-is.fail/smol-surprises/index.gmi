@@ -66,13 +66,13 @@ Some disadvantages include:
 
 In general, Gopher sites (often known as “gopherholes”), do not have logins, or any user-specific content. It is not intended for servers to maintain any client state—only to respond to requests and queries.
 
-For Gemini sites (often known as “capsules”, or “gemcaps”), logins do exist on some sites, but logging in with a username and password, though commonplace on the Web, is unusual in geminispace. Instead, since Gemini requires TLS-encrypted connections at all times, it is typical for users to identify themselves by using a specific TLS client certificate, often known as “identities”. Many Gemini clients offer the ability to create and manage these.
+For Gemini sites (often known as “capsules”, or “gemcaps”), logins do exist on some sites, but logging in with a username and password, though commonplace on the web, is unusual in geminispace. Instead, since Gemini requires TLS-encrypted connections at all times, it is typical for users to identify themselves by using a specific TLS client certificate, often known as “identities”. Many Gemini clients offer the ability to create and manage these.
 
-Just as, if you use an in-browser password manager and try to login using a friend’s or a public Web browser, you won’t be able to (unless you remember the password—but memorizable passwords are usually insecure!), in the same way, if you try to log into a gemcap on a different browser (perhaps just even on a different device that you own), you’ll find that you cannot, unless you first transfer your identity’s certificate and private key (never, ever share that to others or to any site!) to the client on the other device.
+Just as, if you use an in-browser password manager and try to login using a friend’s or a public web browser, you won’t be able to (unless you remember the password—but memorizable passwords are usually insecure!), in the same way, if you try to log into a gemcap on a different browser (perhaps just even on a different device that you own), you’ll find that you cannot, unless you first transfer your identity’s certificate and private key (never, ever share that to others or to any site!) to the client on the other device.
 
 ## Understanding Gopher links
 
-With both the HTTP Web protocol, and the Gemini SmolNet protocol, you ask for a resource, and when the server sends you that resource, it will also include information about what _kind_ of resource it is (the “Content-Type”).
+With both the HTTP web protocol, and the Gemini SmolNet protocol, you ask for a resource, and when the server sends you that resource, it will also include information about what _kind_ of resource it is (the “Content-Type”).
 
 The Gopher protocol (another SmolNet protocol), does not work this way: the server does not tell you what kind of resource it is, at the time that you are fetching it; instead, the *link* to that resource will contain that information. It is therefore necessary for Gopher _links_ to include information about what kind of thing you will be fetching, _in_ the link.
 

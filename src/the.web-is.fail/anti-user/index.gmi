@@ -28,7 +28,7 @@ The obvious exception is that if you are using TLS certificate identities, the s
 
 ### No “fingerprinting”
 
-Targeted advertising on the Web has never been more sophisticated, aggregating tiny, seemingly-insignificant points of data to form an identiy profile. Using things like what browser and OS you’re using, small differences in how your browser behaves, little differences in how *you* behave, the set of fonts you have installed, etc, modern sites can still track you even if you’ve blocked cookies!
+Targeted advertising on the web has never been more sophisticated, aggregating tiny, seemingly-insignificant points of data to form an identiy profile. Using things like what browser and OS you’re using, small differences in how your browser behaves, little differences in how *you* behave, the set of fonts you have installed, etc, modern sites can still track you even if you’ve blocked cookies!
 
 None of this information is available to servers via Gopher, Gemini, or other SmolNet protocols—no fingerprinting on the Smolnet!
 
@@ -40,7 +40,7 @@ It _is_ possible (for some clients that support it) to stream content without a 
 
 ### No preventing “Save As...” or “View Source”
 
-On the Web, some sites will use scripts in an attempt to prevent right-clicking, and thereby prevent you from inspecting the page’s raw source, or from downloading any embedded images to your local disk (where you might—gasp!—continue to view it without having to go through their platform!)
+On the web, some sites will use scripts in an attempt to prevent right-clicking, and thereby prevent you from inspecting the page’s raw source, or from downloading any embedded images to your local disk (where you might—gasp!—continue to view it without having to go through their platform!)
 
 On the SmolNet, there’s no scripting, and there are no (automatically) embedded images anyway, so there’s no way to prevent downloads or views (and... not much content to prevent download of anyway).
 
@@ -60,11 +60,11 @@ There is nothing in the way of technology preventing the following kinds of beha
 
 ### Intrusive advertising (or, advertising)
 
-It would be possible to inject text-only advertising into page content. It would be particularly gross If such ads were to masquerade as legitimate content. It might be hard to avoid at least simple, clearly-marked text ads of any kind at all in the future, if the SmolNet achieves even a hundredth of the attention that the Web has. But it doesn’t, and commercial ads are either non-existent, or nearly so.
+It would be possible to inject text-only advertising into page content. It would be particularly gross If such ads were to masquerade as legitimate content. It might be hard to avoid at least simple, clearly-marked text ads of any kind at all in the future, if the SmolNet achieves even a hundredth of the attention that the web has. But it doesn’t, and commercial ads are either non-existent, or nearly so.
 
 ### Platform entrapment
 
-Out on the Web, it has become commonplace to build large, centralized platforms with attractive features and liberating, users-first policies, unencumbered by excessive advertising... only to later snap the trap-jaws shut when it’s too late, and everybody’s already there, and completely dependent on its conveniences. Then, they lock down the platform and tighten restrictions, become a firehose of advertisements, institute anti-user polices designed to keep you only on that platform, and minimize the opportunities to visit others, or sometimes even prohibit linking to them.
+Out on the web, it has become commonplace to build large, centralized platforms with attractive features and liberating, users-first policies, unencumbered by excessive advertising... only to later snap the trap-jaws shut when it’s too late, and everybody’s already there, and completely dependent on its conveniences. Then, they lock down the platform and tighten restrictions, become a firehose of advertisements, institute anti-user polices designed to keep you only on that platform, and minimize the opportunities to visit others, or sometimes even prohibit linking to them.
 
 Even the content that you’re there for, will become less accessible, as they place obstacles between you, the user, and the content you’re actually there for in the first place. After all, the more time you spend trying to get to the content, the more opportunities they will have to advertise at you, or otherwise leverage your attention.
 

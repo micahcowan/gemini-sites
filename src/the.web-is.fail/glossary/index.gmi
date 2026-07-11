@@ -13,7 +13,7 @@ The term “gemcap”, then, is also used to unambiguously refer to a Gemini cap
 
 ### client
 
-Anything that accesses a SmolNet server (also used more broadly for anything that accesses any kind of server). Often refers to a “browser” or “viewer”; these terms do not appear to be in wide use in the SmolNet community, where client is the usual term, and browser tends to be specific to clients that access Web protocols such as HTTP(S).
+Anything that accesses a SmolNet server (also used more broadly for anything that accesses any kind of server). Often refers to a “browser” or “viewer”; these terms do not appear to be in wide use in the SmolNet community, where client is the usual term, and browser tends to be specific to clients that access web protocols such as HTTP(S).
 
 Can also refer to any program, including bots, spiders or automated tools, that access a server (not just “browsers” or browser-like programs)
 

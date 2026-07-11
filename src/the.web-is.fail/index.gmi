@@ -11,9 +11,9 @@
 
 # The Web Has Failed Us
 
-Don’t get me wrong—Web technologies such as JavaScript, WebAssembly, HTML5 Canvas, and Web Audio, have placed tremendous power in the hands of website authors, and with them, some truly amazing, awe-inspiring applications have been built and deployed on the Web.
+Don’t get me wrong—web technologies such as JavaScript, WebAssembly, HTML5 Canvas, and Web Audio, have placed tremendous power in the hands of website authors, and with them, some truly amazing, awe-inspiring applications have been built and deployed on the Web.
 
-...But that’s exactly the problem. Because, while Web technology has enabled the creation of some very awesome things, that same technology allows site creators to also do some decidedly un-awesome things, too.
+...But that’s exactly the problem. Because, while web technology has enabled the creation of some very awesome things, that same technology allows site creators to also do some decidedly un-awesome things, too.
 
 And just maybe, like me, you’re becoming more than a little bit tired of
 * The barrage of “Accept/Manage Your Cookies” boxes
@@ -26,7 +26,7 @@ And just maybe, like me, you’re becoming more than a little bit tired of
 * Absolutely everything begging, pleading, cheating, and manipulating you into spending your attention anywhere but where you wanted to
 * Non-existent privacy, where marketers and data miners know more about you than even you do
 
-Maybe you, too, are beginning to feel that your forays into the Web are draining your mental energy and your focus, drained by dribs and drabs at each encounter of the various obstacles and impediments that have become the standard price you pay, for the privilege to take part in the bounties of the Internet.
+Maybe you, too, are beginning to feel that your forays into the web are draining your mental energy and your focus, drained by dribs and drabs at each encounter of the various obstacles and impediments that have become the standard price you pay, for the privilege to take part in the bounties of the Internet.
 
 Of course, a site author can simply choose to forego these things. Not use cookies, adhere to a strictly text-oriented, undistracted, unobtrusive style. The problem is, as a user, there’s no way to know whether a site will be one that extracts that mental tax, or one that doesn’t.
 
@@ -36,7 +36,7 @@ And even if a website author has staunchly refused to provide any links to un-fr
 
 # Enter the SmolNet
 
-The small internet, affectionately dubbed SmolNet, is a series of sites, built not on the Web technologies of HTTP(S) and HTML, but on protocols and text formats that are deliberately simple and “unpowerful” (specifically, Gopher, and Gemini). They don’t do any of those bothersome things mentioned above, because they are literally incapable of supporting them. In fact, the primary SmolNet protocols only really support two kinds of content, at their core: text, and links!
+The small internet, affectionately dubbed SmolNet, is a series of sites, built not on the web technologies of HTTP(S) and HTML, but on protocols and text formats that are deliberately simple and “unpowerful” (specifically, Gopher, and Gemini). They don’t do any of those bothersome things mentioned above, because they are literally incapable of supporting them. In fact, the primary SmolNet protocols only really support two kinds of content, at their core: text, and links!
 
 Not only that, but these protocols provide no way for either the server or the client to send each other anything but “I want resource X,” and “Okay, here is resource X.” There is no metadata sent, except what the type of the content is, no HTTP Headers or any kind of equivalent, and the protocols are designed for it to be impractical-to-impossible for anyone to try to add such things to the protocol later on.
 
@@ -44,7 +44,7 @@ As a consequence, not only can you be absolutely certain that the site you are v
 
 The SmolNet is primarily for people who want to be reading. That is what you’ll be doing with the bulk of the content available on the SmolNet—and while you are reading, you will be doing little else, because little else is possible on most pages.
 
-There are games, there is art, there is music, there are “applications”. But the art never loads unless you asked for it, the music never plays unless you clicked for it, and all the apps and games are governed by a simple rule: nothing can ever change in the page you’re viewing—once you’ve loaded the page, the content is stable, until you click a link to reload the page, or to visit another. There is no “dynamic content” on the SmolNet, and that is what prevents much of the annoyances of the modern Web.
+There are games, there is art, there is music, there are “applications”. But the art never loads unless you asked for it, the music never plays unless you clicked for it, and all the apps and games are governed by a simple rule: nothing can ever change in the page you’re viewing—once you’ve loaded the page, the content is stable, until you click a link to reload the page, or to visit another. There is no “dynamic content” on the SmolNet, and that is what prevents much of the annoyances of the modern web.
 
 => /anti-user/ Anti-User Practices, Solved by the SmolNet
 For more details on anti-user behaviors that the SmolNet saves you from, and how it does so

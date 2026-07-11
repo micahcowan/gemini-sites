@@ -11,17 +11,17 @@ What else does using a SmolNet client buy you? Depending on the client’s capab
 * As mentioned above, you can generate manage TLS-cert identities for logging in
 * Won’t burden the portal server
 * You can still surf the SmolNet even if the portal site goes down
-* The relief of knowing that so long as you stay in the client, that nasty Web can’t harm you (but only if using a client with no web protocol support)
+* The relief of knowing that so long as you stay in the client, that nasty web can’t harm you (but only if using a client with no web protocol support)
 
 I recommend Lagrange, which
 * is available on multiple platforms,
-* supports a large number of SmolNet protocols (including Gopher, Gemini, Titan, Spartan), but not Web protocols,
+* supports a large number of SmolNet protocols (including Gopher, Gemini, Titan, Spartan), but not web protocols,
 * can generate/manage TLS-certificate identities/logins,
 * can manage subscription feeds to any updates to your favorite capsules,
 * will generate a table of contents, for navigation convenience,
 * generates a unique theme/appearance for each capsule,
 * supports the Titan protocol for posting, uploading, and editing content (depends on the capsule’s support for these features)
-* clearly distinguishes between SmolNet and Web hyperlinks, and
+* clearly distinguishes between SmolNet and web hyperlinks, and
 * uses (some) familiar keybindings from common web browsers
 
 Here are a handful of links to clients you might try:
