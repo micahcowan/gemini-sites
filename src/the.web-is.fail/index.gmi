@@ -65,6 +65,9 @@ If you'd like to know more details about most of these notes, see
 
 # Let's Get Started!
 
+=> /glossary/ A Glossary of SmolNet Terms
+Possibly-unfamiliar terminology you may encounter on the SmolNet
+
 => /getting-started/ Getting Started
 How to get started on SmolNet
 

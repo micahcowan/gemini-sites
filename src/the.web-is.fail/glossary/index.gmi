@@ -1,0 +1,96 @@
+# A Glossary of SmolNet Terms
+
+See also:
+=> gemini://geminiprotocol.net/docs/faq.gmi The Gemini Project FAQ
+
+### capsule
+
+A site served via the Gemini protocol. The Gemini equivalent of a “website” or “gopherhole”.
+
+The Gemini Project's FAQ defines capsule as referring specifically to a Gemini site, but in practice it also sees use more generally, referring to a site on the SmolNet, especially if served via a protocol that is alternative to either Gemini or Gopher (Spartan, for example).
+
+The term “gemcap”, then, is also used to unambiguously refer to a Gemini capsule, specifically.
+
+### client
+
+Anything that accesses a SmolNet server (also used more broadly for anything that accesses any kind of server). Often refers to a "browser" or "viewer"; these terms do not appear to be in wide use in the SmolNet community, where client is the usual term, and browser tends to be specific to clients that access Web protocols such as HTTP(S).
+
+Can also refer to any program, including bots, spiders or automated tools, that access a server (not just “browsers” or browser-like programs)
+
+### gemcap
+
+A site served via the Gemini protocol. The Gemini equivalent of a “website” or “gopherhole”.
+
+### gemlog
+
+The Gemini equivalent of “blog” on the web (which is short for “weblog”, or of “phlog” in gopherspace.
+
+### geminaut
+
+A user in geminispace. Or: a user accessing a server via the Gemini protocol.
+
+### Gemini
+
+Together with Gopher, one of the two primary SmolNet protocols. Probably the faster-spreading of the two, currently, as it is more directly associated with the notion of the SmolNet. Compared with Gopher, it adds the requirement that all connections be encrypted, adds a very limited quantity of text-formatting markup, and relies on the server to describe the type of content that is being returned. (In contrast, content types in Gopher are dictated within the link you followed.)
+
+=> gemini://geminiprotocol.net The Gemini Project (Gemini Protocol & the Gemtext format)
+
+### geminispace
+
+That assembly of capsules, or the section of the internet, that can be accessed via the Gemini protocol.
+
+Not to be confused with the GeminiSpace BBS, which is the name of a specific capsule. Geminispace, as generally used, is a term for all gemcaps combined, and not just that one particular site.
+
+=> gemini://bbs.geminispace.org/ GeminiSpace BBS
+
+### gemtext
+
+The file format used for creating “pages”
+
+Gemini, and the gemtext format, were based on, and heavily inspired by, the Gopher protocol, and its index format. Gemini was aimed at being "a little bit more" than Gopher, as opposed to being "less than" HTTP (even though, currently, that may be one of its higher selling-points).
+
+This may go some way toward explaining why certain features (such as hypertext links within a line or paragraph, or bold/italic (or strong/emphasized) formatting), are missing from this format, despite them being fairly useful, and relatively easy to implement.
+
+### glog
+
+See “gemlog”.
+
+### Gopher
+
+Together with Gemini, one of the two primary SmolNet protocols. The more mature and time-tested of the two
+
+=> /rfcs/rfc1436.txt The Gopher Protocol (RFC 1436)
+
+### gopherhole
+
+The equivalent of a “website”, but using the Gopher protocol.
+
+### gopherspace
+
+The total collective of gopherholes, or, the section of the internet which can be accessed via the Gopher protocol.
+
+### phlog
+
+The Gemini equivalent of “blog” on the web (which is short for “weblog”, or of “gemlog” or “glog” in geminispace. Short for “gopherlog”.
+
+### Spartan
+
+A lesser SmolNet protocol, not terribly common. It is extremely similar to the Gemini protocol, and like it, primarily serves gemtext documents.
+
+Its primary distinguishing features are that
+* like Gopher, it does not use TLS encryption, but is served through direct TCP, and
+* like Gopher, but unlike Gemini, following a link that requires the user to respond to an input query, is indicated via the hyperlink itself, and does not require the server to issue with a dedicated status code
+
+=> spartan://spartan.mozz.us/ The Spartan Protocol Home
+
+### Titan
+
+A complementary protocol to Gemini for writing, editing, or uploading content. The Titan protocol, when supported, is served on the same TCP port as the Gemini protocol. The client sends a request line whose syntax is distinguishable from a Gemini request.
+
+=> gemini://transjovian.org/titan/The%20Titan%20Specification The Titan Protocol Specification
+
+### TOFU
+
+“Trust On First Use”, for TLS authentication. Refers to the recommendation that Gemini-protocol clients adopt the practice that, on first encounter of a server, a server's self-signed certificate be considered valid, and only flag a server as potentially malicious, if it later changes certificates. This is an alternative practice to the one demanded by HTTPS-protocol servers: that the certificate must not be self-signed, but instead signed by a duly-authorized Certificate Authority.
+
+!include license.gmi

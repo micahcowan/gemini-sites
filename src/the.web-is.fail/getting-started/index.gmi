@@ -4,7 +4,7 @@ Want to start exploring the SmolNet, but haven't a clue where to start? This pag
 
 This page covers what equipment you need, and points you at some useful search engines and other starting points.
 
-!- TODO: Terminology (separate link) (gemspace, capsule, gemcap, gopherhole, glog, phlog, etc - be sure to differentiate between geminispace, and geminispace.org or whatever)
+=> /glossary/ See also this glossary of SmolNet terms you may find useful.
 
 !-=> [web-failure link] What is SmolNet, and why should I care?
 
