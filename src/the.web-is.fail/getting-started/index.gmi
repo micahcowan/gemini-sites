@@ -14,8 +14,8 @@ This page covers what equipment you need, and points you at some useful search e
 
 If you're just testing the waters, then it's probably easiest to use your preferred web browser, together with a web portal that can translate between the Web and the SmolNet protocols (Gopher, Gemini, etc).
 
-=> http://portal.mozz.us/ (Gemini, Spartan, Gopher...)
-=> https://gopherproxy.meulie.net/ (Gopher only)
+=> http://portal.mozz.us/ portal.mozz.us (Gemini, Spartan, Gopher...)
+=> https://gopherproxy.meulie.net/ gopherproxy.meulie.net (Gopher only)
 !- TODO: more portal links. Does geminiprotocol.net have some?
 
 ## Clients (Browsers... but not of the Web)
@@ -44,10 +44,9 @@ Searching for content about something? Try one of these!
 
 Servers with personal sites for a multitude of different users. Like GeoCities of old!
 
-=> gemini://sdf.org/ The Super Dimension Fortress (SDF) - Gemini
-=> gopher://sdf.org/1/ The Super Dimension Fortress (SDF) - Gopher
 => gemini://tilde.team/ Tilde Team - Gemini
 => gopher://tilde.team/1/ Tilde Team - Gopher
+=> gopher://sdf.org/1/ The Super Dimension Fortress (SDF) - Gopher
 => gemini://tilde.team/~khuxkm/leo/ khuxkm's LEO
 
 ## Bulletin Boards (BBS)
@@ -76,5 +75,12 @@ Excellent starting-point guides that, of course, I only discovered after complet
 
 => gemini://skyjake.fi/lagrange/getting_started.gmi skyjake's Getting Started (on Gemini(/Lagrange))
 => gemini://geminiquickst.art/ GeminiQuickst.art
+
+## Protocol Details
+
+=> /rfcs/rfc1436.txt The Gopher Protocol (RFC 1436)
+=> gemini://geminiprotocol.net The Gemini Project (Gemini Protocol & the Gemtext format)
+=> gemini://transjovian.org/titan/The%20Titan%20Specification The Titan Protocol Specification (served on the same port as Gemini protocol, alongside it)
+=> spartan://spartan.mozz.us/ The Spartan Protocol (extremely Gemini-like, but no TLS)
 
 !include license.gmi
