@@ -53,12 +53,15 @@ For more details on anti-user behaviors that the SmolNet saves you from, and how
 
 Before you get started, you should probably know a few of things first, so they don't surprise or confuse you.
 
-* There are no inline hypertext—all links are on their own lines
+* There is no inline hypertext—all links are on their own lines
 * There is virtually no formatting for text—not even bold or italic
 * Images are (usually) not automatically lodaed into a page
-* SmolNet is a rather small community (duh)
+* The protocols do not provide content-length information, so truncated downloads are not generally detectable
+* Instead of HTML-like “form submission”, pages may prompt for a single text-input value
+* Clients accept self-signed server certificates on the principle of Trust On First Use
 * Logging in uses TLS-certificate identities, rather than username/password
-* (Specific to Gopher) the content type is associated with the link, not the resource
+* (Gopher only) the content type is associated with the link, not the resource
+* SmolNet is a rather small community (duh)
 
 If you'd like to know more details about most of these notes, see
 => /smol-surprises/ Smol Surprises
