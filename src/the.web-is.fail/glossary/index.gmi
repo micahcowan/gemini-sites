@@ -7,13 +7,13 @@ See also:
 
 A site served via the Gemini protocol. The Gemini equivalent of a “website” or “gopherhole”.
 
-The Gemini Project's FAQ defines capsule as referring specifically to a Gemini site, but in practice it also sees use more generally, referring to a site on the SmolNet, especially if served via a protocol that is alternative to either Gemini or Gopher (Spartan, for example).
+The Gemini Project’s FAQ defines capsule as referring specifically to a Gemini site, but in practice it also sees use more generally, referring to a site on the SmolNet, especially if served via a protocol that is alternative to either Gemini or Gopher (Spartan, for example).
 
 The term “gemcap”, then, is also used to unambiguously refer to a Gemini capsule, specifically.
 
 ### client
 
-Anything that accesses a SmolNet server (also used more broadly for anything that accesses any kind of server). Often refers to a "browser" or "viewer"; these terms do not appear to be in wide use in the SmolNet community, where client is the usual term, and browser tends to be specific to clients that access Web protocols such as HTTP(S).
+Anything that accesses a SmolNet server (also used more broadly for anything that accesses any kind of server). Often refers to a “browser” or “viewer”; these terms do not appear to be in wide use in the SmolNet community, where client is the usual term, and browser tends to be specific to clients that access Web protocols such as HTTP(S).
 
 Can also refer to any program, including bots, spiders or automated tools, that access a server (not just “browsers” or browser-like programs)
 
@@ -47,7 +47,7 @@ Not to be confused with the GeminiSpace BBS, which is the name of a specific cap
 
 The file format used for creating “pages”
 
-Gemini, and the gemtext format, were based on, and heavily inspired by, the Gopher protocol, and its index format. Gemini was aimed at being "a little bit more" than Gopher, as opposed to being "less than" HTTP (even though, currently, that may be one of its higher selling-points).
+Gemini, and the gemtext format, were based on, and heavily inspired by, the Gopher protocol, and its index format. Gemini was aimed at being “a little bit more” than Gopher, as opposed to being “less than” HTTP (even though, currently, that may be one of its higher selling-points).
 
 This may go some way toward explaining why certain features (such as hypertext links within a line or paragraph, or bold/italic (or strong/emphasized) formatting), are missing from this format, despite them being fairly useful, and relatively easy to implement.
 
@@ -91,6 +91,6 @@ A complementary protocol to Gemini for writing, editing, or uploading content. T
 
 ### TOFU
 
-“Trust On First Use”, for TLS authentication. Refers to the recommendation that Gemini-protocol clients adopt the practice that, on first encounter of a server, a server's self-signed certificate be considered valid, and only flag a server as potentially malicious, if it later changes certificates. This is an alternative practice to the one demanded by HTTPS-protocol servers: that the certificate must not be self-signed, but instead signed by a duly-authorized Certificate Authority.
+“Trust On First Use”, for TLS authentication. Refers to the recommendation that Gemini-protocol clients adopt the practice that, on first encounter of a server, a server’s self-signed certificate be considered valid, and only flag a server as potentially malicious, if it later changes certificates. This is an alternative practice to the one demanded by HTTPS-protocol servers: that the certificate must not be self-signed, but instead signed by a duly-authorized Certificate Authority.
 
 !include license.gmi

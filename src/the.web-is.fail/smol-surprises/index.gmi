@@ -8,7 +8,7 @@ The simple SmolNet protocols, Gopher and Gemini, are very simple indeed. One of 
 
 If a line or paragraph starts out being ordinary text, all of the rest of that paragraph will be ordinary text as well. If a line starts out being a link, the whole line will be a link.
 
-You will find that in practice this isn't as cumbersome as it may sound, and it may even be a little bit freeing to have all the links clearly marked, with nothing tempting you to click on things before you're even finished reading a sentence. Or you may find it irritating—either way, it's an inseparable part of surfing the SmolNet.
+You will find that in practice this isn’t as cumbersome as it may sound, and it may even be a little bit freeing to have all the links clearly marked, with nothing tempting you to click on things before you’re even finished reading a sentence. Or you may find it irritating—either way, it’s an inseparable part of surfing the SmolNet.
 
 ## No (or little) text formatting
 
@@ -25,17 +25,17 @@ A [1mbold[0m word, and a [32mgreen[0m one
 
 ## (Mostly) no auto-loaded images
 
-This has already been mentioned, but any images that might be linked from a page, are generally not loaded automatically. There's nothing technological actually preventing a viewing program (client) from doing so... but the SmolNet protocols do not intend for clients to autoload anything, and so in practice, they don't.
+This has already been mentioned, but any images that might be linked from a page, are generally not loaded automatically. There’s nothing technological actually preventing a viewing program (client) from doing so... but the SmolNet protocols do not intend for clients to autoload anything, and so in practice, they don’t.
 
-Thus, online art galleries and the like are possible, but you should expect to click on each image individually in order to view them: you won't generally find a page that already has a pageful of images already displayed for you (because most client programs don't support it).
+Thus, online art galleries and the like are possible, but you should expect to click on each image individually in order to view them: you won’t generally find a page that already has a pageful of images already displayed for you (because most client programs don’t support it).
 
-When you click on an image, your client may just load it to display directly in the page view that you're on—or your client may just “follow” the link and show it as a page on its own.
+When you click on an image, your client may just load it to display directly in the page view that you’re on—or your client may just “follow” the link and show it as a page on its own.
 
-## Can't distinguish aborted downloads from completed ones
+## Can’t distinguish aborted downloads from completed ones
 
 Neither Gopher nor Gemini (nor Spartan) provide content-length information when sending a resource, and therefore there is no protocol-level support for determining that a download has been aborted.
 
-In the case of Gopher, it is sometimes possible to determine that a text-based document's download was not completed, as Gopher is meant to send a period (.) on a line by itself, before closing the connection. This policy is not followed for binary downloads, however.
+In the case of Gopher, it is sometimes possible to determine that a text-based document’s download was not completed, as Gopher is meant to send a period (.) on a line by itself, before closing the connection. This policy is not followed for binary downloads, however.
 
 ## Text queries, instead of form submission
 
@@ -45,7 +45,7 @@ On the SmolNet (both Gopher and Gemini), a page can request a single text input 
 
 With the Gopher protocol (also Spartan), the link itself will indicate that a query string should be provided, and so the user will be prompted before a request is sent to the server.
 
-With the Gemini protocol, the resource is first requested, and the server then rejects the request with an input prompt. The client then re-issues the resource request, this time with the user's input included.
+With the Gemini protocol, the resource is first requested, and the server then rejects the request with an input prompt. The client then re-issues the resource request, this time with the user’s input included.
 
 ## Self-signed TLS certificates are permitted
 
@@ -57,22 +57,22 @@ Among the advantages of this approach are:
 * anyone can host a Gemini server, without the need to pay exhorbitant fees to a Certificate Authority
 * you can use a certificate with an expiration date set far enough into the future, that it will not need renewing for the lifetime of the site
 * does not depend on the authority of a centralized system of authority (for TLS certificates, at any rate)
-* you will notice if a site you've used, is subsequently hijacked due to their domain name expiring (and reassigned to someone else's control)
+* you will notice if a site you’ve used, is subsequently hijacked due to their domain name expiring (and reassigned to someone else’s control)
 
 Some disadvantages include:
 * if your first encounter with a site suffers from a MITM attack, etc, you are substantially less likely to mmediately discover this event
 
 ## Logging into Sites/TLS Identities
 
-In general, Gopher sites (often known as "gopherholes"), do not have logins, or any user-specific content. It is not intended for servers to maintain any client state—only to respond to requests and queries.
+In general, Gopher sites (often known as “gopherholes”), do not have logins, or any user-specific content. It is not intended for servers to maintain any client state—only to respond to requests and queries.
 
-For Gemini sites (often known as "capsules", or "gemcaps"), logins do exist on some sites, but logging in with a username and password, though commonplace on the Web, is unusual in geminispace. Instead, since Gemini requires TLS-encrypted connections at all times, it is typical for users to identify themselves by using a specific TLS client certificate, often known as “identities”. Many Gemini clients offer the ability to create and manage these.
+For Gemini sites (often known as “capsules”, or “gemcaps”), logins do exist on some sites, but logging in with a username and password, though commonplace on the Web, is unusual in geminispace. Instead, since Gemini requires TLS-encrypted connections at all times, it is typical for users to identify themselves by using a specific TLS client certificate, often known as “identities”. Many Gemini clients offer the ability to create and manage these.
 
-Just as, if you use an in-browser password manager and try to login using a friend's or a public Web browser, you won't be able to (unless you remember the password—but memorizable passwords are usually insecure!), in the same way, if you try to log into a gemcap on a different browser (perhaps just even on a different device that you own), you'll find that you cannot, unless you first transfer your identity's certificate and private key (never, ever share that to others or to any site!) to the client on the other device.
+Just as, if you use an in-browser password manager and try to login using a friend’s or a public Web browser, you won’t be able to (unless you remember the password—but memorizable passwords are usually insecure!), in the same way, if you try to log into a gemcap on a different browser (perhaps just even on a different device that you own), you’ll find that you cannot, unless you first transfer your identity’s certificate and private key (never, ever share that to others or to any site!) to the client on the other device.
 
 ## Understanding Gopher links
 
-With both the HTTP Web protocol, and the Gemini SmolNet protocol, you ask for a resource, and when the server sends you that resource, it will also include information about what _kind_ of resource it is (the "Content-Type").
+With both the HTTP Web protocol, and the Gemini SmolNet protocol, you ask for a resource, and when the server sends you that resource, it will also include information about what _kind_ of resource it is (the “Content-Type”).
 
 The Gopher protocol (another SmolNet protocol), does not work this way: the server does not tell you what kind of resource it is, at the time that you are fetching it; instead, the *link* to that resource will contain that information. It is therefore necessary for Gopher _links_ to include information about what kind of thing you will be fetching, _in_ the link.
 
@@ -80,14 +80,14 @@ A typical gopher:// link might look like:
 
 => gopher://sdf.org/1/phlogs/ gopher://sdf.org/1/phlogs/
 
-See the /1/ in there? That indicates that this is an "index" page, which is the type of Gopher content that can contain lines of either links, or text. The resource itself is /phlogs/.
+See the /1/ in there? That indicates that this is an “index” page, which is the type of Gopher content that can contain lines of either links, or text. The resource itself is /phlogs/.
 
-The /1/ is never actually sent to the Gopher server - it's there for the client (browser) to know how it ought to interpret the resource, once it arrives.
+The /1/ is never actually sent to the Gopher server - it’s there for the client (browser) to know how it ought to interpret the resource, once it arrives.
 
 The type indicator always comes between the hostname (sdf.org, here) and the resource selector (/phlogs/). Other common types include 0 (plaintext file), 9 (binary file), and either g or I (GIF, or any other type of image, respectively).
 
 ## The SmolNet is a rather small community
 
-As a consequence, things happen at a slower pace here, and new content is typically at a stream's trickle, rather than a river's flood. There may also be less demographic diversity amongst users.
+As a consequence, things happen at a slower pace here, and new content is typically at a stream’s trickle, rather than a river’s flood. There may also be less demographic diversity amongst users.
 
 !include license.gmi

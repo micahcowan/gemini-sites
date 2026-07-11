@@ -1,6 +1,6 @@
 # Start Exploring the SmolNet
 
-Want to start exploring the SmolNet, but haven't a clue where to start? This page is intended to help set you on the road!
+Want to start exploring the SmolNet, but haven’t a clue where to start? This page is intended to help set you on the road!
 
 This page covers what equipment you need, and points you at some useful search engines and other starting points.
 
@@ -12,7 +12,7 @@ This page covers what equipment you need, and points you at some useful search e
 
 ## Portals
 
-If you're just testing the waters, then it's probably easiest to use your preferred web browser, together with a web portal that can translate between the Web and the SmolNet protocols (Gopher, Gemini, etc).
+If you’re just testing the waters, then it’s probably easiest to use your preferred web browser, together with a web portal that can translate between the Web and the SmolNet protocols (Gopher, Gemini, etc).
 
 => http://portal.mozz.us/ portal.mozz.us (Gemini, Spartan, Gopher...)
 => https://gopherproxy.meulie.net/ gopherproxy.meulie.net (Gopher only)
@@ -20,7 +20,7 @@ If you're just testing the waters, then it's probably easiest to use your prefer
 
 ## Clients (Browsers... but not of the Web)
 
-Dedicated clients. For when you're ready to get serious, or if you want to log into gemcaps.
+Dedicated clients. For when you’re ready to get serious, or if you want to log into gemcaps.
 
 => ../why-client/ Why would you use a client?
 
@@ -34,10 +34,10 @@ Now that you know how to get around, here are some ideas on where you might star
 ## Search Engines
 
 Searching for content about something? Try one of these!
-(Unlike Google, these won't understand questions - be sure your search includes the actual words that should be in the found pages (and no other words))
+(Unlike Google, these won’t understand questions - be sure your search includes the actual words that should be in the found pages (and no other words))
 
 => gemini://kennedy.gemi.dev/ Kennedy: Search Gemini Space
-=> gemini://tlgs.one "Totally Legit" Gemini Search (for Geminispace)
+=> gemini://tlgs.one “Totally Legit” Gemini Search (for Geminispace)
 => gopher://gopher.floodgap.com/1/v2/ Floodgap/Veronica 2 (for Gopherspace)
 
 ## Cities and Tildespaces
@@ -47,7 +47,7 @@ Servers with personal sites for a multitude of different users. Like GeoCities o
 => gemini://tilde.team/ Tilde Team - Gemini
 => gopher://tilde.team/1/ Tilde Team - Gopher
 => gopher://sdf.org/1/ The Super Dimension Fortress (SDF) - Gopher
-=> gemini://tilde.team/~khuxkm/leo/ khuxkm's LEO
+=> gemini://tilde.team/~khuxkm/leo/ khuxkm’s LEO
 
 ## Bulletin Boards (BBS)
 
@@ -65,15 +65,15 @@ A Super-Aggregator that automatically threads posts that refer to other posts
 ## Games, and Gaming Spaces
 
 => gemini://astrobotany.mozz.us/ Astrobotany (Care for your digital flowers, and participate in a community)
-=> gemini://gemini.thegonz.net/ "Things" at TheGonz.net (scroll to the "Games" section)
+=> gemini://gemini.thegonz.net/ “Things” at TheGonz.net (scroll to the “Games” section)
 => gopher://mozz.us:7006/1/ Text Adventures at Mozz.us (Gopher)
 => gemini://sggs.thegonz.net/ Simple Gemini Game Server (Shogi, Go, Connect4, ...)
 
-## Other "Starting Point" Guides!
+## Other “Starting Point” Guides!
 
 Excellent starting-point guides that, of course, I only discovered after completing most of the content for this capsule.
 
-=> gemini://skyjake.fi/lagrange/getting_started.gmi skyjake's Getting Started (on Gemini(/Lagrange))
+=> gemini://skyjake.fi/lagrange/getting_started.gmi skyjake’s Getting Started (on Gemini(/Lagrange))
 => gemini://geminiquickst.art/ GeminiQuickst.art
 
 ## Protocol Details

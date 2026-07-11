@@ -5,4 +5,4 @@
 => https://github.com/rkd77/elinks Elinks (In-terminal browser. Does Gemini,, does Gopher, does the Web too.)
 => https://github.com/rkd77/elinks Lynx (does Gopher, in addition to Web stuff)
 
-=> gemini://geminiprotocol.net/software/ (See the Gemini Project's "Known Software" page, for many more!)
+=> gemini://geminiprotocol.net/software/ (See the Gemini Project’s “Known Software” page, for many more!)

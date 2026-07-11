@@ -1,17 +1,17 @@
 # Why You Should Use A Client When Exploring the SmolNet
 
-If you're done just kicking the tires of SmolNet, and want to explore it in greater depth, then you want a client (like a browser) for that. Most gemcaps that support logins, use client TLS certificates as both identification and authentication, rather than username-and-password, so a client that can generate and manage different client certificates is particularly helpful for taking a more active and participatory role in the community (as opposed to just observing).
+If you’re done just kicking the tires of SmolNet, and want to explore it in greater depth, then you want a client (like a browser) for that. Most gemcaps that support logins, use client TLS certificates as both identification and authentication, rather than username-and-password, so a client that can generate and manage different client certificates is particularly helpful for taking a more active and participatory role in the community (as opposed to just observing).
 
 Example sites that use TLS certs for logging in, include:
 => gemini://bbs.geminispace.com/
 => gemini://sggs.thegonz.net/
 
-What else does using a SmolNet client buy you? Depending on the client's capabilities:
+What else does using a SmolNet client buy you? Depending on the client’s capabilities:
 * Significantly faster load times than a portal
 * As mentioned above, you can generate manage TLS-cert identities for logging in
-* Won't burden the portal server
+* Won’t burden the portal server
 * You can still surf the SmolNet even if the portal site goes down
-* The relief of knowing that so long as you stay in the client, that nasty Web can't harm you (but only if using a client with no web protocol support)
+* The relief of knowing that so long as you stay in the client, that nasty Web can’t harm you (but only if using a client with no web protocol support)
 
 I recommend Lagrange, which
 * is available on multiple platforms,
@@ -20,7 +20,7 @@ I recommend Lagrange, which
 * can manage subscription feeds to any updates to your favorite capsules,
 * will generate a table of contents, for navigation convenience,
 * generates a unique theme/appearance for each capsule,
-* supports the Titan protocol for posting, uploading, and editing content (depends on the capsule's support for these features)
+* supports the Titan protocol for posting, uploading, and editing content (depends on the capsule’s support for these features)
 * clearly distinguishes between SmolNet and Web hyperlinks, and
 * uses (some) familiar keybindings from common web browsers
 
