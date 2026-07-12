@@ -24,9 +24,12 @@ Even though images aren’t loaded automatically, you are still welcome to click
 
 As a consequence of the above, it is not generally possible for anyone outside of a site to track your path through it.
 
-A server can track your navigation through its own site(s) by your IP address. If you use a proxy, anonymized NAT (network-address translation), or an anonymizing network such as the TOR (The Onion Ring) network, the server cannot track you, because the client cannot send any identifying metadata.
+Note that a server can still track your navigation through it's own site:
+* A server can track your navigation through its own site(s) by your IP address. If you use a proxy, anonymized NAT (network-address translation), or an anonymizing network such as the TOR (The Onion Ring) network, the server cannot track you, because the client cannot send any identifying metadata.
+* A server could also track you by injecting tokens into the URLs that it provides to you.
+* If you are using TLS-certificate identities, the server can obviously track any content you fetch under that identity. Being tracked is, of course, the actual *point* of using an identity: so that the server can verify that you are the same person every time you use it.
 
-The obvious exception is that if you are using TLS certificate identities, the server can obviously track any content you fetch under that identity. Being tracked is, of course, the actual *point* of using an identity: so that the server can verify that you are the same person every time you use it. Regardless, no server can track what you do on some *other* server—at least, not without that server’s explicit cooperation.
+Regardless, no server can track what you do on some *other* server—at least, not without that server’s explicit cooperation.
 
 ### No “fingerprinting”
 
