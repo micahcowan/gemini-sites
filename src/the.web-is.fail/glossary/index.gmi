@@ -69,13 +69,23 @@ The equivalent of a “website”, but using the Gopher protocol.
 
 The total collective of gopherholes, or, the section of the internet which can be accessed via the Gopher protocol.
 
+### Nex
+
+A SmolNet protocol, less commonly used than Gemini or Gopher.
+
+The protocol itself is virtually the same as Gopher, but "selectors" are explicitly paths, and the directory format differs.
+
+The specification for Nex is less than a single page of text, including both the actual protocol, and the directory format.
+
+=> nex://nightfall.city/nex/info/ Nex Info Page
+
 ### phlog
 
 The Gemini equivalent of “blog” on the web (which is short for “weblog”, or of “gemlog” or “glog” in geminispace. Short for “gopherlog”.
 
 ### Spartan
 
-A lesser SmolNet protocol, not terribly common. It is extremely similar to the Gemini protocol, and like it, primarily serves gemtext documents.
+A lesser-used SmolNet protocol, not terribly common. It is extremely similar to the Gemini protocol, and like it, primarily serves gemtext documents.
 
 Its primary distinguishing features are that
 * like Gopher, it does not use TLS encryption, but is served through direct TCP, and

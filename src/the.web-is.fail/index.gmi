@@ -49,14 +49,14 @@ There are games, there is art, there is music, there are “applications”. But
 => /anti-user/ Anti-User Practices, Solved by the SmolNet
 For more details on anti-user behaviors that the SmolNet saves you from, and how it does so
 
-# Surprising Behaviors of the SmolNet
+# Surprising Aspects of the SmolNet
 
 Before you get started, you should probably know a few of things first, so they don’t surprise or confuse you.
 
 * There is no inline hypertext—all links are on their own lines
 * There is virtually no formatting for text—not even bold or italic
-* Images are (usually) not automatically lodaed into a page
-* The protocols do not provide content-length information, so truncated downloads are not generally detectable
+* Images are not automatically lodaed into a page
+* Some of the SmolNet protocols (Gopher, Spartan) cannot reliably detect an aborted download
 * Instead of HTML-like “form submission”, pages may prompt for a single text-input value
 * Clients accept self-signed server certificates on the principle of Trust On First Use
 * Logging in uses TLS-certificate identities, rather than username/password

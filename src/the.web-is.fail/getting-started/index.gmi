@@ -82,5 +82,7 @@ Excellent starting-point guides that, of course, I only discovered after complet
 => gemini://geminiprotocol.net The Gemini Project (Gemini Protocol & the Gemtext format)
 => gemini://transjovian.org/titan/The%20Titan%20Specification The Titan Protocol Specification (served on the same port as Gemini protocol, alongside it)
 => spartan://spartan.mozz.us/ The Spartan Protocol (extremely Gemini-like, but no TLS)
+=> nex://nightfall.city/nex/info/ The Nex Protocol (a straightforwardly simple, extremely Gopher-like protocol)
+=> https://raw.githubusercontent.com/zzo38/scorpion/trunk/Specification The Scorpion Protocol (another SmolNet protocol you may encounter)
 
 !include license.gmi

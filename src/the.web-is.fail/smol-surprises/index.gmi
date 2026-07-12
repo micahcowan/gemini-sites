@@ -31,11 +31,11 @@ Thus, online art galleries and the like are possible, but you should expect to c
 
 When you click on an image, your client may just load it to display directly in the page view that you’re on—or your client may just “follow” the link and show it as a page on its own.
 
-## Can’t distinguish aborted downloads from completed ones
+## (Gopher and Sparta) Can’t distinguish aborted downloads from completed ones
 
-Neither Gopher nor Gemini (nor Spartan) provide content-length information when sending a resource, and therefore there is no protocol-level support for determining that a download has been aborted.
+Neither Gopher nor Gemini (nor Spartan) provide content-length information when sending a resource. In the case of Gopher, this means there is no way to distinguish the case where a download completed successfully, or the case where the connection was lost prematurely. In the case of Gemini, a feature of the TLS encryption layer is used to indicate when the download is complete.
 
-In the case of Gopher, it is sometimes possible to determine that a text-based document’s download was not completed, as Gopher is meant to send a period (.) on a line by itself, before closing the connection. This policy is not followed for binary downloads, however.
+In the case of text-file downloads, Gopher does have a crude means to indicate the end of the download, but it is unreliable. In the case of binary downloads, there truly is no distinguishing the cases at all, unless the site provides the user with direct information about the file's exact size, elsewhere on the page.
 
 ## Text queries, instead of form submission
 
@@ -80,9 +80,9 @@ A typical gopher:// link might look like:
 
 => gopher://sdf.org/1/phlogs/ gopher://sdf.org/1/phlogs/
 
-See the /1/ in there? That indicates that this is an “index” page, which is the type of Gopher content that can contain lines of either links, or text. The resource itself is /phlogs/.
+See the “/1” in there? That indicates that this is an “index” page, which is the type of Gopher content that can contain lines of either links, or text. The resource itself is /phlogs/.
 
-The /1/ is never actually sent to the Gopher server - it’s there for the client (browser) to know how it ought to interpret the resource, once it arrives.
+The “/1” is never actually sent to the Gopher server - it’s there for the client (browser) to know how it ought to interpret the resource, once it arrives.
 
 The type indicator always comes between the hostname (sdf.org, here) and the resource selector (/phlogs/). Other common types include 0 (plaintext file), 9 (binary file), and either g or I (GIF, or any other type of image, respectively).
 

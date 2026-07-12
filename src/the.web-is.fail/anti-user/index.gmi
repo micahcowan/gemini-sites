@@ -12,11 +12,13 @@ There is no way for a server to send you any kind of metadata other than the act
 
 ### No automatic content-fetching
 
-When retrieving a requested page, there is no way for your client (~browser) to be asked to also fetch other content for the page, such as CSS, scripts, or even images (which, sadly, have historically been used to track you across sites).
+When the user requests a page, it is only that direct page, and nothing else, that is fetched and displayed. Not scripts, CSS, nor even embedded images (which, sadly, have historically been used to track you across sites). One page request results in (at most) one fetch.
 
-This guarantee is specific to *some* protocols, such as Gemini and Spartan, and does not fully apply to Gopher (which can fetch GIF images, and via some extensions to the protocol, other image types as well). But in practice, Gopherholes don’t do a lot of this either.
+In the case of the Gemtext format (Gemini and Spartan), embedded content is impossible, or at least quite impractical, as there is no real means of specifying it.
 
-Even though images aren’t loaded automatically, you are still welcome to click a link to separately view any linked content you are interested in!
+In the case of Gopher (and its index format), it would technically be possible for a client to automatically load any linked images (as those links are distinguished from other types), but possible or not, Gopher clients typically don't do it, generally speaking.
+
+Even though images aren’t loaded automatically, you are still welcome to click a link to separately view any linked content you are interested in. Some Gemini clients (such as Lagrange) will display a clicked image as embedded in the page (since the fetched content can be determined to have been an image, _after_ having fetched it).
 
 ### No cross-site tracking
 
