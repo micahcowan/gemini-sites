@@ -9,6 +9,7 @@ SHIZ-GLOG-LATEST := $(BUILD)/shizuka.space/glog/latest/index.gmi
 
 define make-shiz-glog-rule
 $(1): $(call make-shiz-glog-src,$(1)) Makefile bin/eval-template
+
 endef
 make-shiz-glog-src = $(shell date=$1; date=$${date#$(BUILD)/shizuka.space/glog/}; date=$${date%/index.gmi}; date=$$(echo "$$date" | tr / -); echo "src/shizuka.space/glog/$${date}.gmi")
 
@@ -55,6 +56,8 @@ $(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Ma
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
 	printf '\n###Latest glogs:\n\n' >> $@.tmp
 	for article in $(SHIZ-GLOGOBJ); do \
+	    echo "$$article"; \
+	done | sort -r | head -n 10 | while read -r article; do \
 	    target=$${article%index.gmi}; \
 	    target=$${target#$(BUILD)/shizuka.space/glog/}; \
 	    date=$${target%/}; \
@@ -65,7 +68,7 @@ $(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Ma
 	printf '\n--\n=> mailto:kado@shizuka.space\n' >> $@.tmp
 	mv $@.tmp $@
 
-$(foreach target,$(SHIZ-GLOGOBJ),$(call make-shiz-glog-rule,$(target)))
+$(eval $(foreach target,$(SHIZ-GLOGOBJ),$(call make-shiz-glog-rule,$(target))))
 
 $(SHIZ-GLOGOBJ):
 	mkdir -p $(dir $@)
