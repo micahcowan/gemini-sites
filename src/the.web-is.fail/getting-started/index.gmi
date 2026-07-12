@@ -56,10 +56,13 @@ Servers where you can post and read content on a variety of topics.
 => gemini://bbs.geminispace.org/ GeminiSpace BBS
 => gemini://station.martinrue.com/ Station
 
-## Gemlog Aggregators
+## Aggregators
 
-=> gemini://antenna.michaelnordmeyer.com/ Antenna Aggregator
-=> gemini://cosmos.skyjake.fi/view.gmi Cosmos
+Aggregators check for the existence of new log entries, to gather them all in one feed. It's a great way to discover other sites, and some clients can use them to “subscribe” to updates.
+
+=> gemini://antenna.michaelnordmeyer.com/ Antenna Aggregator (Gemini)
+=> gopher://i-logout.cz/1/bongusta
+=> gemini://cosmos.skyjake.fi/view.gmi Cosmos (Gemini)
 A Super-Aggregator that automatically threads posts that refer to other posts
 
 ## Games, and Gaming Spaces
