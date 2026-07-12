@@ -1,0 +1,37 @@
+# Having a blast
+
+I owe a serious thank-you to 4am (Apple II hacker extraordinaire), simply for linking his SDF gopherhole, thus making me aware of its existence. And thereby, SDF itself, and its community of gophernauts. And through those, the SDF Gemini capsules, the existence of Gemini, and the idea of the SmolNet.
+
+=> gopher://sdf.org:70/1/users/a2.4am/ The 4am Gopherhole on SDF
+
+I was fired up by this discovery (which happened about two weeks ago), because my distaste for what the web has become, and what my regular experience using it is, had been seriously intensifying lately. I really wanted something like the small internet to exist, but didn't think there were enough other people around who felt the same way to get something like it off the ground, let alone that it might have already been existing for some time.
+
+And I'd heard of Gopher, but didn't know anything about it, and I think it had once been described to me as "FTP with search". Which is kinda BS.
+
+✻
+
+Anyway, I'm having a blast here. Diligently watering my lil' green tamagotchi over at Astrobotany. Playing a round of Shogi over at SGGS (and helped catch an issue with the board setup). Regularly checking the GeminiSpace BBS and the Cosmos Gemini super-aggregator (just found the Bongusta! Gopher aggregator, as well).  Finding gemlogs and phlogs that I find sufficiently compelling as to subscribe to directly.
+
+I do wish a few more of them followed the Gemsub format, or else published Atom feeds, so I could just get the notifications from Lagrange. But I guess for the ones that don't, I'll just check 'em directly for now, or maybe get around to writing a tiny, personal Aggregator that speaks their individual listing styles.
+
+=> gemini://astrobotany.mozz.us/ Atrobotany
+=> gemini://sggs.thegonz.net/ Simple Gemini Game Server (SGGS)
+=> gemini://bbs.geminispace.org/ GeminiSpace BBS
+=> gemini://cosmos.skyjake.fi/view.gmi Cosmos Super-Aggregator
+=> gemini://geminiprotocol.net/docs/companion/subscription.gmi Gemsub Format
+
+I'm enjoying the creativity, the "frontier" quality I miss from the 90's, and above all, the simplicity, and lack of slavering hypercommerce, and absolutely everyone and everything fighting log dogs for two seconds of my attention.
+
+I'll never stop using the web, even if the resources of the SmolNet eventually become sufficient that I could feasibly consider doing so. I love being able to run a debugger, on software I wrote, running on an emulated Apple ][, and all of it happening in my web browser. I love being able to write interactive action-oriented games and just sending someone a link, and they don't need to "download and execute" anything.
+
+=> https://8bitworkshop.com/ The 8-Bit Workshop, a FOSS, in-browser IDE for retro videogame consoles and computers
+
+But the web is also not the place it once was, and the joy I can experience there is now burdened by hypercapitalism, greed, and pro-corporation, anti-user mentalities and behaviors. It no longer feels like "home". Don't know if gemini- or gopherspace can be, either, but I aim to help keep it a nice place to be, and to contribute to strengthening its appeal (while maintaining its principles).
+
+✻
+
+I've recently put up a Getting Started/why might you want to try the SmolNet guide (why, yes, it _is_ presumptive of me, given I've only been here a couple weeks!). It's only available on Gemini, at the moment; I intend to put up an HTTP mirror so I can actually direct my friends, and any other interested parties at it. I'll probably also eventually set up Spartan and Gopher versions.
+
+It's a bit longer/provides more details (to those that care to know 'em) than the couple of other quickstart guides I've found. I felt like there were things about SmolNet that can potentially be surprising or confusing to newcomers, particularly if (unlike me), they're not immediately inclined to start reading protocol specifications and the like.
+
+=> gemini://the.web-is.fail/ The Web Is Fail (or: Why, and How, to SmolNet?)
