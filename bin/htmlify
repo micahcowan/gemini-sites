@@ -1,0 +1,150 @@
+#!/usr/bin/awk -f
+
+function br() {
+    if (!suppress_br) {
+        print "<br />"
+    }
+}
+
+function entity_escaped() {
+    escaped = $0;
+    gsub(/[&]/, "\\&amp;", escaped);
+    gsub(/</, "\\&lt;", escaped);
+    gsub(/>/, "\\&gt;", escaped);
+    return escaped;
+}
+
+function get_link(link) {
+    if (link !~ /:/) {
+        # Leave alone
+    }
+    else if (link ~ /^http/) {
+        # Leave alone
+    }
+    else if (link ~ /^gemini:\/\//) {
+        sub(/^gemini:\/\//, "http://portal.mozz.us/gemini/", link)
+    }
+    else if (link ~ /^gopher:\/\//) {
+        sub(/^gopher:\/\//, "http://portal.mozz.us/gopher/", link)
+    }
+    else if (link ~ /^spartan:\/\//) {
+        sub(/^spartan:\/\//, "http://portal.mozz.us/spartan/", link)
+    }
+    else if (link ~ /^nex:\/\//) {
+        sub(/^nex:\/\//, "http://portal.mozz.us/nex/", link)
+    }
+    return link;
+}
+
+function get_class(link) {
+    if (link !~ /:/) {
+        return "site";
+    }
+    else if (link ~ /^gemini:\/\//) {
+        return "gemini";
+    }
+    else if (link ~ /^gopher:\/\//) {
+        return "gopher";
+    }
+    else if (link ~ /^http/) {
+        return "http";
+    }
+    else {
+        return "unknown";
+    }
+}
+
+BEGIN {
+    PREFMT=0
+    suprpess_br=1
+    bullets=0
+    print "<html><link rel=\"stylesheet\" href=\"/style.css\" />"
+}
+
+{
+    gsub(/kado@shizuka\.space/, "---@---.---", $0);
+}
+
+bullets && !/^\*/ {
+    print "</ul>"
+    bullets=0
+}
+
+/^```/ {
+    PREFMT = ! PREFMT;
+    if (PREFMT) {
+        print "<pre>"
+    } else {
+        print "</pre>"
+    }
+    next;
+}
+
+PREFMT {
+    print entity_escaped();
+    next;
+}
+
+/^\*/ {
+    if (!bullets) {
+        bullets=1
+        print "<ul>"
+    }
+    sub(/^\* */, "", $0)
+    print "<li>" entity_escaped() "</li>"
+    next;
+}
+
+/^###/ {
+    sub(/^#* */, "", $0)
+    print "<h3>" entity_escaped() "</h3>"
+    suppress_br=1
+    next;
+}
+
+/^##/ {
+    sub(/^#* */, "", $0)
+    print "<h2>" entity_escaped() "</h2>"
+    suppress_br=1
+    next;
+}
+/^#/ {
+    sub(/^#* */, "", $0)
+    print "<h1>" entity_escaped() "</h1>"
+    suppress_br=1
+    next;
+}
+
+/^=>/ {
+    suppress_br=0
+    sub(/^=> */, "", $0)
+    class=get_class($1)
+    link=get_link($1)
+    $1 = "";
+    sub(/^ */, "", $0)
+    if ($0 ~ /^ *$/) $0 = link
+    print "<a class=\"" class "\" href=\"" link "\">" entity_escaped() "</a>"
+    br()
+    next;
+}
+
+# NOT HANDLED: > (blockquote) lines
+
+/^$/ {
+    br()
+    next;
+}
+
+# Default handling (ordinary plaintext line
+{
+    print entity_escaped();
+    suppress_br=0
+    br();
+}
+
+END {
+    if (PREFMT) {
+        print("</pre>")
+    }
+    print("</html>")
+}
