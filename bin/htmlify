@@ -54,11 +54,18 @@ function get_class(link) {
     }
 }
 
+########################################
+
 BEGIN {
     PREFMT=0
     suprpess_br=1
     bullets=0
     print "<html><link rel=\"stylesheet\" href=\"/style.css\" />"
+    if (me) {
+        sub(/^.*\/the.web-is/, "gemini://the.web-is", me);
+        sub(/index\.(gmi|html)$/, "", me);
+        print "<pre>" me "</pre><br />";
+    }
 }
 
 {

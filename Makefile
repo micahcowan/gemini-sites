@@ -22,7 +22,7 @@ make-shiz-glog-src = $(shell date=$1; date=$${date#$(BUILD)/shizuka.space/glog/}
 define make-fail-html-rule
 $(patsubst $(BUILD)/the.web-is.fail/%.gmi,$(BUILD)/the.web-is.fail-html/%.html,$(1)): $(1) Makefile bin/htmlify
 	mkdir -p $$(dir $$@)
-	bin/htmlify < $$< > $$@.tmp
+	bin/htmlify -v me=$$< < $$< > $$@.tmp
 	mv $$@.tmp $$@
 
 endef
