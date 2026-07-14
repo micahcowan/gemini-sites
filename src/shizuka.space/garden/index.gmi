@@ -1,0 +1,75 @@
+=> / Back to Kado's home page
+
+# Kado's Link Garden
+
+## Me (Kado) in Other Smol Spaces
+
+=> gemini://astrobotany.mozz.us/public/9f7fccab4cd847b5b736d9914fa06c04 My plant “Ichirou” at Astrobotany
+=> gemini://astrobotany.mozz.us/public/9f7fccab4cd847b5b736d9914fa06c04/m1 My plant “Ichirou” at Astrobotany (COLOR)
+=> gemini://bbs.geminispace.org/u/shizukado shizukado @ The GeminiSpace BBS
+
+## Clients
+
+=> https://github.com/makeworld-the-better-one/amfora Amfora (terminal)
+=> gemini://skyjake.fi/lagrange/ Lagrange
+
+## Search Engines
+
+=> gemini://kennedy.gemi.dev/ Kennedy: Search Gemini Space
+=> gemini://tlgs.one The “Totally Legit” Gemini Search
+=> gopher://gopher.floodgap.com/1/v2/ Floodgap/Veronica 2
+
+## (Gem|Ph)logs
+
+### Unfeeded
+
+=> gopher://sdf.org:70/1/users/a2.4am/projects The 4am Gopherspace (Apple II/6502 tools & cracks)
+=> gopher://gopher.club:70/1/users/nclp/ nclp @ gopher.club
+=> gopher://sdf.org:70/1/users/danielaw/phlog danielaw
+
+### Gemsubs
+
+=> gemini://coldscars.smol.pub/ coldscars // fragments (Poetry)
+=> gemini://tilde.club/~winter/gemlog/ winter's gemlog
+=> gemini://thrig.me/blog/ thrig bphflog
+
+## Aggregators
+
+=> gemini://cosmos.skyjake.fi/view.gmi Cosmos Super-Aggregator
+=> gopher://i-logout.cz/1/bongusta Bongusta! (Gopher)
+
+## Cities and Tildespaces
+
+=> gemini://tilde.team/ Tilde Team - Gemini
+=> gopher://tilde.team/1/ Tilde Team - Gopher
+=> gopher://sdf.org/1/ The Super Dimension Fortress (SDF) - Gopher
+
+## Bulletin Boards (BBS)
+
+=> gemini://bbs.geminispace.org/ GeminiSpace BBS
+=> gemini://station.martinrue.com/ Station (chatboard)
+
+## Games, and Gaming Spaces
+
+=> gemini://astrobotany.mozz.us/ Astrobotany
+=> gemini://sggs.thegonz.net/ Simple Gemini Game Server (Mainly a few board games: Shogi, Go, Connect4, ...)
+=> gemini://gemini.thegonz.net/ “Things” at TheGonz.net (scroll to the “Games” section)
+=> gopher://mozz.us:7006/1/ Text Adventures at Mozz.us (Gopher). Including Zork!
+
+## Miscellanea
+
+=> gemini://mozz.us/ Mozz.us Gemini
+=> gopher://mozz.us/1 Mozz.us Gopher
+=> gemini://gemini.thegonz.net/ TheGonz
+=> gemini://skyjake.fi/ Skyjake.fi
+=> gemini://transjovian.org/ Transjovian
+
+## Protocol Details
+
+=> gemini://geminiprotocol.net The Gemini Project (Gemini Protocol & the Gemtext format)
+=> /rfcs/rfc1436.txt The Gopher Protocol (RFC 1436)
+=> gemini://satch.xyz/misfin/ Misfin (smolmail?)
+=> nex://nightfall.city/nex/info/ The Nex Protocol
+=> https://raw.githubusercontent.com/zzo38/scorpion/trunk/Specification The Scorpion Protocol
+=> spartan://spartan.mozz.us/ The Spartan Protocol
+=> gemini://transjovian.org/titan/The%20Titan%20Specification The Titan Protocol Specification
