@@ -61,7 +61,7 @@ Not all clients, but at least several, will clearly mark any non-SmolNet web lin
 
 ## Not Impossible, But Absent Nonetheless
 
-There is nothing in the way of technology preventing the following kinds of behaviors, except the goodwill and principles of the community itself. But, they are nonetheless absent (as of the time of this writing, to the knowledge of the author). So long as this remains true, they constitute additional blessings that can’t be depended upon, on the World-Wide Web.
+There is nothing in the way of technology preventing the following kinds of behaviors, except the goodwill and principles of the community itself. But, they are nonetheless absent (as of the time of this writing, to the knowledge of the author). So long as this remains true, they constitute additional blessings that can’t be depended upon on the World-Wide Web, but that you may be confident that you will not encounter on the SmolNet (...so far, and for now).
 
 ### Intrusive advertising (or, advertising)
 
@@ -75,6 +75,16 @@ Even the content that you’re there for, will become less accessible, as they p
 
 Nothing about the SmolNet prevents this from happening, apart from the collective intolerance of the community. But it hasn’t happened yet.
 
-SmolNet can’t prevent it happening. But a dogged unwillingness to participate in large, centralized platforms, and a strong preference for decentralized technologies, could!
+SmolNet can’t prevent it happening. But a dogged unwillingness to participate in large, centralized platforms, and a strong aversion to decentralized technologies, could!
+
+### Deliberately inefficient feed algorithms or searches
+
+There is, of course, nothing preventing a server from making itself less reliable/less helpful to the user who wishes to find or discover something. However, I think there are two things that help limit the motivation to do so.
+
+For one, current search and feed technology used on the SmolNet is exceedingly basic. As far as I can see, if Google were to make the choice to make their search functionality deliberately worse (as some have reported they've done), it would only be because they are head, shoulders—and waist!—above their competitors in being efficient, and have ample room to degrade search performance in the interest of ad performance while still remaining far better than their competitors.
+
+For another... if the motivation to keep you searching or navigating longer is that they can serve you more ads, then the opportunity for that is fairly limited. As mentioned, it's not technically impossible to serve ads on the SmolNet, but it _is_ impossible to serve unasked-for images... which only leaves text insertions. In my view, there is a much lower limit to user tolerance for ads being inserted into text content, and if you were to combine that with a search site that has you viewing more pages than you'd otherwise need to, the tolerance would be lower still.
+
+But that's an opinion, and it may well be wrong. Perhaps all the necessary motivations and opportunity exist, and we're saved merely because the current SmolNet culture is, momentarily, both inclined not to create such devils, nor tolerant of them were they to be introduced. The result, for now at least, is the same: you won't find it here.
 
 !include license.gmi

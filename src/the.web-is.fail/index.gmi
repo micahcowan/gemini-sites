@@ -46,13 +46,13 @@ The SmolNet is primarily for people who want to be reading. That is what you’l
 
 There are games, there is art, there is music, there are “applications”. But the art never loads unless you asked for it, the music never plays unless you clicked for it, and all the apps and games are governed by a simple rule: nothing can ever change in the page you’re viewing—once you’ve loaded the page, the content is stable, until you click a link to reload the page, or to visit another. There is no “dynamic content” on the SmolNet, and that is what prevents much of the annoyances of the modern web.
 
+=> /anti-user/ Anti-User Practices, Solved by the SmolNet
+For more details on anti-user behaviors that the SmolNet saves you from, and how it does so
+
 => http://portal.mozz.us/ Try It Right Now!
 Use the link above if you're impatient to see what I'm talking about! It's a SmolNet Portal, for exploring these alternative internet protocols, and has a few suggested links for getting started.
 
 Or, continue reading to get a bit more information you might find useful as you explore, as well as suggestions on excellent starting points for your explorations.
-
-=> /anti-user/ Anti-User Practices, Solved by the SmolNet
-For more details on anti-user behaviors that the SmolNet saves you from, and how it does so
 
 # Surprising Aspects of the SmolNet
 
