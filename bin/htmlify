@@ -72,6 +72,10 @@ BEGIN {
     gsub(/kado@shizuka\.space/, "---@---.---", $0);
 }
 
+/This capsule [(]the\.web-is\.fail[)] is licensed/ {
+    gsub(/capsule/, "site", $0);
+}
+
 bullets && !/^\*/ {
     print "</ul>"
     bullets=0
