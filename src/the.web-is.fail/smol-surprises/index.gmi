@@ -90,4 +90,14 @@ The type indicator always comes between the hostname (sdf.org, here) and the res
 
 As a consequence, things happen at a slower pace here, and new content is typically at a stream’s trickle, rather than a river’s flood. There may also be less demographic diversity amongst users.
 
+To give you an idea *how* small: at the time of writing, a fairly popular Gemini aggregator found an average of around 4 new gemlog posts per day to include in its feed, over the past week. Cosmos, a super-aggregator (aggregator of feeds from various aggregators), averaged about a dozen a day, maybe a bit more.
+
+“Bongusta!”, a Gopher aggregator, has had an average of 4 or 5 a day in the past week, excepting exactly a week ago there was a sudden influx of a couple dozen or more.
+
+There are hundreds, possibly thousands, of users on smolnet, who could still reasonably be termed “participants”. Not all of them are regularly creating new content. A few are maintaining vital services, and some of these are writing posts on occasion. There are probably people writing gemlogs or phlogs at a once-a-month pace, or even more seldom. And of course, not nearly all capsules are logs of some sort, so there's presumably plenty that's not tracked by aggregators.
+
+In addition, there are, presumably, people who've never bothered to submit themselves to an aggregator, or are deliberately avoiding indexing or aggregation. I know of at least one such.
+
+...Of course, whatever's difficult for an indexer or aggregator to find, is also liable to be difficult for an individual user to stumble across. So the question of whether they exist or not may be immatterial to the question of just how small the “small internet” will feel.
+
 !include license.gmi
