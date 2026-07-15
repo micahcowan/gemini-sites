@@ -128,7 +128,7 @@ $(SHIZ-GLOGOBJ):
 	printf '\n--\n=> mailto:kado@shizuka.space?subject=%s kado@shizuka.space (please include SHIZUKA in the subject)\n' 'SHIZUKA%3A%20%28Replace%20Me%21%29' >> $@.tmp
 	mv $@.tmp $@
 
-.PHONY: clean clean-shiz
+.PHONY: clean clean-shiz shiz
 
 clean:
 	rm -fr $(BUILD)/*/* stamps
@@ -137,3 +137,4 @@ clean:
 
 clean-shiz:
 	rm -fr $(BUILD)/shizuka.space/* stamps/shizuka.space* sites
+shiz: stamps/shizuka.space
