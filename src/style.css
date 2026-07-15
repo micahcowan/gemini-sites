@@ -2,18 +2,20 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 pre {
+    max-width :100%;
     font-family: monospace;
     color: #dde;
     line-height: 1em;
 }
 html {
     background-color: #000400;
+    width: 100vw;
     padding: 0;
     color: #cfc;
 }
 body {
     background-color: #010;
-    width: 40em;
+    max-width: 40em;
     padding: 2em 2em;
     padding-left: 4em;
     margin-left: auto;
@@ -85,4 +87,19 @@ li::marker {
 }
 .unknown:link:before, .unknown:hover:before, .unknown:visited:before {
     color: grey;
+}
+
+@media screen and (max-width: 46em) {
+    body {
+        padding: 0 2em;
+        margin: 0;
+    }
+    h1, h2, h3, :link, :hover, :visited {
+        margin-left: 0em;
+    }
+    pre {
+        font-size: 0.56rem;
+        max-width: 100%;
+        overflow: hidden;
+    }
 }

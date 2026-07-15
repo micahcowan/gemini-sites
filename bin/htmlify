@@ -61,6 +61,7 @@ BEGIN {
     suprpess_br=1
     bullets=0
     print "<html><link rel=\"stylesheet\" href=\"/style.css\" />"
+    print "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />"
     if (me) {
         sub(/^.*\/the.web-is/, "gemini://the.web-is", me);
         sub(/index\.(gmi|html)$/, "", me);
