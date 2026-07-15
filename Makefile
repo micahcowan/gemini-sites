@@ -5,19 +5,38 @@ FAIL-OBJS := $(patsubst src/%,$(BUILD)/%,$(FAIL-SRC))
 
 SHIZ-STATIC-SRC := $(filter-out src/shizuka.space/index.gmi,$(shell find src/shizuka.space ! -type d | grep -v BITS | grep -v glog/))
 SHIZ-STATIC-OBJS := $(patsubst src/%,$(BUILD)/%,$(SHIZ-STATIC-SRC))
-SHIZ-GLOGSRC := $(shell find src/shizuka.space/glog ! -type d | grep -v BITS)
-SHIZ-GLOGOBJ := $(foreach obj,$(SHIZ-GLOGSRC),$(shell obj=$(obj); obj=build/$${obj#src/}; date=$${obj##*/}; date=$${date%.gmi}; date=$$(echo "$$date" | tr - /); echo "$(BUILD)/shizuka.space/glog/$${date}/index.gmi"))
+SHIZ-GLOGSRC := $(shell find src/shizuka.space/glog -name '*.gmi' | grep -v BITS)
+
+define make-shiz-glog-rule
+$(1): $(call make-shiz-glog-src,$1) Makefile bin/eval-template
+
+endef
+make-shiz-glog-src = $(shell \
+    date=$1; \
+    date=$${date#$(BUILD)/shizuka.space/glog/}; \
+    date=$${date%.gmi}; \
+    date=$${date%/index}; \
+    date=$$(echo "$$date" | tr / -); \
+    echo "src/shizuka.space/glog/$${date}.gmi" \
+)
+make-shiz-glog-obj = $(shell \
+    obj=$1; \
+    obj=$${obj#src/shizuka.space/glog/}; \
+    tail=$${obj##*/}; \
+    tail=$${tail#????-??-??}; \
+    date=$${obj%"$$tail"}; \
+    tail=$${tail#-}; \
+    date=$$(echo "$$date" | tr - /); \
+    tail=$${tail%.gmi}; \
+    tail=$${tail}$${tail:+/}index.gmi; \
+    echo "$(BUILD)/shizuka.space/glog/$${date}/$${tail}" \
+)
+SHIZ-GLOGOBJ := $(foreach obj,$(SHIZ-GLOGSRC),$(call make-shiz-glog-obj,$(obj)))
 SHIZ-GLOG-LATEST := $(BUILD)/shizuka.space/glog/latest/index.gmi
 
 FHTML-OBJS := $(subst $(BUILD)/the.web-is.fail/,$(BUILD)/the.web-is.fail-html/,$(FAIL-OBJS))
 FHTML-HTML := $(patsubst $(BUILD)/the.web-is.fail/%.gmi,$(BUILD)/the.web-is.fail-html/%.html,$(filter %.gmi,$(FAIL-OBJS)))
 FHTML-MISC := $(patsubst $(BUILD)/the.web-is.fail/%,$(BUILD)/the.web-is.fail-html/%,$(filter-out %.gmi,$(FAIL-OBJS)))
-
-define make-shiz-glog-rule
-$(1): $(call make-shiz-glog-src,$(1)) Makefile bin/eval-template
-
-endef
-make-shiz-glog-src = $(shell date=$1; date=$${date#$(BUILD)/shizuka.space/glog/}; date=$${date%/index.gmi}; date=$$(echo "$$date" | tr / -); echo "src/shizuka.space/glog/$${date}.gmi")
 
 define make-fail-html-rule
 $(patsubst $(BUILD)/the.web-is.fail/%.gmi,$(BUILD)/the.web-is.fail-html/%.html,$(1)): $(1) Makefile bin/htmlify
@@ -91,9 +110,11 @@ $(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Ma
 	    target=$${article%index.gmi}; \
 	    target=$${target#$(BUILD)/shizuka.space/glog/}; \
 	    date=$${target%/}; \
+	    trash=$${date#????/??/??}; \
+	    date=$${date%"$$trash"}; \
 	    date=$$(echo "$$date" | tr / -); \
 	    heading=$$(sed -ne '/^#/ { s/^#* //p; q; }' < $$article); \
-	    printf '=> %s/ %s - %s\n' "/glog/$$target" "$$date" "$$heading"; \
+	    printf '=> %s %s - %s\n' "/glog/$$target" "$$date" "$$heading"; \
 	done >> $@.tmp
 	printf '\n--\n=> mailto:kado@shizuka.space?subject=%s kado@shizuka.space (please include SHIZUKA in the subject)\n' 'SHIZUKA%3A%20%28Replace%20Me%21%29' >> $@.tmp
 	mv $@.tmp $@
@@ -107,9 +128,12 @@ $(SHIZ-GLOGOBJ):
 	printf '\n--\n=> mailto:kado@shizuka.space?subject=%s kado@shizuka.space (please include SHIZUKA in the subject)\n' 'SHIZUKA%3A%20%28Replace%20Me%21%29' >> $@.tmp
 	mv $@.tmp $@
 
-.PHONY: clean
+.PHONY: clean clean-shiz
 
 clean:
 	rm -fr $(BUILD)/*/* stamps
 # ^ Leave $(BUILD/$(SITENAME) around, in case build/ is symlinked to
 # /var/gemini, etc
+
+clean-shiz:
+	rm -fr $(BUILD)/shizuka.space/* stamps/shizuka.space* sites
