@@ -27,11 +27,27 @@
 => gopher://gopher.club:70/1/users/nclp/ nclp @ gopher.club
 => gopher://sdf.org:70/1/users/danielaw/phlog danielaw
 
+=> gemini://skyjake.fi/tinylog.gmi skyjake's tinylog
+(terser, updated a bit more frequently; see “skyjake’s Capsule”, a bit below.
+
 ### Gemsubs
 
 => gemini://coldscars.smol.pub/ coldscars // fragments (Poetry)
 => gemini://tilde.club/~winter/gemlog/ winter's gemlog
 => gemini://thrig.me/blog/ thrig bphflog
+=> gemini://frooplet.com/ Big Bungo's Froopsule (Unixy stuff?)
+
+=> gemini://skyjake.fi/ skyjake’s Capsule
+Creator/maintainer of the excellent Lagrange Gemini client, gmcapsuled (Gemini/Titan server), Gitview (git repo-viewing extension to gmcapsuled, and the Cosmos super-aggregator! Also, co-author of the Titan ";edit" proposal spec.
+
+=> gemini://lowkey.party/ Lowkey Party (Nigel)
+Experiences in tech, photography, DIY, and dealing with other humans.
+
+
+## Bulletin Boards (BBS)
+
+=> gemini://bbs.geminispace.org/ GeminiSpace BBS
+=> gemini://station.martinrue.com/ Station (chatboard)
 
 ## Aggregators
 
@@ -43,11 +59,6 @@
 => gemini://tilde.team/ Tilde Team - Gemini
 => gopher://tilde.team/1/ Tilde Team - Gopher
 => gopher://sdf.org/1/ The Super Dimension Fortress (SDF) - Gopher
-
-## Bulletin Boards (BBS)
-
-=> gemini://bbs.geminispace.org/ GeminiSpace BBS
-=> gemini://station.martinrue.com/ Station (chatboard)
 
 ## Games, and Gaming Spaces
 
@@ -61,7 +72,6 @@
 => gemini://mozz.us/ Mozz.us Gemini
 => gopher://mozz.us/1 Mozz.us Gopher
 => gemini://gemini.thegonz.net/ TheGonz
-=> gemini://skyjake.fi/ Skyjake.fi
 => gemini://transjovian.org/ Transjovian
 
 ## Protocol Details
