@@ -1,0 +1,46 @@
+# Shokz Headphones
+
+=> gemini://spell.mywire.org:1960/~stack/0260.gmi stack - Shokz Bone-Conduction Headphones (2026-05-12)
+=> gemini://bbs.geminispace.org/u/stack/43203 GeminiSpace BBS post of the same, with replies
+
+> So I got a pair, and am not regretting it at all.
+
+Same! Just a couple weeks ago (mere days before my jubilant introduction to geminispace and the smolnet!)
+
+Mine were somewhat over $150, and I generally don’t look to spend that much unless it’s going to have some _serious_ audio fidelity. So I was somewhat anxious to spend that much on a technology I hadn’t had an opportunity to try out for myself (unlike stack, who tried a friend’s first), and that is widely known for having a week bass-end. That’s actually why I wanted these, in particular, as they use both bone-conduction, and little speakers right by, but not actually on, your ears. And you can switch them to bone-conduction-only mode.
+
+I absolutely love them!—Apparrently, bc I am listening to music way more than usual, since purchasing them. I barely notice them, even when wearing for long hours. Being open-air, they allow me to clearly hear what’s going on around me (...except that I’m usually blasting the music, so maybe not so much—still, it feels nice for my earlobes to be completely exposed to the open air).
+
+I do miss the bass—even my Raycon earbuds had significantly more there, and I have a pair of somewhat-bulky Yamaha earbuds that do significantly better than _that_.
+
+## Issues with other headphones
+
+When I really want fidelity, in both the highs and the lows, I use my Sony WH-H900N. At some point, the foam cups deteriorated pretty badly, and I bought third-party replacements. They’re decent enough, except that something in them is always decompressing slightly, and the tiny pressure changes are very noticeable/distracting to me, in the pressure-sealed dome of air around my ears. I usually have to listen with my ears slightly uncovered, using my lobes to “lift” a side of the cup so it doesn’t seal as thoroughly. I also need to always turn off noise-cancelling mode (which always comes on when I power them on), as that unfortunately exaggerates the tiny sounds made by the tiny pressure changes, making them stronger.
+
+(Yes, I should absolutely replace those “hifi” earphones with something that wn’t do that)
+
+The sound on my new Shokz pair may be nowhere near as good as those, but they’re still plenty good, more so than I was expecting, to be honest. And they’re damned convenient. Since they cause very little discomfort, I often just continue to wear them when they’re not powered on, so I never forget them or have to fish for them through my pack.
+
+Note: the Shokz does have a "bass-boost" mode, accessible via their mobile app. IMO, it’s not worth using, ever.
+
+The main reason I bought them was, on the one hand I’ve got those annoyingly pressure-varying, very bulky Sony over-ear things, and on the other, I’ve got earbuds. Problem is, my ears generate earwax. Like, a _lot_ of it. Enough that after a while it tends to compact and I suffer hearing loss until I degunk it (TMI, I know. Sorry!). My go-to Raycons additionally had an issue where the rubber plug would get left behind in my right ear, every time I removed them. And the plug fit pretty much exactly within my earhole, meaning it was a bit of a pain to fish out, and I’d have to worry it with my fingernail to get enough of it to jut out that I could grip it with my fingertips.
+
+After that started happening, my patience for them obviously began to wear thin pretty quickly. Also they tended not to be terribly comfortable for long periods (they come with an assortment of rubber plug sizes, but I don’t think any of the others would’ve been more comfortable—though I’m sure some would’ve prevented the stuck-plug issue!)
+
+## More notes on the Shokz
+
+Noise leakage: one of my biggest concerns about using them was that they’d leak enough noise to annoy everyone near me (and I like to listen to things pretty loudly—for me, personally, the joy of listening to music at a fairly high volume, outweighs any dangers of mild hearing loss over time). But at the volume I listen at, you can mostly just hear the higher-pitched stuff leaking faintly. I liken it to the very cheap headphones that used to ship with a knock-off walkman, back in the day (if you’re old enough to remember those). It’s quite tolerable, though possibly annoying enough in *ultra-quiet* spaces, such as a library.
+
+Bone conduction: by default, its "Standard" mode combines a small amount of "bone conduction", with the small conventional speakers. Using their mobile app, you can switch it to what they call "Classic" mode, which will use the bone conduction exclusively, disabling the speakers.
+
+(I acknowledge that requiring a mobile app to access headset features is a likely deal-breaker for at least some readers on the SmolNet. I, personally, can tolerate this. For now, anyway. I can always stop using the bone conduction feature, and it would remain useful to me.)
+
+However, the strap that keeps the phones on your head, doesn’t press the conductors into your ears (or bones). In my experience, having the sound up high enough that I can hear it at the volume I want, or even near it, without having to find a way to press them firmly into the sides of my head, leaks exactly as much noise to others, as just using the Standard mode does.
+
+But! When I’m listening to audiobooks at night, next to my wife, I generally am laying on my side, with a pillow pushing one of the sides into my head. In this situation, I can turn the volume _waaaaaayyy_ down, and still hear quite clearly. Obviously, most of the sound is coming from only one ear piece (the one pressed to me by the pillow). For music, this would be a deal-breaker, but for audiobooks, merely speech, that suits me just fine.
+
+lars_the_bear, commenting on stack’s post to the BBS (see above link) recommends using earplugs, as the conductors against those are apparently very effective. For my purposes, though, that’s a definite step backwards from what I love about these. But perhaps I might try that technique on an airplane or in a library, so I can lower the volume/noise leakage to others. Of course, on an airplane, I’m more likely to prefer plug-in headphones so that I can still use them during takeoff and landing. (My current phone has a deal-breaker issue with USB C-to-phono adapters, but that’s another story...)
+
+### Product (web) link, for the curious
+
+=> https://shokz.com/products/openrunpro2 The set I got: OpenRun Pro 2

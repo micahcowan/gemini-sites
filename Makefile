@@ -124,7 +124,7 @@ $(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Ma
 	    printf '=> %s %s - %s\n' "/glog/$$target" "$$date" "$$heading"; \
 	done >> $@.tmp
 	cat src/shizuka.space/BITS/orerano.gmi >> $@.tmp
-	cat src/shizuka.space/BITS/trailer.gmi >> $@.tmp
+	cat src/shizuka.space/BITS/trailer.gmi | grep -v 'Back to' >> $@.tmp
 	mv $@.tmp $@
 
 $(eval $(foreach target,$(SHIZ-GLOGOBJ),$(call make-shiz-glog-rule,$(target))))
@@ -132,7 +132,6 @@ $(eval $(foreach target,$(SHIZ-GLOGOBJ),$(call make-shiz-glog-rule,$(target))))
 $(SHIZ-GLOGOBJ):
 	mkdir -p $(dir $@)
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
-	printf '\n=> / /  Back to capsule home\n' >> $@.tmp
 	cat src/shizuka.space/BITS/trailer.gmi >> $@.tmp
 	mv $@.tmp $@
 
