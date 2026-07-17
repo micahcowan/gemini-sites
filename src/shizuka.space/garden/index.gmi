@@ -34,15 +34,34 @@
 
 => gemini://coldscars.smol.pub/ coldscars // fragments (Poetry)
 => gemini://tilde.club/~winter/gemlog/ winter's gemlog
-=> gemini://thrig.me/blog/ thrig bphflog
-=> gemini://frooplet.com/ Big Bungo's Froopsule (Unixy stuff?)
+=> gemini://frooplet.com/ Big Bungo’s Froopsule (Unixy stuff?)
+=> gemini://lierre.smol.pub/posts Lierre's soapbox
+=> gemini://njms.ca/gemlog/ njms’s gemlog
+
+=> gemini://gemini.cyberbot.space/smolzine/ smolzine
+A smol gemzine
 
 => gemini://skyjake.fi/ skyjake’s Capsule
 Creator/maintainer of the excellent Lagrange Gemini client, gmcapsuled (Gemini/Titan server), Gitview (git repo-viewing extension to gmcapsuled, and the Cosmos super-aggregator! Also, co-author of the Titan ";edit" proposal spec.
 
+=> gemini://zaibatsu.circumlunar.space/~solderpunk/gemlog/ Solderpunk's gemlog
+Author of the Gemini Protocol specification.
+
+=> gemini://alexschroeder.ch/ Alex Schroeder's Diary
+Author of the Titan Protocol specification.
+
 => gemini://lowkey.party/ Lowkey Party (Nigel)
 Experiences in tech, photography, DIY, and dealing with other humans.
 
+=> gemini://thrig.me/blog/ thrig bphflog
+The homepage of a professional internet peanut thrower.
+Topics: OpenBSD, music, Perl, programming, software, Common LISP, vi, C, cooking and the oxford comma. (...I see what they did there!)
+
+=> gemini://tilde.town/~hush/gemlog/ hush’s gemlog
+Writes about her thoughts on personal philosophy, her relationship to art, and experiences from her life.
+
+=> gemini://danielledevs.smol.pub/ danielledevs
+Musings of a luddite, chronically ill, transgender software developer.
 
 ## Bulletin Boards (BBS)
 
@@ -67,12 +86,25 @@ Experiences in tech, photography, DIY, and dealing with other humans.
 => gemini://gemini.thegonz.net/ “Things” at TheGonz.net (scroll to the “Games” section)
 => gopher://mozz.us:7006/1/ Text Adventures at Mozz.us (Gopher). Including Zork!
 
+## Reading Fodder
+
+=> gemini://cosmic.voyage/ Cosmic Voyage
+A tilde community based around a collaborative science-fiction universe. Users write stories as the people aboard ships, colonies, and outposts.
+
+## Articles
+
+=> gemini://gemini.alexandrevicente.net/posts/2026/05/25/how-an-e-reader-became-my-favorite-web-browser/
+“How an e-reader became my favorite Web Browser”
+
 ## Miscellanea
 
 => gemini://mozz.us/ Mozz.us Gemini
 => gopher://mozz.us/1 Mozz.us Gopher
 => gemini://gemini.thegonz.net/ TheGonz
-=> gemini://transjovian.org/ Transjovian
+=> gemini://alexschroeder.ch/
+
+=> gemini://gemini.bortzmeyer.org/software/lupa/lupa-capsules.gmi Lupa Capsule List
+List of all Gemini capsules known to the Lupa crawler. Seems to be better kept up-to-date than the TLGS or Kennedy indexers...
 
 ## Protocol Details
 
