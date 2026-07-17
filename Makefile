@@ -3,12 +3,15 @@ BUILD = build
 FAIL-SRC := $(shell find src/the.web-is.fail ! -type d | grep -v BITS)
 FAIL-OBJS := $(patsubst src/%,$(BUILD)/%,$(FAIL-SRC))
 
-SHIZ-STATIC-SRC := $(filter-out src/shizuka.space/index.gmi,$(shell find src/shizuka.space ! -type d | grep -v BITS | grep -v glog/))
+SHIZ-SRC := $(filter-out src/shizuka.space/index.gmi,$(shell find src/shizuka.space ! -type d | grep -v BITS | grep -v glog/))
+SHIZ-STATIC-SRC := $(filter-out %.gmi,$(SHIZ-SRC))
 SHIZ-STATIC-OBJS := $(patsubst src/%,$(BUILD)/%,$(SHIZ-STATIC-SRC))
+SHIZ-GEMTEXT-SRC := $(filter %.gmi,$(SHIZ-SRC))
+SHIZ-GEMTEXT-OBJS := $(patsubst src/%,$(BUILD)/%,$(SHIZ-GEMTEXT-SRC))
 SHIZ-GLOGSRC := $(shell find src/shizuka.space/glog -name '*.gmi' | grep -v BITS)
 
 define make-shiz-glog-rule
-$(1): $(call make-shiz-glog-src,$1) Makefile bin/eval-template
+$(1): $(call make-shiz-glog-src,$1) Makefile bin/eval-template src/shizuka.space/BITS/trailer.gmi
 
 endef
 make-shiz-glog-src = $(shell \
@@ -85,14 +88,18 @@ stamps/the.web-is.fail-html: $(FHTML-HTML) $(FHTML-MISC) $(BUILD)/the.web-is.fai
 $(BUILD)/the.web-is.fail-html/style.css: src/style.css Makefile
 	cp $< $@
 
-stamps/shizuka.space-static: $(BUILD)/shizuka.space/index.gmi $(SHIZ-STATIC-OBJS)
+stamps/shizuka.space-static: $(BUILD)/shizuka.space/index.gmi $(SHIZ-GEMTEXT-OBJS) $(SHIZ-STATIC-OBJS)
 	touch $@
 
 $(eval $(foreach gmi,$(filter %.gmi,$(FAIL-OBJS)),$(call make-fail-html-rule,$(gmi))))
 
 $(eval $(foreach other,$(filter-out %.gmi,$(FAIL-OBJS)),$(call make-fail-html-static-rule,$(other))))
 
-$(SHIZ-STATIC-OBJS): $(BUILD)/%.gmi: src/%.gmi src/shizuka.space/BITS/*.gmi Makefile bin/eval-template
+$(SHIZ-STATIC-OBJS): $(BUILD)/%: src/% Makefile
+	mkdir -p $(dir $@)
+	cp $< $@
+
+$(SHIZ-GEMTEXT-OBJS): $(BUILD)/%.gmi: src/%.gmi src/shizuka.space/BITS/*.gmi Makefile bin/eval-template
 	mkdir -p $(dir $@)
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
 	mv $@.tmp $@
@@ -100,7 +107,7 @@ $(SHIZ-STATIC-OBJS): $(BUILD)/%.gmi: src/%.gmi src/shizuka.space/BITS/*.gmi Make
 stamps/shizuka.space-glog: $(SHIZ-GLOGOBJ)
 
 #$(SHIZ-GLOG-LATEST): $(SHIZ-GLOGOBJ) Makefile bin/eval-template
-$(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Makefile bin/eval-template
+$(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Makefile bin/eval-template src/shizuka.space/BITS/orerano.gmi src/shizuka.space/BITS/trailer.gmi
 	mkdir -p $(dir $@)
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
 	printf '\n###Latest glogs:\n\n' >> $@.tmp
@@ -116,7 +123,8 @@ $(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Ma
 	    heading=$$(sed -ne '/^#/ { s/^#* //p; q; }' < $$article); \
 	    printf '=> %s %s - %s\n' "/glog/$$target" "$$date" "$$heading"; \
 	done >> $@.tmp
-	printf '\n--\n=> mailto:kado@shizuka.space?subject=%s kado@shizuka.space (please include SHIZUKA in the subject)\n' 'SHIZUKA%3A%20%28Replace%20Me%21%29' >> $@.tmp
+	cat src/shizuka.space/BITS/orerano.gmi >> $@.tmp
+	cat src/shizuka.space/BITS/trailer.gmi >> $@.tmp
 	mv $@.tmp $@
 
 $(eval $(foreach target,$(SHIZ-GLOGOBJ),$(call make-shiz-glog-rule,$(target))))
@@ -125,7 +133,7 @@ $(SHIZ-GLOGOBJ):
 	mkdir -p $(dir $@)
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
 	printf '\n=> / /  Back to capsule home\n' >> $@.tmp
-	printf '\n--\n=> mailto:kado@shizuka.space?subject=%s kado@shizuka.space (please include SHIZUKA in the subject)\n' 'SHIZUKA%3A%20%28Replace%20Me%21%29' >> $@.tmp
+	cat src/shizuka.space/BITS/trailer.gmi >> $@.tmp
 	mv $@.tmp $@
 
 .PHONY: clean clean-shiz shiz
