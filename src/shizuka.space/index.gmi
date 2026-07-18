@@ -11,4 +11,4 @@ Content incoming.
 => gemini://the.web-is.fail/ The.Web-Is.Fail
 Site I made to make a case for the Smolnet, and to provide resources for ramping up understanding, and ideas on where to start one's SmolNet exploration journey.
 
-=> /garden/ Links I find interesting
+=> /garden/ Links I find interesting (Kado's Link Garden)

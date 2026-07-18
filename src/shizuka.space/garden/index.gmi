@@ -1,6 +1,6 @@
-=> / Back to Kado's home page
+=> / Back to Kado’s home page
 
-# Kado's Link Garden
+# Kado’s Link Garden
 
 ## Me (Kado) in Other Smol Spaces
 
@@ -23,19 +23,20 @@
 
 ### Unfeeded
 
-=> gopher://sdf.org:70/1/users/a2.4am/projects The 4am Gopherspace (Apple II/6502 tools & cracks)
+=> gopher://sdf.org:70/1/users/a2.4am/ The 4am Gopherspace (Apple II/6502 tools & cracks)
 => gopher://gopher.club:70/1/users/nclp/ nclp @ gopher.club
 => gopher://sdf.org:70/1/users/danielaw/phlog danielaw
 
-=> gemini://skyjake.fi/tinylog.gmi skyjake's tinylog
+=> gemini://skyjake.fi/tinylog.gmi skyjake’s tinylog
 (terser, updated a bit more frequently; see “skyjake’s Capsule”, a bit below.
 
 ### Gemsubs
 
 => gemini://coldscars.smol.pub/ coldscars // fragments (Poetry)
-=> gemini://tilde.club/~winter/gemlog/ winter's gemlog
+=> gemini://drmollytov.smol.pub/ molly’s guide to cyberpunk gardening
+=> gemini://tilde.club/~winter/gemlog/ winter’s gemlog
 => gemini://frooplet.com/ Big Bungo’s Froopsule (Unixy stuff?)
-=> gemini://lierre.smol.pub/posts Lierre's soapbox
+=> gemini://lierre.smol.pub/posts Lierre’s soapbox
 => gemini://njms.ca/gemlog/ njms’s gemlog
 
 => gemini://gemini.cyberbot.space/smolzine/ smolzine
@@ -44,10 +45,10 @@ A smol gemzine
 => gemini://skyjake.fi/ skyjake’s Capsule
 Creator/maintainer of the excellent Lagrange Gemini client, gmcapsuled (Gemini/Titan server), Gitview (git repo-viewing extension to gmcapsuled, and the Cosmos super-aggregator! Also, co-author of the Titan ";edit" proposal spec.
 
-=> gemini://zaibatsu.circumlunar.space/~solderpunk/gemlog/ Solderpunk's gemlog
+=> gemini://zaibatsu.circumlunar.space/~solderpunk/gemlog/ Solderpunk’s gemlog
 Author of the Gemini Protocol specification.
 
-=> gemini://alexschroeder.ch/ Alex Schroeder's Diary
+=> gemini://alexschroeder.ch/ Alex Schroeder’s Diary
 Author of the Titan Protocol specification.
 
 => gemini://lowkey.party/ Lowkey Party (Nigel)
