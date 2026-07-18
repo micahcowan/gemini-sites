@@ -1,0 +1,95 @@
+# (PENDING) An Introduction to Shogi, a Japanese Chess variant
+
+I'm not any particular good, but I enjoy playing Shogi (将棋/しょうぎ/shougi) when I have the opportunity to do so. Which isn't often, as few people know about it, and for many that might otherwise be interested, distinguishing the (traditional) pieces by the kanji characters is too daunting.
+
+# Beginner-Friendly Ways to Play
+
+## Kumon “Study” Sogi Pieces
+
+Fortunately, there are sets you can purchase that also have the moveset printed directly on them, such as the one linked below.
+
+=> https://www.amazon.com/dp/B002ACUC4A? (AMAZON) Kumon “Study” Shogi Pieces
+=> https://shop.kumonshuppan.com/view/item/000000003436 Official product page on Kumon (in Japanese)
+=> /img/study-Shogi-board.jpg (IMAGE) Kumon “Study” Shogi Pieces, on a Shogi board
+=> /img/study-Shogi-closeup.jpg (IMAGE) Close-up of pawn and rook pieces, showcasing the printed movesets
+
+Unfortunately, I haven't found any such sets available for purchase where I live (USA), and if that's also the case for where you reside, that, too, could impede your inclination to satisfy whatever curiosity about it you may have.
+
+Fortunately (again!), you can just take a regular set of Shogi pieces, and a sharpie marker, and make little dots and dashes to indicate the moveset on the pieces, for the convenience of any new players. Of course, as you build your skill, poring over the movement notations of each piece on the board to understand the active threats probably won't work out too well, so you'll still want to build an understanding of their moves.
+
+## Simple Gemini Game Server!
+
+You can also avoid the kanji altogether, by playing in “latin” mode, over on the Simple Gemini Game Server (SGGS)! It also has a “kanji” mode (the default), but latin mode may be more comfortable for some people, and is also less likely to cause board-formatting issues with some Gemini client/font combinations (I can't get Lagrange 1.20.7 to format it correctly, whatever I do. I either play in latin mode, or use the Amfora client in my terminal).
+
+=> gemini://sggs.thegonz.net/help?Shogi Shogi Instructions on SGGS (requires account!)
+=> gemini://sggs.thegonz.net/?askcert SGGS Account Registration page
+
+SGGS is how I've been getting my own Shogi kicks, lately. I'm very grateful to mbays for the service!
+
+# Comparison to Chess
+
+## Similarities to Chess
+
+Like Chess, Shogi:
+
+* Takes place on a grid of squares, divided into ranks and files
+* Has one king per player, whose defeat ends the game, and who can only move a single square, but in any direction
+* Has a row of pawns across the board for each of the players, that can only move one square ahead
+* Has rooks that can move as many uninterrupted squares in a straight direction as the player wishes
+* Has bishops that can do the same, in the diagonal directions
+* Has knights, which can jump over other pieces, friend and foe alike, and move in “L” shpaes
+* Features an ability for pieces to be promoted when they're on the other end of the board
+* Features the ability for a piece to “capture” other pieces that lie within the squares that are available for the attacking piece to move into
+* Can involve strategies like “forks” and “pins”
+
+## Differences from Chess
+
+You could, therefore, be forgiven for assuming that Shogi is just Chess with a few mild variations. You would, however, be mistaken!
+
+Because while Shogi undeniably shares some strong similarities with Chess, it has even stronger differences! The biggest of these undoubtedly being:
+
+### Captured pieces re-enter play, in service of the player who captured them!
+
+If you're thinking of a Chess board (and haven't looked at the above links to images of Shogi pieces), you may be saying to yourself: Well, isn't it going to be difficult to tell whose piece is whose, if you capture a white pawn, but unlike all the other white pawns, that one white pawn in particular is actually the player for “black”?
+
+If you _have_ peeked at the images, you may have put the answer together: the pieces are not colored! Instead, the pieces are pointed, so as to indicate directionality. So when a piece is turned on its former master by its new captor, the piece is turned about to face toward its new opponent's end of the board.
+
+Not only do any captured pieces become yours to put back into play, but a captured piece may be dropped absolutely anywhere on the board! ...Actually, there are a few sensible rules against a few drop scenarios (such as dropping a piece where it will never have a legal move out of that square)—but _almost_ anywhere on the board!
+
+If you consider the ramifications of this for even a few moments, you will realize that this completely alters defense and strategy for the game. The threat of a rook is significantly less dominating, if the threatened player can simply drop a piece in hand in front of the threatened piece. Now, in order to take the new piece, the rook might have to place itself within the attack range of the originally otherwise-doomed piece!
+
+Although the pieces have no distinguishing colors, in English the players are still frequently referred to as Black and White. However:
+
+### “Black” moves first, with “White” following
+
+The English terms for the players in Shogi, are taken not from the names of the players in Chess, but from Go. (As with Go, the Japanese terms for the respective players are “sente” (先手), and “gote” (後手) (the “te” in each case is pronounced like “teh”), meaning “preceding hand”, and “following hand”, respectively.
+
+The player pieces are not colored distinctively for each player in Shogi, and furthermore:
+
+### The squares on a Shogi board are colored uniformly throughout
+
+So, they aren't distinguished (except by their position), either.
+
+### There is no queen piece
+
+Shogi has no “queen”. Instead, the players get more-powerful versions of the rook and the bishop (more on that, later). This obviously affects the board layout! Instead of the king and queen in the center, flaring out with four “officer” pieces to either side, laid out symmetrically, we instead have only the king in the center, with _five_ officers symmetrically spread to either side.
+
+...Wait, five?! That's right, because:
+
+### The Shogi board is a 9×9 grid
+
+### Not only pawns, but (nearly) every piece in Shogi can promote—even the rook and bishop!
+
+### The rook and bishop promote to add the movements of a king to their existing moveset
+
+And thus, a rook gains a limited ability to move diagonally, and the bishop gains a limited ability to move straight. Which is a very important ability, particularly for the bishop, since:
+
+### Each player starts with only one rook, and one bishop
+
+Good thing you can give that single bishop the ability to switch tracks, eh?
+
+### Promotion involves the far three ranks of the board, not just the farthest
+
+### Except for the rook and the bishop, all other pieces that may be promoted, promote to have the exact same moveset
+
+And, far from becoming more powerful, that promoted moveset is a pretty darn restrictive one. In fact, these promoted pieces have almost the exact same set of available moves as the king does, except two moves fewer! They can retreat directly behind (no diagonal retreats).
