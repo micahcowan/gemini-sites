@@ -110,7 +110,7 @@ stamps/shizuka.space-glog: $(SHIZ-GLOGOBJ)
 $(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Makefile bin/eval-template src/shizuka.space/BITS/orerano.gmi src/shizuka.space/BITS/trailer.gmi
 	mkdir -p $(dir $@)
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
-	printf '\n###Latest glogs:\n\n' >> $@.tmp
+	printf '\n###Latest gemlog entries:\n\n' >> $@.tmp
 	for article in $(SHIZ-GLOGOBJ); do \
 	    echo "$$article"; \
 	done | sort -r | head -n 10 | while read -r article; do \
@@ -123,6 +123,8 @@ $(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Ma
 	    heading=$$(sed -ne '/^#/ { s/^#* //p; q; }' < $$article); \
 	    printf '=> %s %s - %s\n' "/glog/$$target" "$$date" "$$heading"; \
 	done >> $@.tmp
+	printf '\n\n%s\n' "=> gemini://skyjake.fi/gmcapsule/ This gemcap is powered by gmcapsule" >> $@.tmp
+	printf '%s\n' "(along with various scripts I’ve written)." >> $@.tmp
 	cat src/shizuka.space/BITS/orerano.gmi >> $@.tmp
 	cat src/shizuka.space/BITS/trailer.gmi | grep -v 'Back to' >> $@.tmp
 	mv $@.tmp $@
