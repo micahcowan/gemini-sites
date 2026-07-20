@@ -72,24 +72,80 @@ So, they aren't distinguished (except by their position), either.
 
 ### There is no queen piece
 
-Shogi has no “queen”. Instead, the players get more-powerful versions of the rook and the bishop (more on that, later). This obviously affects the board layout! Instead of the king and queen in the center, flaring out with four “officer” pieces to either side, laid out symmetrically, we instead have only the king in the center, with _five_ officers symmetrically spread to either side.
+Shogi has no “queen”. Instead, the players get more-powerful versions of the rook and the bishop (more on that, later). This obviously affects the board layout! Instead of the king and queen in the center, flaring out with three “officer” pieces to either side, laid out symmetrically, we instead have only the king in the center, with _four_ officers symmetrically spread to either side.
 
-...Wait, five?! That's right, because:
+...Wait... king, plus four on each side, makes nine in a row, Nine?! That's right, because:
 
 ### The Shogi board is a 9×9 grid
 
+In contrast to the 8×8 board in Chess.
+
 ### Not only pawns, but (nearly) every piece in Shogi can promote—even the rook and bishop!
 
-### The rook and bishop promote to add the movements of a king to their existing moveset
+The only pieces that don't promote are the king, and the golden generals (you'll see why, later).
 
-And thus, a rook gains a limited ability to move diagonally, and the bishop gains a limited ability to move straight. Which is a very important ability, particularly for the bishop, since:
+### You don't choose what to promote your pieces into
+
+Since, in Chess, you virtually always promote your pawn into a queen when given the chance, some players may not actually realize that when you promote a pawn, you can actually choose to promote your pawn into any officer piece (that is, any non-pawn, non-king piece). Since queens have by far the most powerful moveset, and since the moves of a rook or a bishop are a subset of those of the queen, there's never any real reason to promote to a rook or bishop. However, a pawn can also promote to a knight, and occasionally that may be more useful than a queen.
+
+In Shogi, however, there are no promotion choices. Every piece promotes to one specific form. In fact, in Shogi, you do not promote a piece by replacing it with a better piece: you promote by flipping the piece over to its “promoted” side!
+
+When a promoted piece is captured, and the capturing player drops it back on the board, it is always reverted to its unpromoted side.
+
+While you may not get to choose what you promote into, you do have some choice surrounding _when_ to promote, because:
+
+### Promotion involves the far three ranks of the board, not just the farthest one
+
+Any time you move a promotable piece either into, out of, or within the farthest three ranks from your side of the board, you have the option to promote the moved piece. Thus, if that piece's move either started in, or ended in the promotion zone (or both), you may promote it.
+
+There are a few cases where you don't get this choice, and _must_ promote your moved piece. This occurs when the piece would otherwise become immovable (the pawn being an obvious example, once it reaches the back row).
+
+Note that dropping a piece into the promotion zone does not get it promoted, it must actually make a move that involves the zone.
+
+### Shogi has more types of pieces
+
+If you were reading carefully, you may recall that I mentioned that in Shogi, the king has four officers, symmetrically arranged to either side of it. Since Chess has three officers, excluding the queen (which I've already said that Shogi lacks), it follows that Shogi must have (at least) one extra type of piece. It could also be the case that there are Chess pieces besides the queen that don't have a counterpart in Shogi (but it's not, in fact, the case—all other pieces have comparable (not identical) pieces in Shogi.
+
+But, it's not the case that Shogi has only one additional piece besides the ones in Chess—actually, there are three! They are the golden general, the silver general, and the lance.
+
+Okay, but then if we have the non-queen Chess officers (rook, bishop, knight), and we also have golden general, silver general, and lance... that makes six officers total. Earlier I said that the back row holds just the king and four types of officers, so that means:
+
+### Shogi board setup uses three rows (ranks) for each player
+
+Instead of two. There's the back row with the king and most of the officers, the row full of just pawns in the front, and between them is a row with only two pieces on it:
 
 ### Each player starts with only one rook, and one bishop
 
-Good thing you can give that single bishop the ability to switch tracks, eh?
+And they're placed in that special, extra “middle” player row, between the king and pawn rows.
 
-### Promotion involves the far three ranks of the board, not just the farthest
+Wait, just one bishop? That means you can only control half of the squares, right?
 
-### Except for the rook and the bishop, all other pieces that may be promoted, promote to have the exact same moveset
+Well, right... except that, as mentioned previously, most Shogi pieces have promotions. This includes the rook and the bishop! Read on for more about the difference that makes.
+
+(You could also capture the opponent's bishop and drop it on one of the squares your own bishop couldn't access.)
+
+### The knight can only move forward
+
+In Chess, the knight has a total of up to eight, L-shaped moves available to it. In Shogi, there are only two moves for an (unpromoted) knight, though they are two of the ones available in Chess: a knight can only move three spaces forward, and one space left or right.
+
+### Pawns attack directly forward
+
+In Chess, pawns move directly forward, but can only attack diagonally forward. In Shogi, pawns attack in the same way they move: directly in front of them.
+
+### No two-space pawn advance, no castling, and no en-passant
+
+These stranger rules in Chess do not have equivalents in Shogi.
+
+# Other Shogi Notes
+
+### The rook and bishop promote to add the movements of a king to their existing moveset
+
+And thus, a rook gains a limited ability to move diagonally, and the bishop gains a limited ability to move straight. Which is a very important ability, particularly for the bishop.
+
+### Except for the rook and the bishop, all other promotable pieces, promote to have the exact same moveset
 
 And, far from becoming more powerful, that promoted moveset is a pretty darn restrictive one. In fact, these promoted pieces have almost the exact same set of available moves as the king does, except two moves fewer! They can retreat directly behind (no diagonal retreats).
+
+## Pawns are not the only pieces who have no “retreat” moves
+
+
