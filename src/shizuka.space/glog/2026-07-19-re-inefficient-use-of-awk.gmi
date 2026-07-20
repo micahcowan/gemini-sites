@@ -1,0 +1,81 @@
+# Re: i was corrected on the internet about my inefficient use of awk today
+
+This is a rambling response to the following post by jecxjo, itself part of a longer thread.
+=> gemini://gemini.sh0.xyz/cgi-bin/gemlog.py/post/re-i-was-corrected-on-the-internet-about-my-inefficient-use-of-awk-today jecxjo’s original post
+
+Like jecxjo’s own post, I’m not necessarily speaking “at” the person to whom I’m responding; but instead responding to “the thread as a whole”, chiming in with related thoughts that the topic has teased out from me.
+
+## The (Perceived) Irrelevance of Awk
+
+I was telling my friend the other day about having written an awk script to convert the.web-is.fail into HTML, so I could actually publish it where its intended audience might conceivably read it. He mentioned avoiding awk/sed when at all possible, because he always seemed to end up with more corner cases than intended behavior.
+
+=> gemini://the.web-is.fail/
+=> http://the.web-is.fail/ (HTMLified edition of the same)
+!-=> http://the.web-is.fail/ (ʜᴛᴍʟified edition of the same)
+
+I pointed him at my (somewhat thrown-together) script (as an in-case-you-find-it-interesting), and he was quiet for a moment, then announced, “You know, I don’t think I realized you could write for awk in this way. Makes perfect sense in hindsight, but I always  chunked it out into multiple one liners instead of this sort of thing. I should probably pay more attention to it.”
+
+=> https://github.com/micahcowan/gemini-sites/blob/main/bin/htmlify the awk script in question
+(If you poke around there, you’ll also see sources for the creation/maintenance of this site’s content, as well!)
+
+I think this is an incredibly common misunderstanding of awk: that it’s mainly for slapping together one-liners. Although sed is (shockingly!) Turing-complete, I think it very much deserves to share that reputation; being Turing-complete doesn’t turn out to add up to all that much on its own, and sed isjust a couple short steps away from deliberately challenging-to-use novelty languages like Brainfuck (which is itself, also Turing-complete, and in fact rather strikingly similar to Turing’s original abstract machine idea, I think).
+
+But Awk is, in fact, a proper language. Not the best of them, perhaps—for example, it has “arrays”, but they’re actually implemented as strings, with the elements being separated by secret “separator” sequences. But its unique line-oriented nature, combined with the virtue of not being _absurdly terse_ the way sed (another line-oriented language) is, makes it one worth knowing, IMO. In my experience, it’s also worth knowing if you want to understand the motivation for some of why Perl is the way it is, as well. But more on that, later.
+
+## Awk as an Inspiration for Perl
+
+My introduction to Unix, was Perl. Ironically, learned on a Windows-only Perl distribution, called ActivePerl. The first use I put it to was some scripts to track firmware updates in the medium-sized company where I worked, for Y2K preparedness.
+
+I learned a lot of Unix philosophy, through Perlisms. Probably not so much the renowned philosophy of composing small, modular tools—that came a bit later. But it was enough to whet a taste for more, and I’m very glad it did—and that there was an immediate opportunity to explore that, in the form of our company webserver-and-NAT.
+
+I learned Perl primarily through its reference manpages (I do not recommend this approach to others—there is far too much cross-referencing between them, apart from the explicitly tutorial-oriented ones, ofc). As they explain some of Perl’s features, particularly when it comes to some of the special variables and their naming conventions, they explicitly cite inspirations from sed, awk, and the Bourne shell. (And it was the learning of these attributes of Perl, and simultaneously learning about their connections to sed/awk/sh, that I was referring to when I said Perl taught me Unix, despite using it on a decidedly non-Unix system.)
+
+Perl has two features in particular that I’d like to mention, borrowed directly from Awk: the BEGIN and END blocks. While I was able to use them (should I wish to), I didn’t really understand or appreciate what value they offered. BEGIN seemed to be popular (at least at the time, 1999-2000) for initializing Perl modules, but it seemed to me that it wasn’t doing anything terribly interesting, so I didn’t understand why the convention existed (TBH, I still don’t). END, too, seemed superfluous, and even more seldom-used. After all, if you have a &main() sub or what have you, why not simply do your “end” stuff at the end of your code?
+
+Unlike some other Awk borrowings, Perl didn’t really explain the connection to Awk for these BEGIN/END blocks in detail—actually, I doubt I realized at the time that they even come from Awk. It actually wasn’t until I later learned to code in Awk, that I realized exactly what they’re for.
+
+Awk has a fairly unique outlook on how a program should run—the entire code of your program is run through, from start to finish, on every single line of input you feed through it. You organize that program code into blocks, and those blocks begin with selectors, which determine if the associated block should apply to the current line of input or not. Most of the time, and most especially in Awk “one-liners”, these selectors are regexes, determining what should happen when the line matches (or doesn’t match) a particular pattern. But a selector can be any expression at all, so it can also check to see if a previously-declared variable has a particular value, or if the number of words (“fields”) in a line falls within a certain range, et cetera.
+
+In this view of the world, BEGIN and END selectors not only make better sense—they’re absolutely vital! BEGIN always matches at the program’s start, before the first line of input has been read; END always matches after the input has reached its end, and there are no further lines to process. Both of these blocks are special because, when they are active, they are the _only_ blocks that will be evaluated. This is because an input line is not being processed at that time, so the rest of the selectors (for processing the current input line) are all irrelevant.
+
+Just because the input file has reached its end, doesn’t mean your program is done doing things! If you’ve been compiling some kind of summary, or a table, END is where you’d want to actually print that out! Similarly, BEGIN is where you do all of your initialization, and possibly output any preamble before processing begins.
+
+Perl doesn’t behave like Awk, running everything over and over again on every line of input... by default. But it does have the ability to do so, with certain command-line options, like -n or -p (like Awk, most often used in crafting one-liners). You then have a lot more reason why you might want to use BEGIN or END! (I wish this had been made a bit clearer to me, at the time I was learning.)
+
+Now that I know what I know about both languages, and given Perl’s acronym reported as standing for “Practical Extraction and Reporting Language”, along with archaic, seldom-used features like Perl’s `format` built-in function (perldoc -f format), I have to imagine that Perl was originally envisioned as being significantly more Awk-like in the beginning, than it wound up being by the time it was popularized as a popular choice for CGI scripts.
+
+## My History With Awk
+
+Like pretty much everyone I know, my introduction, and the vast majority of my exposure, to Awk, was in the form of one-liners—particularly, things like '{print $1}' for behaving rather like the Unix `cut` command (but with somewhat more flexibility around variable-length whitespace, than I gather some older implementations of that command had). Being the kind of guy I am, I believe I did immediately peruse through GNU’s Awk Manual to better solidify my understanding of it, but only really learned enough that I knew where to look for more information later, if I needed it. My usage of the language remained, for years, the construction of very simple one-liners.
+
+At one point, I was using a regression test framework for C, known as libcheck, and as there was a modest bit of boilerplate needed to plug your unit tests in, to arrange them to be run, I wanted to script that stuff away so my test code could become a bit more terse. I did this in Perl, like pretty much everything else I scripted at that time.
+
+After I completed the script to my own satisfaction, I submitted it to the libcheck maintainer for their approval. They were appreciative, but did not wish to require anyone to have something like Perl installed on a system in order to use it. I probably should’ve responded by pointing out that no one’s forcing anyone to use the terse syntax in their code, and if they don’t have Perl, they can just fall back on doing it the more-explicit way (which, of course, they’ll have to anyway, if no one provides them the script to do otherwise!)
+
+But I didn’t do that. Instead, I realized that the requirements for the existing script were fairly ideal for implementation in Awk: the entire input file can be passed through in one go, test function names are accumulated as they’re encountered, and then the boilerplate “glue” code that ties it all together is generated. And, of course, everyone everywhere always assumes that a proper, functioning Unix system will have an `awk` installed.
+
+So I pivoted, and rewrote the script in Awk. That was my first-ever time writing a “real” script in it, and the experience taught me what I needed to know to continue doing so in the future. Now, even when I know I can use Perl, I will still sometimes opt for Awk instead, when the processing involves is highly “stream-of-lines”-oriented.
+
+Apparently, my contribution (dubbed “checkmk”) is still to be found in the project’s contrib/ sub-directory. (Hi—I’m Micah.)
+
+=> https://github.com/libcheck/check/tree/master/checkmk checkmk (checkmk.in is the script itself)
+
+## Other Stuff I’ve Done with Awk
+
+In the interest of better applying the principle of DRY (Don’t Repeat Yourself), my Apple ][ emulator project Bobbin, uses Awk scripts to generate code around command-line options and configuration, parsed from the manual (the README.md file). This has the added benefit of ensuring that all command-line options are always documented—if they didn’t at least appear in the manual, the code for them would not get generated, and I’d have no way to support them in the code (apart from writing kludgey hacks, I guess).
+
+The --help message is also generated from these same manual snippets, taking just the first line of explanation from the more-thorough explanations found in the README.md file.
+
+=> https://github.com/micahcowan/bobbin/ bobbin on GitHub
+=> https://github.com/micahcowan/bobbin/tree/main/src/scripts the Awk scripts
+=> https://raw.githubusercontent.com/micahcowan/bobbin/refs/heads/main/README.md the README.md file (raw view)
+(Look for comments like <!--START-OPTIONS--> and <!--MACHINES--> to find sections that are processed by the scripts.)
+
+
+tags: awk unix perl bobbin libcheck checkmk
+
+```
+   a thousand lines parsed
+surely all know, is best done
+      one line at a time
+```

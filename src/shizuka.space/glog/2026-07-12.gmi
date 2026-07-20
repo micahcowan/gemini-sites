@@ -35,3 +35,5 @@ I've recently put up a Getting Started/why might you want to try the SmolNet gui
 It's a bit longer/provides more details (to those that care to know 'em) than the couple of other quickstart guides I've found. I felt like there were things about SmolNet that can potentially be surprising or confusing to newcomers, particularly if (unlike me), they're not immediately inclined to start reading protocol specifications and the like.
 
 => gemini://the.web-is.fail/ The Web Is Fail (or: Why, and How, to SmolNet?)
+
+tags: smolnet retro
