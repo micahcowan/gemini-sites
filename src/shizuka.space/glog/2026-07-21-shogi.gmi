@@ -1,10 +1,12 @@
-# (PENDING) An Introduction to Shogi, a Japanese Chess variant
+# An Introduction to Shogi, a Japanese Chess variant
 
 I'm not any particular good, but I enjoy playing Shogi (将棋/しょうぎ/shougi) when I have the opportunity to do so. Which isn't often, as few people know about it, and for many that might otherwise be interested, distinguishing the (traditional) pieces by the kanji characters is too daunting.
 
+This post isn't intended to be a comprehensive guide to Shogi, or even how to play it. It is intended as an attempt to entice Chess enthusiasts to contemplate looking into Shogi, while also providing some additional information about it. It's probably way too many words for that purpose, but here we are. I've spent too much time on it already to be willing to pare it down for focus. 🙃
+
 # Beginner-Friendly Ways to Play
 
-## Kumon “Study” Sogi Pieces
+## Kumon “Study” Shogi Pieces
 
 Fortunately, there are sets you can purchase that also have the moveset printed directly on them, such as the one linked below.
 
@@ -128,6 +130,8 @@ Well, right... except that, as mentioned previously, most Shogi pieces have prom
 
 In Chess, the knight has a total of up to eight, L-shaped moves available to it. In Shogi, there are only two moves for an (unpromoted) knight, though they are two of the ones available in Chess: a knight can only move three spaces forward, and one space left or right.
 
+(As with (nearly) all other Shogi pieces, it can promote into a different moveset (which does have a retreat), once it reaches the back third of the board.)
+
 ### Pawns attack directly forward
 
 In Chess, pawns move directly forward, but can only attack diagonally forward. In Shogi, pawns attack in the same way they move: directly in front of them.
@@ -144,8 +148,26 @@ And thus, a rook gains a limited ability to move diagonally, and the bishop gain
 
 ### Except for the rook and the bishop, all other promotable pieces, promote to have the exact same moveset
 
-And, far from becoming more powerful, that promoted moveset is a pretty darn restrictive one. In fact, these promoted pieces have almost the exact same set of available moves as the king does, except two moves fewer! They can retreat directly behind (no diagonal retreats).
+And, far from becoming more powerful, that promoted moveset is a pretty darn restrictive one. In fact, these promoted pieces have almost the exact same set of available moves as the king does, except two moves fewer! They can retreat directly behind (no diagonal retreats). Some ”promotion”!
+
+The golden general does not have the ability to promote, by virtue of the fact that it already has this exact moveset, from the start.
+
+The silver general has a very similar moveset, but with no movement to the sides, and two retreat moves (the diagonals). It cannot attack directly behind itself. Because its moveset is a useful complement to the golden general, a player may often choose not to promote silver even when given the opportunity, because this would make it just like any other promoted piece (or golden general).
+
+Rooks and bishops are the only two pieces not to have the same promoted moveset as everyone else: they add the moveset of the king, in addition to their existing moves (as previously mentioned).
+
+But, for all the others, several pieces do desperately need that single-square retreat, as before promotion, they have no means of moving backward:
 
 ## Pawns are not the only pieces who have no “retreat” moves
 
+As mentioned previously, knights have only the two forward-most moves that a Chess knight has. It has no retreat.
 
+On the extreme sides, in the same rank as the king, roughly where the rooks would be in Chess, there are two “lances”, which, like a rook, can move as many squares in front of it as are available—but can only move in that one direction, directly in front of it.
+
+
+
+```
+soldiers’ lines are formed,
+  fighting for their freedom
+    to make your slaves, theirs
+```
