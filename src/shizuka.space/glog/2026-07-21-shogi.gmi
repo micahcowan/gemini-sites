@@ -165,6 +165,8 @@ As mentioned previously, knights have only the two forward-most moves that a Che
 On the extreme sides, in the same rank as the king, roughly where the rooks would be in Chess, there are two “lances”, which, like a rook, can move as many squares in front of it as are available—but can only move in that one direction, directly in front of it.
 
 
+tags: shogi chess boardgames
+
 
 ```
 soldiers’ lines are formed,

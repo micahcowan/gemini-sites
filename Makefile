@@ -14,26 +14,9 @@ define make-shiz-glog-rule
 $(1): $(call make-shiz-glog-src,$1) Makefile bin/eval-template src/shizuka.space/BITS/trailer.gmi
 
 endef
-make-shiz-glog-src = $(shell \
-    date=$1; \
-    date=$${date#$(BUILD)/shizuka.space/glog/}; \
-    date=$${date%.gmi}; \
-    date=$${date%/index}; \
-    date=$$(echo "$$date" | tr / -); \
-    echo "src/shizuka.space/glog/$${date}.gmi" \
-)
-make-shiz-glog-obj = $(shell \
-    obj=$1; \
-    obj=$${obj#src/shizuka.space/glog/}; \
-    tail=$${obj##*/}; \
-    tail=$${tail#????-??-??}; \
-    date=$${obj%"$$tail"}; \
-    tail=$${tail#-}; \
-    date=$$(echo "$$date" | tr - /); \
-    tail=$${tail%.gmi}; \
-    tail=$${tail}$${tail:+/}index.gmi; \
-    echo "$(BUILD)/shizuka.space/glog/$${date}/$${tail}" \
-)
+make-shiz-glog-src = $(shell echo $1 | bin/glogconv src)
+make-shiz-glog-obj = $(shell echo $1 | bin/glogconv obj)
+
 SHIZ-GLOGOBJ := $(foreach obj,$(SHIZ-GLOGSRC),$(call make-shiz-glog-obj,$(obj)))
 SHIZ-GLOG-LATEST := $(BUILD)/shizuka.space/glog/latest/index.gmi
 

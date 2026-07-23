@@ -1,0 +1,37 @@
+#!/bin/sh
+
+set -e -u -C
+
+# Convert a glog filename (on stdin) between "src" and "obj" versions
+
+case "$1" in
+    src)
+        name=$(cat)
+        name=${name#build/shizuka.space/glog/};
+        name=${name%.gmi};
+        name=${name%/index};
+        name=$(echo "$name" | tr / -);
+        echo "src/shizuka.space/glog/${name}.gmi" \
+        ;;
+    obj)
+        obj=$(cat);
+        obj=${obj#src/shizuka.space/glog/};
+        tail=${obj##*/};
+        tail=${tail#????-??-??};
+        date=${obj%"$tail"};
+        tail=${tail#-};
+        date=$(echo "$date" | tr - /);
+        tail=${tail%.gmi};
+        tail=${tail}${tail:+/}index.gmi;
+        btail=${tail#[0-9][0-9]-}
+        if test "$tail" != "$btail"; then
+            atail=${tail%"$btail"}
+            atail=${atail%-}
+            tail="$atail/$btail"
+        fi
+        echo "build/shizuka.space/glog/${date}/${tail}"
+        ;;
+    *)
+        echo >&2 "$0: Unrecognized arg \"$1\"."
+        exit 2
+esac
