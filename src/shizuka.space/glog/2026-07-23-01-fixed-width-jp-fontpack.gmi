@@ -1,0 +1,73 @@
+# Kurinto Mono JP - Monospace CJK fontpack for Lagrange
+
+## TL;DR: Downloading and Setting Up the Fontpack
+
+NOTE: the link is deliberately BROKEN, as I do not wish misbehaving bots to download this ~47MiB fontpack. Please, if you share this link, share it in a similarly broken fashion, or else link directly to _this_ page instead.
+
+To fix the link, simply remove the “.foo” from the end of it. Thanks!
+=> gemini://shizuka.space/pub/KurintoMonoJP.fontpack.foo
+
+These fonts are Free (Libre) and Open Source, under the SIL Open Font License Version 1.1 (see the Kurinto Fonts website, below, for details).
+
+### Setting up Kurinto Mono JP in Lagrange
+
+If you download the fontpack within the Lagrange Geminispace browser, it will directly offer to install the pack (making the fonts available for use in displaying capsules).
+
+After installing the fontpack, you should open up Preferences, go to the Fonts section, and choose “Kubuntu Mono JP” as the font for Preformatted text (and, optionally, for “Monospace font”, which by default affects content served via Gopher or Nex, and other protocols that can’t distinguish proportional text from fixed-width, but may include content such as ASCII art, or diagrams, that depend on the font being monospace).
+
+The test Shogi board below should then display correctly. If it does not, you might go into the "Manage Fonts..." dialog in Lagrange, and disable any other currently-enabled fonts, and see if that makes a difference.
+
+At least in Lagrange 1.20.7, there is no need to restart—the page’s content should immediately reflect the change (possibly after switching to a different tab or page, and back again).
+
+### Using the Fontpack for Other Purposes
+
+This .fontpack file is just a zip archive of some TrueType fonts. After downloading the pack, you can rename it to .zip, and then extract it. However, you may wish to obtain a fuller set of typefaces that make up the Kurinto family, at:
+=> https://www.kurinto.com/ Kurinto Fonts
+
+## Test—Does Your Client Correctly Display CJK in Monospace?
+
+The following is a test display of a Shogi game board, copy/pasted from a game-in-progress at SGGS.
+=> gemini://sggs.thegonz.net/ SGGS (the Simple Gemini Game Server)
+
+If your CJK monospace font is set up correctly, all pieces, and the numbers on the right-hand side, should all be perfectly aligned, and you should clearly see kanji characters for the pieces, rather than uniform “replacement character” boxes.
+
+``` a shogi board
+White's hand: 歩                                
+   ａ   ｂ   ｃ   ｄ   ｅ   ｆ   ｇ   ｈ   ｉ   
+9 ↓香↓ ↓桂↓ ↓銀↓ ↓金↓  。  ↓金↓ ↓銀↓ ↓桂↓ ↓香↓ 9
+                                                
+8  。  ↓飛↓  。   。   。   。   。  ↓王↓  。  8
+                                                
+7 ↓歩↓ ↓歩↓ ↓歩↓ ↓歩↓ ↓歩↓ ↓歩↓  。  ↓歩↓ ↓歩↓ 7
+                                                
+6  。   。   。   。   。  ↓角↓  。   。   。  6
+                                                
+5  。   。   。   。   。   。  ↑飛↑  。   。  5
+                                                
+4  。   。  ↑歩↑  。   。   。   。   。   。  4
+                                                
+3 ↑歩↑ ↑歩↑  。  ↑歩↑ ↑歩↑ ↑歩↑  。  ↑歩↑ ↑歩↑ 3
+                                                
+2  。  *角↑  。   。   。   。   。   。   。  2
+                                                
+1 ↑香↑ ↑桂↑ ↑銀↑ ↑金↑ ↑王↑ ↑金↑ ↑銀↑ ↑桂↑ ↑香↑ 1
+   ａ   ｂ   ｃ   ｄ   ｅ   ｆ   ｇ   ｈ   ｉ   
+Black's hand: 歩                                
+```
+
+(NOTE: if the board above correctly displays, but you can’t imagine playing a game based in such alien characters, rest assured that the Shgoi implementation over at SGGS also supports a “latin” mode, using “friendlier” ASCII names, in addition to the (default) “kanji” display mode shown above.)
+
+## The Problem
+
+By default, Lagrange does not include glyphs for any CJK characters (~kanji). No problem, because the website _does_ provide them, along with symbols for many other useful characters, via any of the Noto Sans fontpacks. (Lagrange's “Manage Fonts...” page provides a link directly to those fontpacks, via a “Download new fonts” link at the top of that page.)
+
+However, the Shogi board above still was not displaying correctly for me in Lagrange, even after installing Lagrange's notosans-set.fontpack. Why? Well, the fonts contained in that fontpack are not designated as monospace, and so are not used within preformatted text... except as “backups” to supply any missing characters that the default monospace font (Iosevka) does not have.
+
+As mentioned earlier, an easy fix is to use SGGS's “latin” mode for displaying the Shogi board. However, as I have a real Shogi set at home, I’m more accustomed to identifying and reasoning about the pieces by their kanji designations, so I was reluctant to use latin mode. I was working around the issue by using a terminal Gemini client (Amfora—very nice!) instead.
+
+## Finding the Solution
+
+I went out and found a Noto Sans Mono CJK set of truetype fonts, and thought that would solve things for me. Turns out, no, because the fonts I got are not, in fact, monospace. Among other things, “v” and “^” (both ASCII characters) have different widths. So that’s clearly not going to help.
+
+So, I went hunting for free, monospaced CJK fonts. I had to give -Noto to Google, because search results were full of Noto Sans Mono CJK, but I had already ruled those out. I happened across Kurinto, in OpenSUSE’s Fontinfo site, downloaded, verified it in LibreOffice, created the fontpack, and verified it in Lagrange. Phew! Finally, I have a solution.
+=> https://fontinfo.opensuse.org/fonts/KurintoMonoCJKRegular.html OpenSUSE Fontinfo site (Kurinto Mono CJK font page)
