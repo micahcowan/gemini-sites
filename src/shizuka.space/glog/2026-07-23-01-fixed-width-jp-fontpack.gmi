@@ -2,6 +2,8 @@
 
 ## TL;DR: Downloading and Setting Up the Fontpack
 
+ *** WARNING! *** THIS FONTPACK IS APPARENTLY MISSING THE HIRAGANA CHARACTERS! It seems I’ll need to find yet a different mono CJK font!
+
 NOTE: the link is deliberately BROKEN, as I do not wish misbehaving bots to download this ~47MiB fontpack. Please, if you share this link, share it in a similarly broken fashion, or else link directly to _this_ page instead.
 
 To fix the link, simply remove the “.foo” from the end of it. Thanks!
