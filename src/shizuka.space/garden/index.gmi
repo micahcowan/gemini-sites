@@ -7,6 +7,7 @@
 => gemini://astrobotany.mozz.us/public/9f7fccab4cd847b5b736d9914fa06c04 My plant “Ichirou” at Astrobotany
 => gemini://astrobotany.mozz.us/public/9f7fccab4cd847b5b736d9914fa06c04/m1 My plant “Ichirou” at Astrobotany (COLOR)
 => gemini://bbs.geminispace.org/u/shizukado shizukado @ The GeminiSpace BBS
+=> gemini://station.martinrue.com/shizukado shizukado @ Station
 
 ## Clients
 
@@ -19,31 +20,45 @@
 => gemini://tlgs.one The “Totally Legit” Gemini Search
 => gopher://gopher.floodgap.com/1/v2/ Floodgap/Veronica 2
 
-## (Gem|Ph)logs
+## Gemlogs/Phlogs
 
 ### Unfeeded
 
 => gopher://sdf.org:70/1/users/a2.4am/ The 4am Gopherspace (Apple II/6502 tools & cracks)
 => gopher://gopher.club:70/1/users/nclp/ nclp @ gopher.club
 => gopher://sdf.org:70/1/users/danielaw/phlog danielaw
+=> gopher://sdf.org:70/1/users/jrconduit/log/ junior conduit
 
 => gemini://skyjake.fi/tinylog.gmi skyjake’s tinylog
 (terser, updated a bit more frequently; see “skyjake’s Capsule”, a bit below.
 
-### Gemsubs
+### Gemsubs, “Human” Content
+Stuff I follow for art (writing, poetry, images), or naked humanity/realness. They may also have other content.
 
 => gemini://coldscars.smol.pub/ coldscars // fragments (Poetry)
 => gemini://drmollytov.smol.pub/ molly’s guide to cyberpunk gardening
-=> gemini://tilde.club/~winter/gemlog/ winter’s gemlog
-=> gemini://frooplet.com/ Big Bungo’s Froopsule (Unixy stuff?)
-=> gemini://lierre.smol.pub/posts Lierre’s soapbox
+=> gemini://voidrane.smol.pub/ voidrane
+=> gemini://rawtext.club/~deerbard/ deerbard’s nest
+=> gemini://tilde.club/~winter/ winter’s gemlog
 => gemini://njms.ca/gemlog/ njms’s gemlog
+=> gemini://idiomdrottning.org/ Idiomdrottning
+=> gemini://ambling.cc/ ambling
 
-=> gemini://gemini.cyberbot.space/smolzine/ smolzine
-A smol gemzine
+=> gemini://tilde.town/~hush/gemlog/ hush’s gemlog
+Writes about her thoughts on personal philosophy, her relationship to art, and experiences from her life.
+
+### Gemsubs, Smolnet, Programming, or Technical Content
+
+=> gemini://gemini.sh0.xyz/ sh0.xyz
+=> gemini://lierre.smol.pub/ Lierre’s soapbox
+=> gemini://frooplet.com/ Big Bungo’s Froopsule
 
 => gemini://skyjake.fi/ skyjake’s Capsule
 Creator/maintainer of the excellent Lagrange Gemini client, gmcapsuled (Gemini/Titan server), Gitview (git repo-viewing extension to gmcapsuled, and the Cosmos super-aggregator! Also, co-author of the Titan ";edit" proposal spec.
+
+=> gemini://thrig.me/blog/ thrig bphflog
+The homepage of a professional internet peanut thrower.
+Topics: OpenBSD, music, Perl, programming, software, Common LISP, vi, C, cooking and the oxford comma. (...I see what they did there!)
 
 => gemini://zaibatsu.circumlunar.space/~solderpunk/gemlog/ Solderpunk’s gemlog
 Author of the Gemini Protocol specification.
@@ -51,15 +66,13 @@ Author of the Gemini Protocol specification.
 => gemini://alexschroeder.ch/ Alex Schroeder’s Diary
 Author of the Titan Protocol specification.
 
+=> gemini://gemini.cyberbot.space/smolzine/ smolzine
+A smol gemzine
+
+### Gemsubs, Miscellaneous (or Multi-Reason Follows)
+
 => gemini://lowkey.party/ Lowkey Party (Nigel)
 Experiences in tech, photography, DIY, and dealing with other humans.
-
-=> gemini://thrig.me/blog/ thrig bphflog
-The homepage of a professional internet peanut thrower.
-Topics: OpenBSD, music, Perl, programming, software, Common LISP, vi, C, cooking and the oxford comma. (...I see what they did there!)
-
-=> gemini://tilde.town/~hush/gemlog/ hush’s gemlog
-Writes about her thoughts on personal philosophy, her relationship to art, and experiences from her life.
 
 => gemini://danielledevs.smol.pub/ danielledevs
 Musings of a luddite, chronically ill, transgender software developer.
@@ -86,6 +99,13 @@ Musings of a luddite, chronically ill, transgender software developer.
 => gemini://sggs.thegonz.net/ Simple Gemini Game Server (Mainly a few board games: Shogi, Go, Connect4, ...)
 => gemini://gemini.thegonz.net/ “Things” at TheGonz.net (scroll to the “Games” section)
 => gopher://mozz.us:7006/1/ Text Adventures at Mozz.us (Gopher). Including Zork!
+=> gemini://gemi.dev/cgi-bin/mines.cgi/ Acidus's Minesweeper
+
+## Smol Interfaces to the Web
+
+=> gemini://gemi.dev/cgi-bin/wp.cgi/ Gemipedia (Gemini interface to Wikipedia)
+=> gemini://gemi.dev/cgi-bin/waffle.cgi/ 🧇 NewsWaffle (Gemini interface to news websites)
+=> gemini://gemi.dev/xkcd/ XKCD Comics Archive
 
 ## Reading Fodder
 
@@ -102,7 +122,6 @@ A tilde community based around a collaborative science-fiction universe. Users w
 => gemini://mozz.us/ Mozz.us Gemini
 => gopher://mozz.us/1 Mozz.us Gopher
 => gemini://gemini.thegonz.net/ TheGonz
-=> gemini://alexschroeder.ch/
 
 => gemini://gemini.bortzmeyer.org/software/lupa/lupa-capsules.gmi Lupa Capsule List
 List of all Gemini capsules known to the Lupa crawler. Seems to be better kept up-to-date than the TLGS or Kennedy indexers...

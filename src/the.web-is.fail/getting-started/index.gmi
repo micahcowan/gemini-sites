@@ -72,6 +72,13 @@ A Super-Aggregator that automatically threads posts that refer to other posts
 => gemini://gemini.thegonz.net/ “Things” at TheGonz.net (scroll to the “Games” section)
 => gopher://mozz.us:7006/1/ Text Adventures at Mozz.us (Gopher)
 => gemini://sggs.thegonz.net/ Simple Gemini Game Server (Shogi, Go, Connect4, ...)
+=> gemini://gemi.dev/cgi-bin/mines.cgi/ Acidus's Minesweeper
+
+## SmolNet Interfaces to the Web
+
+=> gemini://gemi.dev/cgi-bin/wp.cgi/ Gemipedia (Gemini interface to Wikipedia)
+=> gemini://gemi.dev/cgi-bin/waffle.cgi/ 🧇 NewsWaffle (Gemini interface to news websites)
+=> gemini://gemi.dev/xkcd/ XKCD Comics Archive
 
 ## Other “Starting Point” Guides!
 
