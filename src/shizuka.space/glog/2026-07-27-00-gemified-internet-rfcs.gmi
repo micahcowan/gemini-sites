@@ -1,0 +1,10 @@
+# Gemified Internet RFCs
+
+I wrote some tools to convert HTML RFCs into gemtext, then hosted them up over at
+=> spartan://docs.addictivecode.org/rfc/
+
+Lots of details about the server, and the gemified RFCs, at
+=> spartan://docs.addictivecode.org/rfc/about-gem/
+
+
+tags: rfcs gemtext spartan

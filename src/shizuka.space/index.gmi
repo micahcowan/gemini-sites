@@ -9,6 +9,8 @@ When it comes to agentic coding, I'm happier creating my own vibes, thanks.
 > I did not use LLMs or any so-called "AI" products in this project. I am a craftsman. The effort is the point.
 => https://mastodon.social/@a2_4am/116941935263390899 —4am, on mastodon.social
 
+
+
 => /garden/ Kado's Link Garden
 
 => gemini://astrobotany.mozz.us/public/9f7fccab4cd847b5b736d9914fa06c04 My plant “Ichirou” at Astrobotany
