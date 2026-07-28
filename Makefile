@@ -101,11 +101,11 @@ $(SHIZ-GLOG-LATEST): $(SHIZ-GLOGOBJ) Makefile bin/eval-template src/shizuka.spac
 $(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Makefile bin/eval-template src/shizuka.space/BITS/orerano.gmi src/shizuka.space/BITS/trailer.gmi
 	mkdir -p $(dir $@)
 	exec >| $@.tmp; \
-	bin/eval-template -I src/shizuka.space/BITS < $<; \
-	printf '\n###Latest gemlog entries:\n\n'; \
+	bin/eval-template -I src/shizuka.space/BITS < $< \
+	    | awk '!/^@LATEST@/{print; next} {exit(0)}'; \
 	bin/glogconv link $(SHIZ-GLOGOBJ) | head -n 4; \
-	echo; \
-	echo '=> /glog/ More recent gemlogs...'; \
+	bin/eval-template -I src/shizuka.space/BITS < $< \
+	    | awk 'BEGIN {p=0} !p && !/^@LATEST/ {next} !p {p=1;next} {print}'; \
 	echo; \
 	printf '\n\n%s\n' "=> gemini://skyjake.fi/gmcapsule/ This gemcap is powered by gmcapsule" ; \
 	printf '%s\n' "(along with various scripts I’ve written)." ; \
