@@ -106,9 +106,6 @@ $(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Ma
 	bin/glogconv link $(SHIZ-GLOGOBJ) | head -n 4; \
 	bin/eval-template -I src/shizuka.space/BITS < $< \
 	    | awk 'BEGIN {p=0} !p && !/^@LATEST/ {next} !p {p=1;next} {print}'; \
-	echo; \
-	printf '\n\n%s\n' "=> gemini://skyjake.fi/gmcapsule/ This gemcap is powered by gmcapsule" ; \
-	printf '%s\n' "(along with various scripts I’ve written)." ; \
 	cat src/shizuka.space/BITS/orerano.gmi; \
 	cat src/shizuka.space/BITS/trailer.gmi | grep -v 'Back to'
 	mv $@.tmp $@

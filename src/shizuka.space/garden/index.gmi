@@ -9,7 +9,15 @@
 => gemini://bbs.geminispace.org/u/shizukado shizukado @ The GeminiSpace BBS
 => gemini://station.martinrue.com/shizukado shizukado @ Station
 
+## My Bigweb Stuff
+
+=> https://github.com/micahcowan?tab=stars GitHub (micahcowan)
+I plan to migrate my repos to this capsule, when I can.
+
 ## My SmolNet Projects
+
+=> gemini://the.web-is.fail/ The.Web-Is.Fail
+Site I made to make a case for the Smolnet, and to provide resources for ramping up understanding, and ideas on where to start one's SmolNet exploration journey.
 
 => spartan://docs.addictivecode.org/ The Gemified Internet RFCs (spartan://)
 
