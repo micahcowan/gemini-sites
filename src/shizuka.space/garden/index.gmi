@@ -130,7 +130,7 @@ A tilde community based around a collaborative science-fiction universe. Users w
 => gemini://gemini.bortzmeyer.org/software/lupa/lupa-capsules.gmi Lupa Capsule List
 List of all Gemini capsules known to the Lupa crawler. Seems to be better kept up-to-date than the TLGS or Kennedy indexers...
 
-### Protocol Details
+## Protocol Details
 
 => gemini://geminiprotocol.net The Gemini Project (Gemini Protocol & the Gemtext format)
 => /rfcs/rfc1436.txt The Gopher Protocol (RFC 1436)

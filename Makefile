@@ -11,13 +11,12 @@ SHIZ-GEMTEXT-OBJS := $(patsubst src/%,$(BUILD)/%,$(SHIZ-GEMTEXT-SRC))
 SHIZ-GLOGSRC := $(shell find src/shizuka.space/glog -name '*.gmi' | grep -v BITS)
 
 define make-shiz-glog-rule
-$(1): $(call make-shiz-glog-src,$1) Makefile bin/eval-template src/shizuka.space/BITS/trailer.gmi
+$(1): $(shell bin/glogconv src $1) Makefile bin/eval-template src/shizuka.space/BITS/trailer.gmi
 
 endef
-make-shiz-glog-src = $(shell echo $1 | bin/glogconv src)
-make-shiz-glog-obj = $(shell echo $1 | bin/glogconv obj)
 
-SHIZ-GLOGOBJ := $(foreach obj,$(SHIZ-GLOGSRC),$(call make-shiz-glog-obj,$(obj)))
+#SHIZ-GLOGOBJ := $(foreach obj,$(SHIZ-GLOGSRC),$(shell bin/glogconv obj $(obj)))
+SHIZ-GLOGOBJ := $(shell bin/glogconv obj $(SHIZ-GLOGSRC))
 SHIZ-GLOG-LATEST := $(BUILD)/shizuka.space/glog/latest/index.gmi
 
 FHTML-OBJS := $(subst $(BUILD)/the.web-is.fail/,$(BUILD)/the.web-is.fail-html/,$(FAIL-OBJS))
@@ -94,18 +93,7 @@ $(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Ma
 	mkdir -p $(dir $@)
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
 	printf '\n###Latest gemlog entries:\n\n' >> $@.tmp
-	for article in $(SHIZ-GLOGOBJ); do \
-	    echo "$$article"; \
-	done | sort -r | head -n 10 | while read -r article; do \
-	    target=$${article%index.gmi}; \
-	    target=$${target#$(BUILD)/shizuka.space/glog/}; \
-	    date=$${target%/}; \
-	    trash=$${date#????/??/??}; \
-	    date=$${date%"$$trash"}; \
-	    date=$$(echo "$$date" | tr / -); \
-	    heading=$$(sed -ne '/^#/ { s/^#* //p; q; }' < $$article); \
-	    printf '=> %s %s - %s\n' "/glog/$$target" "$$date" "$$heading"; \
-	done >> $@.tmp
+	bin/glogconv link $(SHIZ-GLOGOBJ) | head -n 10 >> $@.tmp
 	printf '\n\n%s\n' "=> gemini://skyjake.fi/gmcapsule/ This gemcap is powered by gmcapsule" >> $@.tmp
 	printf '%s\n' "(along with various scripts I’ve written)." >> $@.tmp
 	cat src/shizuka.space/BITS/orerano.gmi >> $@.tmp
