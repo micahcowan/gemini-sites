@@ -17,7 +17,7 @@ endef
 
 #SHIZ-GLOGOBJ := $(foreach obj,$(SHIZ-GLOGSRC),$(shell bin/glogconv obj $(obj)))
 SHIZ-GLOGOBJ := $(shell bin/glogconv obj $(SHIZ-GLOGSRC))
-SHIZ-GLOG-LATEST := $(BUILD)/shizuka.space/glog/latest/index.gmi
+SHIZ-GLOG-LATEST := $(BUILD)/shizuka.space/glog/index.gmi
 
 FHTML-OBJS := $(subst $(BUILD)/the.web-is.fail/,$(BUILD)/the.web-is.fail-html/,$(FAIL-OBJS))
 FHTML-HTML := $(patsubst $(BUILD)/the.web-is.fail/%.gmi,$(BUILD)/the.web-is.fail-html/%.html,$(filter %.gmi,$(FAIL-OBJS)))
@@ -86,18 +86,31 @@ $(SHIZ-GEMTEXT-OBJS): $(BUILD)/%.gmi: src/%.gmi src/shizuka.space/BITS/*.gmi Mak
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
 	mv $@.tmp $@
 
-stamps/shizuka.space-glog: $(SHIZ-GLOGOBJ)
+stamps/shizuka.space-glog: $(SHIZ-GLOGOBJ) $(SHIZ-GLOG-LATEST)
 
-#$(SHIZ-GLOG-LATEST): $(SHIZ-GLOGOBJ) Makefile bin/eval-template
+$(SHIZ-GLOG-LATEST): $(SHIZ-GLOGOBJ) Makefile bin/eval-template src/shizuka.space/BITS/trailer.gmi
+	mkdir -p $(dir $@)
+	exec >| $@.tmp; \
+	echo '# Latest Gemlog Entries'; \
+	echo; \
+	bin/glogconv link $(SHIZ-GLOGOBJ); \
+	echo; \
+	cat src/shizuka.space/BITS/trailer.gmi
+	mv $@.tmp $@
+
 $(BUILD)/shizuka.space/index.gmi: src/shizuka.space/index.gmi $(SHIZ-GLOGOBJ) Makefile bin/eval-template src/shizuka.space/BITS/orerano.gmi src/shizuka.space/BITS/trailer.gmi
 	mkdir -p $(dir $@)
-	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
-	printf '\n###Latest gemlog entries:\n\n' >> $@.tmp
-	bin/glogconv link $(SHIZ-GLOGOBJ) | head -n 10 >> $@.tmp
-	printf '\n\n%s\n' "=> gemini://skyjake.fi/gmcapsule/ This gemcap is powered by gmcapsule" >> $@.tmp
-	printf '%s\n' "(along with various scripts I’ve written)." >> $@.tmp
-	cat src/shizuka.space/BITS/orerano.gmi >> $@.tmp
-	cat src/shizuka.space/BITS/trailer.gmi | grep -v 'Back to' >> $@.tmp
+	exec >| $@.tmp; \
+	bin/eval-template -I src/shizuka.space/BITS < $<; \
+	printf '\n###Latest gemlog entries:\n\n'; \
+	bin/glogconv link $(SHIZ-GLOGOBJ) | head -n 4; \
+	echo; \
+	echo '=> /glog/ More recent gemlogs...'; \
+	echo; \
+	printf '\n\n%s\n' "=> gemini://skyjake.fi/gmcapsule/ This gemcap is powered by gmcapsule" ; \
+	printf '%s\n' "(along with various scripts I’ve written)." ; \
+	cat src/shizuka.space/BITS/orerano.gmi; \
+	cat src/shizuka.space/BITS/trailer.gmi | grep -v 'Back to'
 	mv $@.tmp $@
 
 $(eval $(foreach target,$(SHIZ-GLOGOBJ),$(call make-shiz-glog-rule,$(target))))
