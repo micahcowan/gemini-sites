@@ -1,0 +1,100 @@
+#!/usr/bin/env python3
+
+import sys, os
+from os.path import dirname
+
+def main():
+    "Output a directory of tags, with their corresponding tagged articles."
+    links = get_links(sys.argv[1:])
+    tags = TagMinder(sys.argv[1:])
+
+    print("# Gemlogs By Tag")
+    print()
+    ntags = len(tags)
+    nent = len(sys.argv) - 1
+    print(f"{ntags} tags across {nent} articles:")
+    print()
+    for tag in tags:
+        print(f"### {tag.name}")
+        for ent in tag.entries():
+            print(links[ent])
+    print()
+
+def chomp(str):
+    if len(str) > 0 and str[-1] == "\n":
+        return str[0:-1]
+    else:
+        return str
+
+def get_links(files):
+    "Map a list of filenames to their corresponding link lines."
+    glogconv_path = dirname(sys.argv[0]) + "/glogconv"
+    pipe = os.popen(glogconv_path + " link " + " ".join(files))
+    links = [ chomp(link) for link in pipe ]
+    pipe.close()
+
+    if len(links) != len(files):
+        raise Exception(f"Size of entries and links do not match! #files = {len(files)}, #links = {len(links)}")
+
+    ldict = {}
+    for i in range(0, len(files)):
+        ldict[files[i]] = links[i]
+    return ldict
+
+class TagMinder:
+    "Class to extract and track tags from gemlog posts."
+
+    def __init__(self, files):
+        "Build up the tag database by reading \"tags:\" lines from the named files"
+        self._tags = {}
+        for file in files:
+            f = open(file)
+            for line in f:
+                if line.startswith("tags:"):
+                    self.get_tags(file, line)
+            f.close()
+
+    def __iter__(self):
+        "Return an iterator over the tags registered with this object."
+        tmp = [ val for val in self._tags.values() ]
+        keyfn = lambda tag: tag.name
+        tmp.sort(key = keyfn)
+        return iter(tmp)
+
+    def __len__(self):
+        "Return the number if tags registered with this object."
+        return len(self._tags)
+
+    def get_tags(self, fname, line):
+        "Extract tags from a text line, and associate them with the current file's name."
+        if not line.startswith("tags:"):
+            return
+        line = line[len("tags:"):]  # Remove the prefix
+        tags = line.split()
+
+        for tag in tags:
+            if tag in self._tags:
+                self._tags[tag].append(fname)
+            else:
+                self._tags[tag] = Tag(tag, fname)
+
+class Tag:
+    "A topic tag, together with all the posts that claim that tag."
+    def __init__(self, name, post):
+        "Initialize a tag with its name, and a post associated with it."
+        self.name = name
+        self._entries = [post]
+
+    def append(self, post):
+        "Register another post with this tag."
+        self._entries.append(post)
+
+    def entries(self):
+        "A list of the posts (files) that were registered for this tag."
+        # Return a cloned, reverse-sorted list of the files
+        ret = [ x for x in self._entries ]
+        ret.sort(reverse = True)
+        return ret
+
+if __name__ == '__main__':
+    main()

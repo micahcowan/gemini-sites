@@ -86,12 +86,21 @@ $(SHIZ-GEMTEXT-OBJS): $(BUILD)/%.gmi: src/%.gmi src/shizuka.space/BITS/*.gmi Mak
 	bin/eval-template -I src/shizuka.space/BITS < $< > $@.tmp
 	mv $@.tmp $@
 
-stamps/shizuka.space-glog: $(SHIZ-GLOGOBJ) $(SHIZ-GLOG-LATEST)
+stamps/shizuka.space-glog: $(SHIZ-GLOGOBJ) $(SHIZ-GLOG-LATEST) stamps/shizuka.space-glog-tags
+
+stamps/shizuka.space-glog-tags: $(SHIZ-GLOGOBJ) Makefile bin/generate-tags
+	rm -fr $(BUILD)/shizuka.space/glog/tags/
+	mkdir -p $(BUILD)/shizuka.space/glog/tags
+	bin/generate-tags $(SHIZ-GLOGOBJ) >  $(BUILD)/shizuka.space/glog/tags/index.gmi.tmp
+	mv $(BUILD)/shizuka.space/glog/tags/index.gmi.tmp $(BUILD)/shizuka.space/glog/tags/index.gmi
+	touch $@
 
 $(SHIZ-GLOG-LATEST): $(SHIZ-GLOGOBJ) Makefile bin/eval-template src/shizuka.space/BITS/trailer.gmi
 	mkdir -p $(dir $@)
 	exec >| $@.tmp; \
 	echo '# Latest Gemlog Entries'; \
+	echo; \
+	echo '=> /glog/tags/ Entries by tag...'; \
 	echo; \
 	bin/glogconv link $(SHIZ-GLOGOBJ); \
 	echo; \

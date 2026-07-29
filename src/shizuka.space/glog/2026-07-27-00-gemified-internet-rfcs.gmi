@@ -7,4 +7,4 @@ Lots of details about the server, and the gemified RFCs, at
 => spartan://docs.addictivecode.org/rfc/about-gem/
 
 
-tags: rfcs gemtext spartan
+tags: rfcs gemtext spartan smolnet
