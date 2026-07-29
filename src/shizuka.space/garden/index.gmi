@@ -20,6 +20,10 @@ I plan to migrate my repos to this capsule, when I can.
 Site I made to make a case for the Smolnet, and to provide resources for ramping up understanding, and ideas on where to start one's SmolNet exploration journey.
 
 => spartan://docs.addictivecode.org/ The Gemified Internet RFCs (spartan://)
+A collection of the Internet RFCs, converted to gemtext.
+
+=> gemini://dev.shizuka.space/glog/2026/07/23/01/fixed-width-jp-fontpack/ M PLUS 1 Code Fontpack
+Lagrange .fontpack for M PLUS 1 Code, a monospace Japanese CJK font
 
 ## Clients
 
