@@ -98,6 +98,8 @@ stamps/shizuka.space-glog-tags: $(SHIZ-GLOGOBJ) Makefile bin/generate-tags
 $(SHIZ-GLOG-LATEST): $(SHIZ-GLOGOBJ) Makefile bin/eval-template src/shizuka.space/BITS/trailer.gmi
 	mkdir -p $(dir $@)
 	exec >| $@.tmp; \
+	echo '# 🌛 Shizuka.space'; \
+	echo; \
 	echo '# Latest Gemlog Entries'; \
 	echo; \
 	echo '=> /glog/tags/ Entries by tag...'; \
