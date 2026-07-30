@@ -41,6 +41,8 @@ And now, with only about a hundred lines of Python code, I’ve written a simple
 * viewing a document,
 * hiding my documents behind TLS Identity-based authentication
 
+...Okay, it’s not actually so much a “document server” as a regular gemcap with a very basic upload feature. But it fits approximately the same need, for me.
+
 Given that gmcapsule is also written in Python, and explicitly supports extensions, I should really have gone that route—and probably will—but a standalone CGI script worked fine for standing something up quickly.
 
 A fair bit of what I need a good solution to do, is actually handled for me by the very capable Lagrange client, as a simple Ctrl-E will automatically open up the current document for revision. If I accidentally close the editor, Lagrange remembers the state I was in when I last had the editor open (so long as I hit Ctrl-U, and not Ctrl-E).
@@ -70,5 +72,7 @@ Currently, the gemlog portion of my site consists of a set of source files that 
 
 I really ought to spend more time proofing and editing this post before putting it up... but it’s 3:20 a.m. and I’m off to bed. So I’ll live dangerously!
 
+The (extremely basic) script, for the very curious. It will likely look nothing like this as it progresses.
+=> gemini://shizuka.space/tmp/doc.py
 
 tags: smolnet titan cgi gmcapsule lagrange
