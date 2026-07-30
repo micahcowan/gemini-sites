@@ -1,0 +1,74 @@
+# A Smol Document Server
+
+I’m pretty happy right now—I just wrote about a hundred lines of Python that may represent the beginning of the end of using Google Docs, for me.
+
+## I fell for the trap
+
+I’ve come, far too late, to realize the error of my ways concerning the dangers of becoming too reliant on very convenient platforms, without paying sufficient attention to how difficult it may become to disentangle myself from them later.  Now I find myself caught up in a number of platforms that have more control over my digital property than I currently care for, and the road to disentanglement will be long, and I may never fully complete it.
+
+Amazon Kindle became a serious problem in this area, when they stopped allowing users to handle actual device files, thereby rendering user backups, and protection of the content we paid for/“own” from summary removal, alteration, or withholding, an impossibility (fortunately, at least at the time I’m writing this, there are workarounds, and I did manage to back everything up). Google, at least, has made no moves to withhold my own data from me (yet), but my whole life is wrapped up with them. Documents, tax records, financial planning... if I lost access to Google Calendar my life would swiftly turn to shit. And, for a variety of reasons that I’m sure I needn’t elaborate on in a Gemini capsule, I no longer trust Google with my life in its hands, to the degree I once did.
+
+## Alternatives to Google Workspace
+
+...there aren’t any. Not really.
+
+Oh, there’s LibreOffice (offline only), LibreOffice Online, OnlyOffice, Collabora Office Online, and a few others, but none of them appear to be anything near the total package that Google Workspace is.
+
+Euro-Office has released its version 1.0, and with the backing of major corporations and governments, I feel that there’s a chance this will become viable. I’m not hearing that it’s “there yet”, though, and I imagine it may take some time to get there (if it ever will). Self-hosting it is somewhat cumbersome, from what I’ve seen, but if you use someone else’s platform to host it, then at least you’re using technology and formats that (in theory) won’t lock you into that single provider’s platform—you should be able to migrate your data across any Euro-Office-based provider, in theory.
+
+Proton Docs is apparently based on Euro-Office, and I’ve heard from a few people that have been actively moving to it from Google Workspace, so perhaps it’s actually good enough for many people’s needs, as it is today? I’ll need to investigate further.
+
+=> https://github.com/Euro-Office Euro-Office on GitHub
+=> https://proton.me/ Proton, “privacy-oriented” online office-suite and email solution
+
+## HedgeDoc, a “good enough” solution?
+
+In the meantime, though, there are definitely lighter-weight solutions that are “good enough” for at least some of the more critical of my documents. I use Google Docs a lot for keeping notes on various projects and so forth, and don’t really need a full-fledged office suite, or even the word processor component from one, to handle that task.
+
+Enter HedgeDoc, a collaborative Markdown (only) editor. It fits the bill for creating outlines and basic docs, and supports collaborative editing. Self-hosting appears to me to be somewhat more straight-forward than some of the other “online” soutions, as it doesn’t appear to require configuration of a network-area storage solution.
+
+=> https://hedgedoc.org/ HedgeDoc
+
+## Gemini + Titan
+
+But the truth is, I rarely need collaborative editing, and have probably never needed “realtime” collaborative editing. And if I’m looking at Markdown, isn’t it kind of a short hop to Gemtext?
+
+Hence my excitement. I’ve been musing over all this stuff for the past few weeks, but have been settling on pursuing a basic solution in Gemini/Titan. I won’t be able to move everything I have in “Google Workspace” to geminispace, but the documents I’m editing the most frequently there, the ones I currently most depend on it for (besides budgeting spreadsheets, anyway), are my project notes and outlines, and I can absolutely move those here.
+
+And now, with only about a hundred lines of Python code, I’ve written a simple CGI script for my gmcapsule server, that does the bare minimum tasks of:
+* creating a new document,
+* updating an existing document,
+* viewing a document,
+* hiding my documents behind TLS Identity-based authentication
+
+Given that gmcapsule is also written in Python, and explicitly supports extensions, I should really have gone that route—and probably will—but a standalone CGI script worked fine for standing something up quickly.
+
+A fair bit of what I need a good solution to do, is actually handled for me by the very capable Lagrange client, as a simple Ctrl-E will automatically open up the current document for revision. If I accidentally close the editor, Lagrange remembers the state I was in when I last had the editor open (so long as I hit Ctrl-U, and not Ctrl-E).
+
+The server, gmcapsule (by the same author as the Lagrange client: Jaakko/skyjake), also simplifies the logic, as Titan “edit mode” fetch is presented (via environment variables) to the CGI script exactly as if it were a Gemini fetch (including SERVER_PROTOCOL being set to "GEMINI"), except with the addition of TITAN_EDIT=1 in the environment. This saves on what could otherwise be pretty tedious logic to distinguish “fetch for edit” Titan requests from “upload content” Titan requests—if all fetches look like Gemini, then we can treat them the same in the program logic, and just use the TITAN_EDIT variable to distinguish which version of the content we should send (i.e., with or without automatically-added navigation links, or server-specific templating code, etc).
+
+=> gemini://skyjake.fi/lagrange/ The Lagrange smolnet client
+=> gemini://skyjake.fi/gmcapsule/ The gmcapsule Gemini server
+
+Anyway, as bare as the current features are right now, it’s already enough for me to being migrating the docs that most commonly have me running to my bigweb browser. Ironically, right now I’m heading over there most of the time to review and update my plan document for things I want to accomplish in the smolnet space. Things that bear further exploring, tools I’m considering writing, gemlog and BBS post ideas, etc. It feels rather wrong to rely on Google Docs to track my thoughts and goals for the smolnet! And this scrap of a script will now enable me to address that.
+
+## Planned features
+
+The very next feature I need to add is some basic navigation. Currently I need to know the exact URL of any document I’ve previously created, as there is no means for (re)discovering it. Either I’ve successfully browsed to an existing location, in which case I’m now viewing it... or I¯m starting at a “No file here” page. This feature should be both easy to implement, and quite useful.
+
+I also mean to automatically save each edit or upload to a versioning system (git). That way, if I accidentally overwrite an existing doc, or make big changes I later regret, there’ll be a straightforware path to restoring previous content. The git repo itself will not be directly writable by the server—it will trigger updates by a different user id with access, so as to limit the opportunity for a hacked server to delete history
+
+Since gmcapsule also ships with a module to view git repositories, I imagine that may come in handy for this intended feature (and, if not, I have other intentions for it anyway).
+
+Currently, all docs accessed by this script are always private. At some point I’ll want to share one of them to someone else, and it’ll probably be one I just whipped up for the purpose, possibly from my phone, and then I’ll wish I had made some way for a doc to be publicly available. So I’d better handle that before I get there.
+
+Relatedly, I’ll probably also want the ability to share a document through an obfuscated URL, like Google Workspace’s feature to only share a document with users to whom the URL has been shared.
+
+Currently, the gemlog portion of my site consists of a set of source files that are hand-edited directly on the server’s filesystem, coupled with tools to generate the gemlog layout (“latest posts”, and posts sorted by tag). But I could see potentially replacing that system with something more Titanic, so I can edit iteratively without shelling into the server machine
+
+## In conclusion
+
+I really ought to spend more time proofing and editing this post before putting it up... but it’s 3:20 a.m. and I’m off to bed. So I’ll live dangerously!
+
+
+tags: smolnet titan cgi gmcapsule lagrange
