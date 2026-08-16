@@ -73,6 +73,7 @@ The --help message is also generated from these same manual snippets, taking jus
 
 
 tags: awk unix perl bobbin libcheck checkmk programming
+=> /glog/tags/ gemlog posts by tag
 
 ```
    a thousand lines parsed

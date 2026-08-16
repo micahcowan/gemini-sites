@@ -8,3 +8,4 @@ Lots of details about the server, and the gemified RFCs, at
 
 
 tags: rfcs gemtext spartan smolnet
+=> /glog/tags/ gemlog posts by tag

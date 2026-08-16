@@ -94,3 +94,4 @@ I had intended to write more, but this is quite enough for one post. I’ll foll
 
 
 tags: programming literate-programming knuth perl c
+=> /glog/tags/ gemlog posts by tag

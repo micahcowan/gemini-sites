@@ -35,3 +35,4 @@ with it
 written May 15, 2023
 
 tags: poetry writings
+=> /glog/tags/ gemlog posts by tag

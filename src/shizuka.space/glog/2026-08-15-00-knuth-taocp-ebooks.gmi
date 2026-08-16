@@ -38,3 +38,4 @@ The ReMarkable 2 is particularly well-suited for reading large books that includ
 
 
 tags: knuth literate-programming books ereaders
+=> /glog/tags/ gemlog posts by tag

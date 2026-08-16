@@ -76,3 +76,4 @@ The (extremely basic) script, for the very curious. It will likely look nothing 
 => gemini://shizuka.space/tmp/doc.py
 
 tags: smolnet titan cgi gmcapsule lagrange programming
+=> /glog/tags/ gemlog posts by tag

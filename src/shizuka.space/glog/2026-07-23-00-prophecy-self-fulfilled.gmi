@@ -53,3 +53,4 @@ Written October 4, 2022
 
 
 tags: poetry writings
+=> /glog/tags/ gemlog posts by tag

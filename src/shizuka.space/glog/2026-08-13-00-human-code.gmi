@@ -73,3 +73,4 @@ Without taking the time to call out specific examples, many if not most of tne e
 
 
 tags: programming art-thoughts
+=> /glog/tags/ gemlog posts by tag

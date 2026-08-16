@@ -37,3 +37,4 @@ It's a bit longer/provides more details (to those that care to know 'em) than th
 => gemini://the.web-is.fail/ The Web Is Fail (or: Why, and How, to SmolNet?)
 
 tags: smolnet retro
+=> /glog/tags/ gemlog posts by tag

@@ -9,3 +9,4 @@ Alan: “Some programs'll be thinking soon.”
 Walter: (Chuckles) “Won't that be grand? Computers and the programs will start thinking and the people will stop.”
 
 tags: llm tron
+=> /glog/tags/ gemlog posts by tag

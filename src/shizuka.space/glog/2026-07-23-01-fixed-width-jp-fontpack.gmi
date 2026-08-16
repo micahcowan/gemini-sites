@@ -81,3 +81,4 @@ So, I went hunting for free, monospaced CJK fonts. I had to give -Noto to Google
 So then I went out again on a hunt for a _proper_ Japanese mono font with an Open license, and finally found M PLUS 1, which does fit the bill. Phew!
 
 tags: shogi fonts cjk kanji lagrange 日本語
+=> /glog/tags/ gemlog posts by tag

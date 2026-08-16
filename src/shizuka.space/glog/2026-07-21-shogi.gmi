@@ -166,6 +166,7 @@ On the extreme sides, in the same rank as the king, roughly where the rooks woul
 
 
 tags: shogi chess boardgames
+=> /glog/tags/ gemlog posts by tag
 
 
 ```
