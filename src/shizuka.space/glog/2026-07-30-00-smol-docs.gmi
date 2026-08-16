@@ -75,4 +75,4 @@ I really ought to spend more time proofing and editing this post before putting 
 The (extremely basic) script, for the very curious. It will likely look nothing like this as it progresses.
 => gemini://shizuka.space/tmp/doc.py
 
-tags: smolnet titan cgi gmcapsule lagrange
+tags: smolnet titan cgi gmcapsule lagrange programming

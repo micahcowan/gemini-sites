@@ -72,7 +72,7 @@ The --help message is also generated from these same manual snippets, taking jus
 (Look for comments like <!--START-OPTIONS--> and <!--MACHINES--> to find sections that are processed by the scripts.)
 
 
-tags: awk unix perl bobbin libcheck checkmk
+tags: awk unix perl bobbin libcheck checkmk programming
 
 ```
    a thousand lines parsed

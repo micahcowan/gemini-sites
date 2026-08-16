@@ -1,0 +1,75 @@
+# Human Code
+
+This post was originally made at
+=> gemini://bbs.geminispace.org/s/Human_Code/47077 BBS s/Human_Code
+—I’ve reposted it on my personal gemlog for wider viewing (in case someone explores my gemlog to happen across it, but not (that area of) the GeminiSpace BBS. (Also, decentralization is king, and if I write anything I wish to keep, it’s best not to depend overly much on a centralized platform—even one as wholesome and benevolent as the BBS.)
+----
+
+Code is an artform. If you've encountered (or written!) program code that reveals the humanity of its author, please, I'd like to know about it. Wry, angry, frustrated, gleeful, poetic, or butthurt comments. A spontaneous haiku. Huumorous or pointed identifiers, metaphorical abstraction choices. Or even solving things in an unusual, novel, or awkward way.
+
+Most code written today is much, much more sterile than some of the code of yore (especially, hobbyist/indie code). I'd like more humanity in my everything, please, and code is a great place for it to be.
+
+Moving forward, in the light of both our decades-long systematic sanitization of program code for the sake of professionalism, and (especially) the recent increased tendency to agentically generate code, I intend to conscientiously increase the humanity on display in my software design and code, however I can. Feel free to join me!
+
+Below I've gathered some examples that have touched my soul in some way, and that confront me with the humanity present in a program’s author. I’d like to have included more or better examples of interesting identifier choices, or funny or perplexed code comments—if you have ready examples, please share!
+
+### code poetry
+
+=> https://code-poetry.com/ ./code --poetry
+is an online digital “book” (also available as a paper book, for purchase) of 16 “code poems”, program code that is both functional program code, and, an English-language poem.
+
+This medium for expression was particularly popular within the Perl programming language community in the 90’s, as I recall.
+
+### sudo insults, and guerilla history lesson
+
+Humanity in programmed behaviors.
+
+Lists of insults the "sudo" privilege-escalation command will utter, in response to a mistyped password.
+=> https://github.com/sudo-project/sudo/blob/v1.9.17/plugins/sudoers/ins_classic.h classic/gneeric insults
+=> https://github.com/sudo-project/sudo/blob/v1.9.17/plugins/sudoers/ins_2001.h ...from the movie 2001: A Space Odyssey
+=> https://github.com/sudo-project/sudo/blob/v1.9.17/plugins/sudoers/ins_python.h ...from the works of Monty Python
+=> https://github.com/sudo-project/sudo/blob/v1.9.17/plugins/sudoers/ins_goons.h ...from "The Goon Show"
+=> https://github.com/sudo-project/sudo/blob/v1.9.17/plugins/sudoers/ins_csops.h ...CSOps insults
+
+=> https://feross.org/gcc-ownage/ A post about the old GCC “implementation-defined” behavior easter egg
+
+### GNU su and the wheel group
+
+Human documentation.
+
+To this day, a little section in the GNU coreutils manual, regarding the "su" command (another privilege-escalation util, hey!) Takes a brief sidetrail for a bit of a history lesson and political creed, almost a guerilla mentality, for why GNU’s "su" does not support restricting its use to an approved set of users.
+
+=> https://ftp.gnu.org/old-gnu/Manuals/coreutils-4.5.4/html_node/coreutils_149.html#:~:text=Why%20GNU%20su%20does%20not “Why GNU su does not support the ‘wheel’ group”
+
+### annotated Apple DOS 3.3 sources
+
+Human source-code commentary.
+
+Annotated and hyperlinked (HTML) 6502 assembly-language sources to version 3.3 of Apple Computer's first-ever computer operating system, Apple DOS (for the Apple ][ series of computers that predate the eternal Macintosh line that followed after (with a few other models intervening).
+
+=> https://htmlpreview.github.io/?https://github.com/Michaelangel007/apple2_dos33/blob/cd76a00/dos33.html Apple DOS 3.3C Source Code
+
+Michael Pohoreski displays his humanity in his added annotations, by absolutely drenching them in unmasked, scathing contempt for the quality of this work (while also, of course, providing much more detail on the actual workings, than were present in the sources as originally written). Contempt is human, too!
+
+### gcc and nethack
+
+Another example in humanity showing through choices made over program behavior.
+
+The ISO C Programming Language specification standard defines what behavior a compiler, and the resulting program code, must adhere to, when written in the C programming language, if said compiler claims to conform to the standard (which is sometimes conditional on the compiler being invoked in a particular way, with particular environment variables or command-line options).
+
+Some situations that can be created in C program code, the ISO standard declares to be “unspecified”, meaning there are multiple legitimate choices, and the implementation may make any of them. The term “implementation-defined” means much the same, but places an additional requirement that the implementation is required to document which choice it followed.
+
+There are even some situations that are declared by the ISO C standard as “undefined behavior”, meaning that the C standard places no restrictions whatever on what the implementation (or its resulting program output, if any), might do. It could permanently fry your computer. It could lock up your system, requiring a reboot. It could send the automatic launch sequence for ICBMs. It could do absolutely anything, because the C standard throws its hands up in the air to declare “if your source code has this, we make zero guarantees!”
+
+Sometimes “implementation-defined” behavior wasn't much better, if the available choices were infinite—but at least you still had to document what the behavior was.
+
+The GNU C Compiler (GCC), at one point (version 1.17) decided that its “implementation-defined” response to an unrecognized #pragma directive within the source code fed to it, would be to launch the game NetHack. If it failed to do so, it would then try Rogue, followed by Towers of Hanoi. If all those failed, it would emit an error message that was a reference to Colossal Cave Adventure.
+
+### IOCCC
+
+Without taking the time to call out specific examples, many if not most of tne entries for the International Obfuscade C Code Contest, have plenty of humanity on display, through cleverness, humor, cultural idolatry, and bizarre or hilarious implementation choices.
+
+=> https://www.ioccc.org/
+
+
+tags: programming art-thoughts

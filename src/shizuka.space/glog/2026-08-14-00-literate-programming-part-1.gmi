@@ -1,0 +1,96 @@
+# Literate Programming
+
+This is a continuation on the subject of Human Code, posted both in this gemlog, and on the GeminiSpace BBS.
+=> gemini://shizuka.space/glog/2026/08/13/00/human-code/ on this gemlog
+=> gemini://bbs.geminispace.org/s/Human_Code/47077 on the BBS, s/Human_Code
+
+I don’t think it’s possible to have an informed discussion about human code, code-as-artform, without bringing up the concept of Literate Programming, which is nearly synonymous with the view that program source code can be an artform. Literate Programming is both a declaration that program source code is a form of literature, and should be treated as such—and also an exhortation to structure your programs as literature.
+
+Literate Programming was (is) a paradigm for structuring source code in such a way as to maximise both the comprehension, and the pleasure, of anyone reading the program code. Rather than writing code in a way that best suits a compiler, one writes code in a way that best suits an explanation of the program’s workings, building it up by gently introducing the code, one concept at a time, explaining as one goes. Rather than writing a lot of code and peppering it with comments to explain things here and there, the entirety of a “literate program” tends to be verbose English, peppered with the code. A literate program tends to read exactly like an article or a book, one that just happens to contain little snippets of code to concretely illustrate the explanations. It just so happens that the source text for the formatted article, can not only be processed to form that pleasantly-readable article, but also the actually-compilable source code for the program described by it.
+
+=> http://www.literateprogramming.com/knuthweb.pdf “Literate Programming” (PDF), paper by Donald E. Knuth, submitted to The Computer Journal, 1983
+
+# Literate Program Examples
+
+## 99 Bottles of Beer (Literate Perl)
+
+One easy-to-understand example of literate programming in action, is the following implementation of a program that prints the lyrics to “99 bottles of beer”, written in (literate) Perl. (If you are any sort of programmer, you will find this program quite readable, even if you do not know Perl at all.) It is an HTML page, part of a wiki, that both describes, and is, a program.
+=> https://www.literateprograms.org/99_bottles_of_beer__perl_.html “99 bottles”, in literate Perl
+
+You will notice that it begins by defining a snippet of code (usually referred to as a “section”) called “bottles of beer”, containing a simple definition of a variable to hold the number of bottles of beer (i.e., 99). Further code snippets are then introduced, one after another, some of them (such as the “verse loop” section) containing within them (“including”) references to previously-described sections of code. Finally, the overall program file is described, using a small preamble, and a series of references to already-described program sections.
+
+A few notes. One: this site is meant to have a download-link tab at the top of each article, by means of which you can obtain the extracted source code from the article, and actually run the program. The download link seems to be missing from a great number of the articles on this site, and that includes this one. Without that link, this is an incomplete example of a literate program, as there is in fact no “program” present. It still appears to make for one of the better introductory examples I could find.
+
+Two: I had preferred to use an example in the Python language rather than Perl, but the quality of the literate Python code I could find on that site was of poor quality. They tended to dump the entire code of an implementation, all at once, with a “Here’s one way to do it,” and a “Here’s another implementation.” This really isn’t the right way to do literate programming, as it is much too focused on working from a completed program, than on building it up, concept by concept. Using Perl examples runs a bit of a risk for confusion, as I’ll explain later. There are dozens of other programming languages represented on that site, but I wanted to start with one that the reader would likely immediately comprehend, so that ruled many of them out, and this Perl example does appear to be of higher-than-average quality compared with other examples on the site.
+
+## Hello World, plus time (CWEB)
+
+For another example of a literate program, from the originator of Literate Programming himself, Donald E. Knuth, here’s an example of a “Hello, World” program written in literate C—specifically, a literate language called CWEB, which takes as input a unified source file, and from that generates either a human-readable formatted PDF file, or else compileable C code. This version of “Hello, World” not only issues a greeting, but also tells the time, so as to give the “article” form of the program a bit more to talk about/explain. It was created for a talk on the subject (Literate Programming), given at a Fry’s Electronics (a now-defunct chain of electronics stores) in Sunnyvale, California.
+
+It’s best if you start with the PDF file, the output explicitly intended for reading. Unlike the Perl code, this program will definitely be more understandable if you are already familiar with C. However, since it remains the case that the bulk of the “program” is English prose, it will still be relatively understandable.
+=> gemini://shizuka.space/pub/hwtime/hwtime.pdf hwtime.pdf
+
+The generated program code, which is _not_ intended to be what the user reads, only the compiler, and so does not include things like indentation, is available here:
+=> gemini://shizuka.space/pub/hwtime/hwtime.c hwtime.c
+NOTE: this C code is written using the old/obsolete K&R C function definition style, which was still permitted in ANSI C (ISO C) from the 1990 edition of the language standard, but was swiftly superceded by the “prototype” form of function declarations/definitions (introduced in that same standard), and by the next iteration of the ISO C Programming Language standard, was removed from the language. You may therefore run into trouble trying to compile this C program. I was able to build it using gcc 14.3.0: `gcc -Wno-implicit-int -o hwtime hwtime.c`. Note that it refused to build without the `-Wno-implicit-int` option.
+
+And here is the original CWEB source file, which was used to build the .pdf and .c files above.
+=> gemini://shizuka.space/pub/hwtime/hwtime.w hwtime.w
+
+I obtained it from Donald Knuth’s Stanford website, from this page of CWEB programs he’d written:
+=> https://www-cs-faculty.stanford.edu/~knuth/programs.html Knuth: Programs to Read
+
+CWEB is a source format that combines C program code, and TeX, a formatting language for printing formatted text on paper (and later, into PDF). After downloading the hwtime.w file, I generated a PDF file by running:
+``` shell transcript to generate a PDF file from hwtime.w
+$ cweave hwtime.w   # generates hwtime.tex
+This is CWEAVE (Version 3.64 [22p])
+*1*7*13
+Writing the output file...*1*7*13
+Writing the index...
+Done.
+(No errors were found.)
+$ pdftex hwtime.tex # generates hwtime.pdf
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+(./hwtime.tex
+[...]
+Output written on hwtime.pdf (7 pages, 105932 bytes).
+Transcript written on hwtime.log.
+$ 
+```
+
+And here is the command to generate the C file:
+``` shell transcript to generate a .c file from hwtime.w
+$ ctangle hwtime.w  # generates hwtime.c
+This is CTANGLE (Version 3.64 [22p])
+*1*7*13
+Writing the output file (hwtime.c):
+Done.
+(No errors were found.)
+$ 
+```
+
+The `cweave` and `ctangle` programs are part of CWEB. On my system (NixOS), the package I needed to install was named `cwebbin`.
+
+The `pdftex` program was installed as part of the `tetex` package. You may find it in packages of the TeXLive distribution. Both of those are large packages with a fairly large number of dependencies, so be aware of that before you attempt to install on your own system.
+
+# Perl’s (False) Association With Literate Programming
+
+I found out about the concept of Literate Programming through the Perl programming language community. At the time, at least (mid-to-late 90’s), Perl boasted of its in-language embrace of “Literate Programming” in the form of its POD syntax, or Plain Old Documentation. The Perl community—and I may be misremembering this, but I believe Perl’s manpages, and the famous “Camel Book” from O’Reilly (entitled “The Perl Programming Language”) made this explicit connection.
+
+...But it is false. As with Literate Programming, POD does feature actual documentation/English explanations intermixed with the code, and this shared feature is probably what overexcited those who claimed it was a form of LP. But POD was specifically designed, and pretty much exclusively used, for writing manpage-like documentation, i.e., reference material. Generally, it explained how to _use_ the program or library module, and not why choices were made.
+
+Unlike true Literate Programming, in POD the code it’s intermixed with is _not_ also part of the “book”—that is,the generated documentation. The documentation is intermixed with the code in the source file, but the code does not become part of the reader-oriented format (which is produced by tools with names like `pod2txt`, `pod2html`, `pod2man`) If one wishes to read both code and prose, they can of course just read the original source code document; but POD does not provide any features for breaking the code into “sections” that allow the author to introduce them in a different order (one that’s more convenient for introducing the code concepts to a reader, as opposed to the order that’s convenient for a compiler). As I’ve said, there’s no inclusion of the code within the “woven” output at all. (As hinted at by the program names given for the CWEB system, earlier, one “weaves” a [C]WEB source file into reading material fit for human consumption, and “tangles” a [C]WEB source file into its compiler-consumable program code.)
+
+So no, POD is not an example of “Literate Programming”, as it misses the fundamental features required to be “program code for human reading”. There is, therefore, a pitfall to be avoided in speaking of Perl in the same breath as “Literate Programming”, because there exists some documentation and reference materials, and out-of-date individual misunderstandings, that Perl code is inherently “Literate” when it features POD. It is not. But it _may_ be, as illustrated in the preceding “99 bottles” example provided.
+
+# A Word About Dr Donald E. Knuth
+
+The founder of the principles of Literate Programming, and creator of its primary implementations, WEB, and CWEB, Dr Donald E. Knuth also wrote what many deem to be the most important work on Computer Science (“The Art of Computer Programming”, or TAOCP), which, as it was begun at a time (1962!) when the state of digital publication was inadequate to his needs, also prompted him to invent the formatting language for it (TeX, which, along with the LaTeX framework of TeX macros, remains the gold standard for scientific, mathematical, and academic publishing to this day), a language for describing the fonts he would use (Metafont), along with the fonts themselves (“Computer Modern”). Aside from creating an entire ecosystem of software to support his creation of TAOCP, the work itself has introduced proofs for a few previously unproven mathematical theorems, and introduced entirely-new programming concepts, such as the coroutine. He is also known for having written many bug-bounty checks, in values of powers-of-two (such as for $2.56, or $10.24)), to those who had found errors in his publications and software. (While many of these were simply cashed, many more were kept and framed as trophies)
+
+# To Be Continued...
+
+I had intended to write more, but this is quite enough for one post. I’ll follow on with a part 2, for drawbacks/limitations of LP, and a few thoughts on more modernized approaches to applying the principles of Literate Programming in writing new code.
+
+
+tags: programming literate-programming knuth perl c

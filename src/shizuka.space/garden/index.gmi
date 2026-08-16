@@ -4,8 +4,8 @@
 
 ## Me (Kado) in Other Smol Spaces
 
-=> gemini://astrobotany.mozz.us/public/9f7fccab4cd847b5b736d9914fa06c04 My plant “Ichirou” at Astrobotany
-=> gemini://astrobotany.mozz.us/public/9f7fccab4cd847b5b736d9914fa06c04/m1 My plant “Ichirou” at Astrobotany (COLOR)
+=> gemini://astrobotany.mozz.us/public/9f7fccab4cd847b5b736d9914fa06c04 My plant on Astrobotany
+=> gemini://astrobotany.mozz.us/public/9f7fccab4cd847b5b736d9914fa06c04/m1 My plant on Astrobotany (COLOR)
 => gemini://bbs.geminispace.org/u/shizukado shizukado @ The GeminiSpace BBS
 => gemini://station.martinrue.com/shizukado shizukado @ Station
 
@@ -44,6 +44,10 @@ Lagrange .fontpack for M PLUS 1 Code, a monospace Japanese CJK font
 => gopher://gopher.club:70/1/users/nclp/ nclp @ gopher.club
 => gopher://sdf.org:70/1/users/danielaw/phlog danielaw
 => gopher://sdf.org:70/1/users/jrconduit/log/ junior conduit
+=> gopher://sdf.org:70/1/users/agk/ Anna’s gopherhole: where the horsemen hang their hats
+=> gopher://gopher.club:70/1/users/gef/ evolution revolution
+=> gemini://enemy.org/mrfusion/rants.gmi mrfusion
+=> gemini://higeki.jp/ higeki, photo and thought/poetry diaries (in Japanese)
 
 => gemini://skyjake.fi/tinylog.gmi skyjake’s tinylog
 (terser, updated a bit more frequently; see “skyjake’s Capsule”, a bit below.
@@ -56,9 +60,10 @@ Stuff I follow for art (writing, poetry, images), or naked humanity/realness. Th
 => gemini://voidrane.smol.pub/ voidrane
 => gemini://rawtext.club/~deerbard/ deerbard’s nest
 => gemini://tilde.club/~winter/ winter’s gemlog
-=> gemini://njms.ca/gemlog/ njms’s gemlog
 => gemini://idiomdrottning.org/ Idiomdrottning
 => gemini://ambling.cc/ ambling
+=> gemini://spool-five.com/gemlog/atom.xml Spool Five
+=> gemini://flares-space.me/gemlog/index.gmi Flare’s Gemlog
 
 => gemini://tilde.town/~hush/gemlog/ hush’s gemlog
 Writes about her thoughts on personal philosophy, her relationship to art, and experiences from her life.
@@ -66,6 +71,7 @@ Writes about her thoughts on personal philosophy, her relationship to art, and e
 ### Gemsubs, Smolnet, Programming, or Technical Content
 
 => gemini://gemini.sh0.xyz/ sh0.xyz
+=> gemini://sdf.org/fabiozeh/ fabiozeh
 => gemini://lierre.smol.pub/ Lierre’s soapbox
 => gemini://frooplet.com/ Big Bungo’s Froopsule
 
@@ -87,11 +93,15 @@ A smol gemzine
 
 ### Gemsubs, Miscellaneous (or Multi-Reason Follows)
 
+=> gemini://williamshipes.srht.site/ Goetic's Gemlog
+
 => gemini://lowkey.party/ Lowkey Party (Nigel)
 Experiences in tech, photography, DIY, and dealing with other humans.
 
 => gemini://danielledevs.smol.pub/ danielledevs
 Musings of a luddite, chronically ill, transgender software developer.
+
+=> gemini://nullish.smol.pub/ nullish
 
 ## Bulletin Boards (BBS)
 
@@ -114,12 +124,14 @@ Musings of a luddite, chronically ill, transgender software developer.
 => gemini://astrobotany.mozz.us/ Astrobotany
 => gemini://sggs.thegonz.net/ Simple Gemini Game Server (Mainly a few board games: Shogi, Go, Connect4, ...)
 => gemini://gemini.thegonz.net/ “Things” at TheGonz.net (scroll to the “Games” section)
-=> gopher://mozz.us:7006/1/ Text Adventures at Mozz.us (Gopher). Including Zork!
+=> gemini://gemini.thegonz.net/zyg/ Zyg. Martin Bays’ collection of classic text adventures on gemini. Including Zork
+=> gopher://mozz.us:7006/1/ Text Adventures at Mozz.us (Gopher). Including Zork
 => gemini://gemi.dev/cgi-bin/mines.cgi/ Acidus's Minesweeper
 
 ## Smol Interfaces to the Web
 
 => gemini://gemi.dev/cgi-bin/wp.cgi/ Gemipedia (Gemini interface to Wikipedia)
+=> gopher://gopherpedia.com/1 Gopherpedia (Gopher interface to Wikipedia)
 => gemini://gemi.dev/cgi-bin/waffle.cgi/ 🧇 NewsWaffle (Gemini interface to news websites)
 => gemini://gemi.dev/xkcd/ XKCD Comics Archive
 
@@ -128,12 +140,19 @@ Musings of a luddite, chronically ill, transgender software developer.
 => gemini://cosmic.voyage/ Cosmic Voyage
 A tilde community based around a collaborative science-fiction universe. Users write stories as the people aboard ships, colonies, and outposts.
 
+=> gopher://sdf.org:70/1/users/agk/fic Anna’s fiction writing
+Haven’t read yet. Author warns they can be violent, foul, grotesque, explicit. Can’t wait!
+
 ## Articles
 
-=> gemini://gemini.alexandrevicente.net/posts/2026/05/25/how-an-e-reader-became-my-favorite-web-browser/
-“How an e-reader became my favorite Web Browser”
+=> gemini://gemini.alexandrevicente.net/posts/2026/05/25/how-an-e-reader-became-my-favorite-web-browser/ “How an e-reader became my favorite Web Browser”
+
+=> gemini://detritus.smol.pub/1786031557 “Hiding from my boss”
 
 ## Miscellanea
+
+=> gemini://cdg.thegonz.net/ The Collaborative Directory of Geminispace
+Community-contributed, categorized links to gemini resources
 
 => gemini://mozz.us/ Mozz.us Gemini
 => gopher://mozz.us/1 Mozz.us Gopher
@@ -148,6 +167,7 @@ List of all Gemini capsules known to the Lupa crawler. Seems to be better kept u
 => /rfcs/rfc1436.txt The Gopher Protocol (RFC 1436)
 => gemini://satch.xyz/misfin/ Misfin (smolmail?)
 => nex://nightfall.city/nex/info/ The Nex Protocol
-=> https://raw.githubusercontent.com/zzo38/scorpion/trunk/Specification The Scorpion Protocol
 => spartan://spartan.mozz.us/ The Spartan Protocol
 => gemini://transjovian.org/titan/The%20Titan%20Specification The Titan Protocol Specification
+
+=> /gempub-spec/README.gmi The GEMPUB format (collection of gemtext as an e-book)
