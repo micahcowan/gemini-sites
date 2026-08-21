@@ -1,5 +1,13 @@
 # Literate Programming
 
+> Instead of imagining that our main task is to instruct a _computer_ what to do, let us concentrate rather on explaining to _human beings_ what we want a computer to do.
+—Donald E. Knuth, “Literate Programming”
+
+> The chief goal of my work as educator and author is to help people learn how to write _beautiful programs_.... My feeling is that when we prepare a program, it can be like composing poetry or music.... The possibility of writing beautiful programs... is what got me hooked on programming in the first place.
+—Donald E. Knuth, “Computer Programming as an Art”
+
+🙘
+
 This is a continuation on the subject of Human Code, posted both in this gemlog, and on the GeminiSpace BBS.
 => gemini://shizuka.space/glog/2026/08/13/00/human-code/ on this gemlog
 => gemini://bbs.geminispace.org/s/Human_Code/47077 on the BBS, s/Human_Code
