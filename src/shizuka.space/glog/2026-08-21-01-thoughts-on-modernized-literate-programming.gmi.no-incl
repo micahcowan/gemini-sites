@@ -1,0 +1,27 @@
+# Thoughts on Modernized Literate Programming
+
+This is a continuation of my previous post on Literate Programming. Please read that first, if you do not have an understanding of what Literate Programming is:
+
+=> /glog/2026/08/14/00/literate-programming-part-1/ My previous “Literate Programming” post
+
+# Problems with Literate Programming/WEB
+
+I really want to love the idea of Literate Programming, and the notion of writing code in a fundamentally expository manner, as well as the thought any method for programming that opens the door to greater levels of artistry/humanity—both hold great appeal for me.
+
+But there are a number of concerns about Knuth's approach, and other similar ones that have followed after it.
+
+## The formatting language isn’t terribly readable
+## Major design changes require even more major reworking
+## The “woven” (book) form uses unusual/confusing replacement symbols
+
+Rather than what would actually be present in familiar C code.
+
+## Writing a book instead of raw code, may impede achieving the “flow state”
+
+A.k.a. being “in the zone”.
+
+## Writing a program as an entirely self-consistent “book” demands excessive re-editing
+
+## In many cases, unadorned code can be easier to read
+
+# Literate Commits
