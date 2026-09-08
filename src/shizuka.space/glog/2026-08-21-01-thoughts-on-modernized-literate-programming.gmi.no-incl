@@ -4,11 +4,14 @@ This is a continuation of my previous post on Literate Programming. Please read 
 
 => /glog/2026/08/14/00/literate-programming-part-1/ My previous “Literate Programming” post
 
+
+!!! Reorg this, with a focus on the improvements I want to make, citing the weaknesses I'm addressing at that point, instead of enumerating all the "problems" and then separately, all the "solutions"
+
 # Problems with Literate Programming/WEB
 
 I really want to love the idea of Literate Programming, and the notion of writing code in a fundamentally expository manner, as well as the thought any method for programming that opens the door to greater levels of artistry/humanity—both hold great appeal for me.
 
-But there are a number of concerns about Knuth's approach, and other similar ones that have followed after it.
+But there are a number of concerns I have with Knuth's approach, and other similar methods that have followed after it.
 
 ## The formatting language isn’t terribly readable
 ## Major design changes require even more major reworking
@@ -25,3 +28,5 @@ A.k.a. being “in the zone”.
 ## In many cases, unadorned code can be easier to read
 
 # Literate Commits
+
+
