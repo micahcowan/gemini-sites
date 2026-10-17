@@ -1,0 +1,19 @@
+# Fuck Windows
+
+This weekend was full of frustrating proprietary software enshittification suckitude, on two different fronts. I’ll do a separate, longer post about the other one (the YouTube API), but let’s start with Microsoft Windows.
+
+I don’t use Windows for a lot... but I’m an incurable gamer. I love me some vintage gaming, a la NES, SNES, Genesis, GameBoy Advance, PSX... but I also genuinely enjoy many modern/AAA games. While Linux is becoming an increasingly viable platform on which to enjoy PC games (thanks to Valve’s work on Steam OS, and, especially, Proton), there are still some games that can’t be played on Linux systems, and, in particular, it˚s not currently a great choice for PCVR gaming. I’m not willing to just swear off my favorite PCVR games (played over my Quest 3—but I¯ seriously eyeing the Steam Frame!), so Windows remains a necesary evil, for me.
+
+Last Wednesday—just in time for the arrival of a long-awaited, prordered game on Steam (Control: Resonant), Windows automatically updated itself to a new Windows 11 release... and completely lost its ability to display things over HDMI! I could see video output from the UEFI/BIOS, but once it actually handed over to Windows—nothing.
+
+It still ran, if I could manage to log in, blind. How do I know? Because I could still manage to connect via Steam VR! Also Meta Horizon Link (the app for my Quest 3 headset). This allowed me to have access to the Desktop, where I could try to remedy the situation.
+
+No matter what I could do (which turned out to be rather little), I could not get it to even recognize that an HDMI had been plugged in.
+
+I hadn’t been using Windows’ automatic recovery points, because I wanted the space they took up. I couldn’t update the drivers via the Nvidia Experience app, because initiating this would cause it to lock video output in a way I could no longer use over VR—and whatever confirmation it would then pop up, wasn’t passible with a simple press of the Enter or Space keys. I couldn’t update via the Device Manager, because for some reason it wouldn’t respond to mouse clicks via the VR headset. Other update attempts were also thwarted due to modal dialogs not being shown via the Steam VR desktop interface.
+
+I tried a generic Windows Recovery drive on USB (I had not created one from the system itself—a failure Ive since remedied), but it didn’t include some driver or other needed to actually boot from that thumbdrive. I had no idea which driver was needed (Windows was not specific, just missing “a” driver). The PC manufacturer’s support website offered little help, and I really didn’t feel like spending time identifying all the hardware and chasing down drivers, especially given the very real possibility none of them would actually resolve the problem.
+
+In the end, I was able to use the Settings App to initiate a Windows Reset, to completely blow away the home drive and re-install Windows 11 on it. I was anxious to do so, as there was a very real possibility it would still wind up with incomplete drivers (and then I’d be compltely hosed, as Steam VR wouldn’t be installed any longer, so I’d have no fallback. But it wound up coming back fine. It still installed the latest and “greatest” edition of Windows 11... but this time HDMI worked once again, and I was able to get enough access to set the rest of my system back up.
+
+So anyway, yeah. Fuck Windows.
