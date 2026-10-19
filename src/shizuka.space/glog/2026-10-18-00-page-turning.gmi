@@ -1,0 +1,64 @@
+# On Sheet Music Page-Turning
+
+I’m a pianist. It’s what I studied in uni, though it’s not what I do for a living. You can find some recordings of me playing classical pieces at the following link (the recordings are mostly well over a decade old, but anyway).
+
+=> https://www.youtube.com/watch?v=4B9Haybu9kg&list=PLHHHTIsNQayoj53fzX9bJH4eQ7KU1jZfw Micah (Kado) on Piano [YouTube]
+
+For monophonic instruments—flute, clarinet, trumpet, whatever—the musical score for a lot of pieces can fit on a single page, maybe two. You can fit two pages on a typical music stand, and you could add extenders to hold four, maybe five pages within view. An entire symphonic movement is liable to fit on your stand. Turning pages is no great hurdle.
+
+On piano, though, you inevitably hemmorage spent musical sheets. I’ve been accompanying a middle school choir this month, and the scores are combined piano-plus-vocals, so there’s anywhere between three and five staves (those clusters of five lines, upon which the actual notes are written), which can take up quite a bit of space on the page. The two piano staves on their own tend to take a lot of space as it is, as they need to accommodate a wide range of notes played simultaneously, and so extra space is needed around those two staves, for “ledger lines” (short lines added to extend the staves outword, to write notes that don’t fall within the five lines and six spaces “on” the staff (four spaces within the staff, and two more just above and below that don’t require the extending power of added ledger lines). With this sort of page-space consumption, you can easily blow through a page with only a dozen or so bars—sometimes less.
+
+## Traditional Solutions
+
+Meanwhile, a pianist of course needs both his hands on the keyboard. The combination of page turns being abundant, and a handicapped ability to turn them, presents somewhat of a challenge. Traditional means of dealing with this, of course, include:
+
+* Finding the “right moment” to turn the page
+* An additional human dedicated to turning pages for the pianist
+* Memorizing every note of the music
+* Reducing the number of page turns.
+
+All of these are a bit frought. The “right moment” may simply not exist, in some demanding pieces (though this is probably unusual for most “accompaniment” pieces). In some cases a pianist may be forced to momentarily sacrifice the music played with one of their hands, keeping the rhythm with their remaining hand, while they turn the page. If they lose their grip on the page, the time spent playing only “half” the music may be prolonged!
+
+Even if all the “right moments” can be found, it may demand editing and rearranging the printed page in order to facilitate them, if those moments occur in very different locations than where the original page breaks are.
+
+A human page turner solves the issue without sacrificing the music, but it’s not always easy to find a qualified human free for the purpose (especially in school-related accompaniment situations), and the page-turning person may also have a different idea from the performer, as to when is the right time to turn the page. This is sometimes addressed by the performer nodding to the turner when it’s time, but this still relies upon the turner to respond quickly to such a nod, and upon the performer to manage to nod, even if the music preceding the turn is very demanding.
+
+Memorizing every note of the music is a viable option, and is often expected of a performer in a solo piano concert, for instance. However, in accompaniment situations, it is very often the case that not enough time is available to fully memorize the pieces, and moreover playing from memory without sheet music can make rehearsals more of a challenge, as it’s often necessary to quickly jump to a specific measure number, or, perhaps, to rehearse a particular section with some degree of temporary modification, such as skipping a segment, playing without certain repeats, or adding repeats.
+
+When I was playing as part of the pit orchestra for musical theatre high school programs, it was often necessary to make last-minute, or sometimes even on-the-fly, modifications to the music, in response to changes made in the actors’ performances, or timing fluctuations in the same. This is very difficult to coordinate, or even to communicate, without referring to the music in a written form, and attempting to incorporate such changes into a memorized piece, even if the performer has the brain for it, is likely to be very fragile.
+
+Sheet music is often in book form, in which case two pages may be viewed at a time. But sometimes an individual piece is found in a spread of pages... or you may use a copier and create your own spread. The music stand that’s built into a piano can often accommodate a five-or-six-page spread of sheet music... though if you’re playing a digital keyboard, it may only accommodate two. I have a binder specifically intended for holding sheet music, which has inserts for copied sheet music and can display four pages at once, even if you’re using it on a music stand only designed to show two. However, I frequently committed accidental errors during page-turns with multi-page spreads, so found this solution less than ideal.
+
+Some application of multiple of these various attempts at solutions, simultaneously, can improve matters. For instance, using a human page-turner together with a multi-page spread both means you have fewer turns to deal with, and also the advantage of someone who can take their leisure to prepare for the next page turn, rather than a performer frantically taking a very brief moment to grab the page between played notes. Or, if one doesn’t have the time to memorize entire pieces, there may be time to memorize a bar or two of the music that immediately follows a page turn, and perhaps a bar or two that preceds it, so that there is time to recover from any page-turn mishaps, whether it’s the performer grabbing the wrong page-corner, or an aide missing their timing.
+
+## Modern Technological Solutions
+
+### Facial gestures
+
+In an attempt to improve reliability and consistency in my page-turning experiences, I’ve purchased an iPad Pro running forScore Pro. I’d ordinarily prefer an open-source solution on Android, such as MobileSheets, but what won me over to forScore on an iPad are: (a) it has better/more reliable facial-gestures support that I can use for page turns—I can wink, quirk my lips, or turn my head, and it will turn the page—and (b) the (optional) nano-texturing gives it an excellent matte finish that is much more conducive to reading sheet music under bright lights.
+
+Of the three types of facial gestures (wink, nod, lip-quirk), the one that works most reliably for me is the lip-movement. To trigger this reliably, I wind up doing a sort of a one-sided smirk-grimace-wink, in which not only my lip, but my cheek, moves very firmly in one direction, often causing my eye on that side to close. This works very effectively, especially at home for solo practice. My eyes are the sort that always look nearly-closed, so it’s difficult to pick up just a wink on its own.
+
+However, in group rehearsals, and at performances, there can be issues. If something catches my attention, causing my head to turn towards it, or if I need to switch between looking at my music and looking at a conductor, this will trigger “head turns”. If my entire face isn’t fully visible and turned directly toward the iPad’s front-facing camera, it will also have difficulty reading a lip-quirk or wink on the turned-away side of my face, or may misinterpret a smile or blink. Also, the head-turn and lip-quirk movements can both look like a distracting movement tic, so is somewhat poorly suited for performances.
+
+Worst of all, big changes in lighting and, of course, performances often involve either very bright or very dark lighting—or, frequently, both simultaneously. This requires re-calibrating the software to the right sensitivity in order to maintain reliability... and often there is no opportunity to do this, or it may be done incorrectly. The lighting may change in the midst of the performance! I still use this feature in many cases of at-home music practice, but it’s quite unsuited for use in performances.
+
+### Bluetooth pedals
+
+What has worked best for me, then, is a bluetooth page-turn pedal paired with the iPad Pro. This will typically behave as a bluetooth keyboard, sending up/down, left/right, or PgUp/PgDn keys in response to left-and-right pedal presses. Of course, pianos already have pedals of their own... but in most cases only the right-most pedal, the sustain pedal, is truly necessary (it is extremely common for digital keyboard players to possess only that one single pedal), which frees up the left foot to work a page-turn pedal.
+
+Initially, I bought the-turn pedal pictured in the link below: the PageFlip Butterfly pedal, resembling an upside-down insect with large “wings” (the pedals) splaying out from it, and joined by a seam.
+
+=> /img/butterfly-pedal.jpg [IMG] PageFlip Butterfly page-turning pedal
+
+The pedal does its job well enough, but I find that the clicky pedals provide more opportunity for errors: pressing the prev-page pedal instead of the next-page one, accidentally double- or triple-tapping in rapid succession, or failing to find the pedal with my foot.
+
+So I subsequently bought a different pedal (pictured in the next link), made by Donner. This one is a bit smaller than the butterfly (and bigger pedals are better), but the shape is something like two rectangular pedals joined by a beam, spaced further apart from one another than they are in the Butterfly, and so there is less opportunity for confusion about which pedal is being pressed. Also, rather than the pedals being large, clicky buttons, they have a little bit of give to them—a bit like a kick-drum pedal, but with a much, much shorter window of pressing before the action is triggered. Just enough give that my foot can find the pedal and rest in a position of direct contact with the pedal. This makes it much easier to avoid losing my sense of the pedal’s position relative to my foot (I can feel it under my foot!), and also less likely for me to accidentally trigger it multiple times (though it still happens).
+
+=> /img/donner-pedal.jpg [IMG] Donner page-turning pedal
+
+Like the other solutions, this approach still has drawbacks. Certainly, I must ensure that both the iPad and the pedal, and ideally the Apple Pencil stylus for any annotations and adjustments, are sufficiently charged.
+
+Additionally, the 13-inch iPad is significantly smaller than the standard size for chamber sheet music (in America—9 × 12 inches, which is 15 inches diagonally). This can largely be mediated by zooming in the pages to omit the original margins, and using reading glasses for magnification, if necessary.
+
+But so far, this has proved to be the most-tolerable solution for me, and provides the best reliability for quickly moving from one page of music to the next. It’s still not perfect, and page-turn errors still occur, but they are significantly less common.
